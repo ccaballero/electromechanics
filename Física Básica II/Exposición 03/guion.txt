@@ -1,0 +1,104 @@
+Hola y bienvenidos a esta exposición sobre                                      |
+                                                                                |
+Mecánica de fluidos                                                             | carátula
+1da parte                                                                       |
+estática de fluidos                                                             |
+                                                                                |
+Mi nombre es Carlos Caballero                                                   |
+<200201226@est.umss.edu>                                                        |
+                                                                                |
+y como siempre esta es una                                                      |
+Exposición basada en las secciones 1ra, 2da, y 3ra del capitulo 14 del libro    | libro de física
+Física Universitaria. de Sears y Zemansky                                       |
+                                                                                |
+                                                                                |
+Se denomina fluido a la materia compuesta por moleculas atraidas entre si de    |
+manera debil,                                                                   |
+por tanto, esta no tiene la capacidad de sostener una forma concreta, sino que  |
+adquiere la del recipiente en donde esta contenida.                             |
+                                                                                |
+Ahora exploraremos los conceptos de densidad, presión y flotación.              |
+                                                                                |
+                                                                                |
+Una propiedad importante de cualquier material es su densidad, definida como    |
+su masa por unidad de volumen, por tanto sus unidades serán el kilogramo por    |
+metro cubico.                                                                   |
+                                                                                |
+Podemos ver los valores de densidad para algunas sustancias.                    |
+                                                                                |
+El material mas denso que puede encontrarse en la Tierra es el Osmio con un     |
+valor de 22.59 gramos por centimetro cubico, tambien existen objetos            |
+astronomicos exoticos cuya densidad es casi inimaginable, como las estrellas    |
+enanas blancas, y las estrellas de neutrones.                                   |
+                                                                                |
+Se denomina gravedad especifica o mejor llamada densidad relativa de un         |
+material a la razon entre su densidad y la densidad del agua a 4.0 grados       |
+centrigrados, que es 1000 kilogramos por metro cubico                           |
+                                                                                |
+Cuando la densidad del material varia de un punto a otro, la formula de la      |
+densidad representa la densidad media de un material.                           |
+                                                                                |
+                                                                                |
+Anteriormente se discutio sobre el concepto de presion cuando hablamos de       |
+deformación volumetrica, cuando un fluido (ya sea liquido o gaseoso) se         |
+encuentra en reposo, este ejerce una fuerza perpendicular a cualquier           |
+superficie en contacto.                                                         |
+                                                                                |
+La presion p es la razon entre la fuerza perpendicular y el area, cuyas         |
+unidades en el sistema internacional son los pascales.                          |
+                                                                                |
+Es posible deducir una relación general entre la presión p en cualquier punto   | p
+de un fluido en reposo y la altura h.                                           | h
+                                                                                |
+La fuerza F en ese punto es igual a la masa del fluido por la gravedad,         | F | F = | F = m | F = m\,g
+luego reemplazamos la masa por el valor de la densidad multiplicado por el      | F = \rho V\, g
+volumen del fluido, y finalmente reemplazamos el valor del volumen por el       | F = \rho A\,h\,g
+producto del area por la altura.                                                |
+                                                                                |
+Suponiendo que la densidad del fluido y la gravedad son constantes,             |
+                                                                                |
+Podemos ver que la presion, igual a la fuerza perpendicular sobre el area es    | F / A = \rho\,g\,h
+el producto de la densidad, la gravedad y la altura.                            |
+                                                                                |
+La presión es la misma en cualquier sitio sobre un plano horizontal a la        |
+profundidad h.                                                                  |
+                                                                                |
+Si consideramos el valor de la presion sobre la superficie, entonces hallamos   | p_0
+que la presión en un fluido de densidad uniforme es igual al valor de la        | p = | p = p_0 | p = p_0 + \rho\,g\,h
+presion en la superficie, mas el producto de la densidad, la gravedad y la      |
+altura.                                                                         |
+                                                                                |
+Por tanto si se aumenta la presion en la superficie, la presion p a cualquier   | \Delta p
+profundidad aumentara exactamente en la misma cantidad, este hecho fue          |
+enunciado en 1653 por el fisico-matematico frances Blaise Pascal, que se        |
+resume en la frase:                                                             |
+                                                                                |
+La presion aplicada a un fluido encerrado se transmite sin disminucion a todas  |
+las partes del fluido y las paredes del recipiente.                             |
+                                                                                |
+                                                                                |
+Adicionalmente existen dos conceptos comunmente utilizados:                     |
+                                                                                |
+Cuando la presion se mide en relacion con un vacio perfecto, se denomina        |
+presion absoluta, mientras que cuando se mide en relación con la presion        |
+atmosferica, esta es denominada presion manometrica.                            |
+                                                                                |
+Es comun que los manometros registren el valor cero cuando estan abiertos a la  |
+atmosfera, por tanto, las presiones son positivas si estan por encima de la     |
+presión atmosferica y negativas si estan por debajo.                            |
+                                                                                |
+                                                                                |
+Por ultimo se verá el concepto de flotación, que es el fenomeno que mantiene    |
+un cuerpo en la superficie, cuando este posee menos densidad que la del fluido. |
+                                                                                |
+El principio de Arquimedes dice:                                                |
+                                                                                |
+Si un cuerpo esta parcial o totalmente sumergido en un fluido, este ejerce una  | B | B = 
+fuerza hacia arriba sobre el cuerpo igual al peso del fluido desplazado por el  | B = w_f | B = m\,g | B = \rho\,V\,g
+cuerpo.                                                                         |
+                                                                                |
+La fuerza descrita en este principio se denomina fuerza de flotación.           |
+                                                                                |
+Ahora realizaremos algunos ejercicios relacionados con estos conceptos          |
+                                                                                |
+

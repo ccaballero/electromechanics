@@ -1,0 +1,155 @@
+Hola y bienvenidos a esta exposición sobre                                      |
+                                                                                |
+Ondas Mecánicas                                                                 |
+1ra parte                                                                       |
+                                                                                |
+Mi nombre es Carlos Caballero                                                   |
+<200201226@est.umss.edu>                                                        |
+                                                                                |
+y como siempre esta es una                                                      |
+Exposición basada en las secciones 1ra, 2da, y 3ra del capitulo 15 del libro:   |
+Física Universitaria. de Sears y Zemansky.                                      |
+Adicionalmente se utilizo el capitulo 19 del libro: Física de Resnick y         |
+Halliday.                                                                       |
+                                                                                |
+                                                                                |
+Una onda mecánica es una perturbación que viaja por un material o una sustancia | https://www.youtube.com/watch?v=W7DpP311NxU
+que es el medio. Al viajar la onda por el medio, las partículas que lo          |
+constituyen sufren desplazamientos de varios tipos, dependiendo de la naturaleza|
+de la onda.                                                                     |
+                                                                                |
+Podemos distinguir diferentes clases de ondas, considerando la forma en que el  |
+movimiento de las partículas de materia está relacionado con el sentido de      |
+propagación de las ondas mismas.                                                |
+                                                                                |
+Si los movimientos de las partículas de la materia portadora de la onda son	| https://www.youtube.com/watch?v=Uz9EiYMthL8
+perpendiculares al sentido de propagación de está, decimos que tenemos una onda |
+transversal.                                                                    |
+
+Si el movimiento de las partículas que transportan una onda mecánica es hacia   |
+adelante y hacia atrás a lo largo del sentido de la propagación, la onda es
+entonces, longitudinal.
+
+Algunas ondas no son ni totalmente longitudinales, ni totalmente transversales, | https://www.youtube.com/watch?v=OErX_DJkZeI
+por tanto,  las partículas pueden moverse tanto hacia arriba y hacia abajo como
+hacia adelante y hacia atrás, lo que da lugar a que se tracen trayectorias
+elípticas al pasar por ellas las ondas.
+
+
+La perturbación siempre se propaga por el medio con una rapidez definida llamada|
+rapidez de propagación o simplemente, rapidez de la onda, determinada en cada   |
+caso por las propiedades mecánicas del medio.                                   |
+                                                                                |
+                                                                                |
+Es posible producir un pulso que viaje por una cuerda estirada aplicando un     | https://www.youtube.com/watch?v=jUQkG1A0_Sk
+simple movimiento lateral en uno de sus extremos. Cada partícula de la cuerda   |
+permanece en reposo hasta que el pulso lo alcanza, y entonces se mueve durante  |
+un tiempo corto, volviendo después a quedar en reposo.                          |
+                                                                                |
+Si la acción es repetitiva, entonces se produce un movimiento periódico al      |
+propagarse la onda, y se obtiene una onda periódica.                            |
+                                                                                |
+El caso más sencillo de una onda periódica es el de la onda armónica simple, que|
+comunica a cada una de las partículas un movimiento armónico simple, llamada    |
+también onda senoidal.                                                          |
+                                                                                |
+                                                                                |
+Consideremos una cuerda que genera una onda transversal periódica, en este tipo |
+de onda, la forma de la cuerda en cualquier instante es un patrón repetitivo.   |
+                                                                                |
+La longitud de un patrón de onda completo es la distancia entre una cresta y la |
+siguiente, o de cualquier punto al punto correspondiente en la siguiente        |
+repetición de la forma. Esta distancia se denomina longitud de onda.            |
+                                                                                |
+El patrón de onda viaja con rapidez constante "v" y avanza una longitud de onda |
+\lambda en el lapso de un periodo "T". Por lo tanto, la rapidez de la onda "v"  |
+esta dada por \lambda sobre el periodo o \lambda por la frecuencia.             |
+                                                                                |
+La rapidez de propagación es igual al producto de la longitud de onda y la      |
+frecuencia. La frecuencia es una propiedad de toda la onda periódica, porque    |
+todos los puntos de la cuerda oscilan con la misma frecuencia.                  |
+                                                                                |
+                                                                                |
+Durante el movimiento ondulatorio una partícula con posición de equilibrio "x"  |
+se desplaza cierta distancia "y" en la dirección perpendicular al eje "x". El   |
+valor de "y" depende de cual partícula, y también del instante "t" en el cual se|
+esta considerando. Así, "y" es función tanto de "x" como de "t". Llamamos a "y" |
+la función de onda. Si se conoce tal función para cierto movimiento ondulatorio,|
+es posible usarla para el calculo del desplazamiento de cualquier partícula en  |
+cualquier instante, además de su velocidad y aceleración.                       |
+                                                                                |
+                                                                                |
+Supongamos que el desplazamiento de la partícula en "x" igual a 0, donde la onda|
+se origina es: "A" por coseno de \omega "t, es decir, la partícula oscila en    |
+movimiento armónico simple con amplitud "A", frecuencia angular igual a 2 "pi"  |
+"f". En "t" = 0, la partícula en "x" igual a 0 tiene el máximo desplazamiento   |
+positivo.                                                                       |
+                                                                                |
+La perturbación ondulatoria viaja de "x" igual a 0 a algún punto "x" a la       |
+derecha del origen en un tiempo dado por "x" sobre "v", donde "v" es la rapidez |
+de la onda. Así, el movimiento del punto "x" en el instante "t" es el mismo que |
+el movimiento del punto en "x" igual a 0 en el instante anterior "t" menos "x"  |
+sobre "v".                                                                      |
+                                                                                |
+Por tanto, el desplazamiento del punto "x" en el instante "t" sera: "A" por     |
+coseno de \omega por "t" menos "x" sobre "v", que puede reescribirse como: "A"  |
+por coseno de \omega por "x" sobre "v" menos "t".                               |
+                                                                                |
+Es posible expresar la misma ecuación en términos del periodo y la longitud de  |
+onda.                                                                           |
+                                                                                |
+También es posible expresar la función de onda, definiendo una cantidad "k"     |
+llamada numero de onda igual a 2 "pi" sobre la longitud de onda, por tanto la   |
+frecuencia angular es igual a la rapidez de la onda por el numero de onda, y    |
+reescribir la ecuación como "A" por coseno de "kx" menos \omega "t".            |
+                                                                                |
+En el caso de una onda que viaja en dirección "x" negativa, el signo de "x"     |
+sobre "v" es positivo.                                                          |
+                                                                                |
+                                                                                |
+De la función de onda podemos obtener una expresión para la velocidad           |
+transversal de cualquier partícula en una onda, derivando la función de onda "y"|
+con respecto a "t", manteniendo "x" constante.                                  |
+                                                                                |
+Por tanto, si "y" es igual a la amplitud por el coseno de "kx" menos \omega "t",|
+entonces la velocidad resulta \omega multiplicado por la amplitud por el seno de|
+"kx" menos \omega "t".                                                          |
+                                                                                |
+Aplicando la segunda derivada se obtiene la aceleración igual a menos \omega al |
+cuadrado por la amplitud por el coseno de "kx" menos \omega "t" o también menos |
+\omega al cuadrado por el desplazamiento.                                       |
+                                                                                |
+También es posible calcular las derivadas parciales con respecto a "x",         |
+manteniendo "t" constante.                                                      |
+                                                                                |
+La primera derivada es la pendiente de la cuerda en cualquier punto.            |
+                                                                                |
+Mientras que la segunda derivada es la curvatura de la cuerda, igual a menos el |
+numero de onda al cuadrado por el desplazamiento.                               |
+                                                                                |
+Usando ambas ecuaciones de segunda derivada podemos hallar la relación siguiente|
+...                                                                             |
+                                                                                |
+Y sabiendo que \omega es igual a "v" por "k", hallamos la llamada ecuación de   |
+onda, una de las mas importantes en física. Siempre que ocurre, es posible saber|
+que una perturbación puede propagarse como onda a lo largo del eje "x" con      |
+rapidez "v".                                                                    |
+                                                                                |
+Ahora realizaremos algunos ejercicios usando las ecuaciones mencionadas.        |
+                                                                                |
+
+
+00:00:27.100
+00:00:50.500
+00:01:00.200
+00:01:10.270
+00:01:27.200
+00:01:39.300
+00:01:55.650
+00:02:14.100
+00:02:36.250
+00:03:02.800
+00:03:36.000
+00:05:06.900
+00:05:44.400
+
