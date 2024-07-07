@@ -1,0 +1,129 @@
+>> p5_1_1
+
+table =
+  32x2 table
+
+    Var1    Var2 
+    ____    _____
+
+      0         0
+      0     0.292
+    0.1     0.583
+    0.1     0.875
+    0.2     1.167
+    0.2     1.458
+    0.2      1.75
+    0.3     2.042
+    0.4     2.625
+    0.4     2.917
+    0.5     3.208
+    0.5       3.5
+    0.6     4.083
+    0.6     4.375
+    0.7     4.667
+    0.7     4.958
+    0.7      5.25
+    0.8     5.542
+    0.8     5.833
+    0.9     6.125
+      1     6.708
+      1         7
+      1     7.292
+    1.1     7.583
+    1.2     8.167
+    1.2     8.458
+    1.2      8.75
+    1.3     9.042
+    1.3     9.333
+    1.4     9.625
+    1.4     9.917
+    1.5        10
+
+p = 6.9152    0.0625
+v =
+    0.0625
+    0.0625
+    0.7541
+    0.7541
+    1.4456
+    1.4456
+    1.4456
+    2.1371
+    2.8286
+    2.8286
+    3.5201
+    3.5201
+    4.2116
+    4.2116
+    4.9032
+    4.9032
+    4.9032
+    5.5947
+    5.5947
+    6.2862
+    6.9777
+    6.9777
+    6.9777
+    7.6692
+    8.3608
+    8.3608
+    8.3608
+    9.0523
+    9.0523
+    9.7438
+    9.7438
+   10.4353
+
+caption = 'y = (0.06) + (6.92) x'
+dim = 0.1800    0.3500         0    0.3000
+
+a = 
+  TextBox (y = (0.06) + (6.92) x) with properties:
+
+             String: 'y = (0.06) + (6.92) x'
+           FontName: 'Helvetica'
+           FontSize: 10
+         FontWeight: 'normal'
+              Color: [0 0 0]
+    BackgroundColor: 'none'
+          EdgeColor: [0 0 0]
+          LineStyle: '-'
+          LineWidth: 0.5000
+           Position: [0.1800 0.3500 0 0.3000]
+              Units: 'normalized'
+
+  Show all properties
+
+a = 
+  TextBox (y = (0.06) + (6.92) x) with properties:
+
+             String: 'y = (0.06) + (6.92) x'
+           FontName: 'Helvetica'
+           FontSize: 10
+         FontWeight: 'normal'
+              Color: [1 0 0]
+    BackgroundColor: 'none'
+          EdgeColor: [0 0 0]
+          LineStyle: '-'
+          LineWidth: 0.5000
+           Position: [0.1800 0.3500 0 0.3000]
+              Units: 'normalized'
+
+  Show all properties
+
+a = 
+  TextBox (y = (0.06) + (6.92) x) with properties:
+
+             String: 'y = (0.06) + (6.92) x'
+           FontName: 'Helvetica'
+           FontSize: 10
+         FontWeight: 'normal'
+              Color: [1 0 0]
+    BackgroundColor: 'none'
+          EdgeColor: [0 0 0]
+          LineStyle: '-'
+          LineWidth: 0.5000
+           Position: [0.1800 0.3500 0 0.3000]
+              Units: 'normalized'
+
+  Show all properties

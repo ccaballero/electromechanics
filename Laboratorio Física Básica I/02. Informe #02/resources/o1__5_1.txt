@@ -1,0 +1,71 @@
+
+01 diametro del circulo             TASK 3
+02 cabeza de tornillo               TASK 16
+03 cuerpo del tornillo
+04 longitud de la cabeza            TASK 15
+05 longitud del cuerpo
+06 longitud total del tornillo
+07 diametro de la cabeza            TASK 14
+08 diametro del cuerpo
+09 longitud de la cabeza            TASK 13
+10 longitud del cuerpo
+11 longitud total del tornillo
+12 longitud externa                 TASK 10
+13 longitud intena
+14 longitud externa                 TASK 7
+15 longitud intena
+16 longitud de la caja              TASK 4
+
+ 1)      08.70
+ 2)      30.30
+ 3)      30.35
+ 4)     164.00
+         47.45
+        143.55
+ 5)     166.30
+ 6)     164.30
+ 7)      10.70           31,10
+ 8)      11.55           33.10
+ 9)      23.10           66.30
+10)      22.00           32.00
+11)      21.15           31.15
+12)      21.10           31.10
+13)      17.55           02.55              15.00
+14)      14.10           07.10
+15)      75.10           17.00              58.10
+         55.55           12.55              43.00
+16)      19.30           11.55
+
+
+01 diametro del capacitor           TASK 13
+02 diametro de la cabeza            TASK 9
+03 diametro del cuerpo
+04 diametro de la cabeza            TASK 8
+05 diametro del cuerpo
+06 longitud de la cabeza            TASK 7
+07 longitud del cuerpo
+08 longitud total del tornillo
+09 diametro de la esfera            TASK 4
+
+ 1)     10.5+0.33
+ 2)     10.5+0.44
+ 3)     10.0+0.22
+ 4)      9.0+0.16
+ 5)      9.5+0.39
+ 6)     10.0+0.27
+ 7)     10.0+0.44        1.5+0.10       8.5+0.32
+ 8)      4.0+0.26        2.0+0.26
+ 9)      6.5+0.09        3.5+0.48
+10)      7.5+0.16
+11)      5.0+0.04
+12)      6.5+0.19
+13)      5.5+0.43
+14)      6.0+0.38
+15)      7.0+0.25
+16)      5.0+0.38
+17)      6.0+0.48
+18)      5.0+0.16
+19)      6.5+0.10
+20)      6.5+0.27
+21)      7.0+0.22
+
