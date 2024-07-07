@@ -1,0 +1,32 @@
+{
+    "name": "labo_fisica",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ccaballero/labo_fisica.git"
+    },
+    "author": "Carlos E. Caballero B.",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ccaballero/labo_fisica/issues"
+    },
+    "homepage": "https://github.com/ccaballero/labo_fisica#readme",
+    "devDependencies": {
+        "colors": "^1.4.0",
+        "grunt": "^1.3.0",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-shell": "^3.0.1",
+        "gulp": "^4.0.2",
+        "load-grunt-tasks": "^5.1.0",
+        "time-grunt": "^2.0.0"
+    },
+    "dependencies": {
+        "animejs": "^3.2.1",
+        "jquery": "^3.6.0"
+    }
+}
