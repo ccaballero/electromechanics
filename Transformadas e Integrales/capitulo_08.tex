@@ -1,0 +1,25 @@
+\chapter{Aplicaciones de la transformada de \emph{Laplace}}
+
+\section{Ecuaciones diferenciales lineales}
+
+\textbf{Pasos:}
+\begin{enumerate}
+    \item Se tiene Ecuación diferencial en el dominio del tiempo ``t''.
+    \item Se cuenta con condiciones iniciales.
+    \item Se aplica la transformada de \emph{Laplace} y se convierte en una
+    ecuación algebraica en el dominio de ``s''.
+    \item Se soluciona la ecuación en el dominio de ``s''.
+    \item Se aplica la transformada inversa de \emph{Laplace} y se lleva la
+    solución a el dominio de ``t''.
+\end{enumerate}
+
+\begin{equation}
+    \mathcal{L}\{f'(t)\}=sF(s)-f(0)
+\end{equation}
+\begin{equation}
+    \mathcal{L}\{f''(t)\}=s^2F(s)-f(0)s-f'(0)
+\end{equation}
+\begin{equation}
+    \mathcal{L}\{f^{\prime\prime\prime}(t)\}=s^3F(s)-f(0)s^2-f'(0)s-f''(0)
+\end{equation}
+
