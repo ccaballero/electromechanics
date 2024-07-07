@@ -1,0 +1,105 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage{framed}
+\usepackage[svgnames]{xcolor}
+\colorlet{shadecolor}{Gainsboro!50}
+
+\usepackage[shortlabels]{enumitem}
+\usepackage{graphicx}
+\usepackage{pstricks}
+
+\usepackage{anysize}
+\marginsize{3cm}{2cm}{2cm}{3cm}
+
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{alltt}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Física Básica III}
+\fancyfoot[CO,CE]{\thepage\ de \pageref{LastPage}}
+
+\special{papersize=215.9mm,279.4mm}
+
+\usepackage[
+    pdfauthor={Carlos Eduardo Caballero Burgoa},%
+    pdftitle={Física Básica III},%
+    pdfsubject={Tarea},%
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black,
+    breaklinks]{hyperref}
+\usepackage{breakurl}
+
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\begin{document}
+
+\begin{center}
+    {\Large \bf{\underline{FUERZA Y CAMPO ELÉCTRICO}}}
+\end{center}
+\vspace{0.5cm}
+
+\begin{equation*}
+    \vec{F} = \frac{1}{4 \pi \epsilon_0} \frac{Q Q_1}{|\vec{r}|^2} \hat{r}
+\end{equation*}
+\begin{equation*}
+    \vec{F} = \frac{1}{4 \pi \epsilon_0} \frac{Q Q_1}{|\vec{r}-\vec{r}_1|^2} \hat{r}
+\end{equation*}
+\begin{equation*}
+    \vec{F} = \frac{1}{4 \pi \epsilon_0} \frac{Q Q_1}{|\vec{r}-\vec{r}_1|^2} \left(\frac{\vec{r}-\vec{r}_1}{|\vec{r}-\vec{r}_1|}\right)
+\end{equation*}
+\begin{equation*}
+    \vec{F} = \frac{1}{4 \pi \epsilon_0} Q Q_1 \left(\frac{\vec{r}-\vec{r}_1}{|\vec{r}-\vec{r}_1|^3}\right)
+\end{equation*}
+\begin{equation*}
+    \vec{E} = \frac{1}{q} \vec{F}
+\end{equation*}
+\begin{equation*}
+    \vec{F} = \frac{1}{4 \pi \epsilon_0} \sum_{i=1}^n Q Q_i \left(\frac{\vec{r}-\vec{r}_i}{|\vec{r}-\vec{r}_i|^3}\right)
+\end{equation*}
+\begin{equation*}
+    \vec{E} = \frac{1}{4 \pi \epsilon_0} \sum_{i=1}^n Q_i \left(\frac{\vec{r}-\vec{r}_i}{|\vec{r}-\vec{r}_i|^3}\right)
+\end{equation*}
+
+\begin{equation*}
+    \vec{F} = \frac{1}{4 \pi \epsilon_0} \int_Q Q dq \left(\frac{\vec{r}-\vec{r}_i}{|\vec{r}-\vec{r}_i|^3}\right)
+\end{equation*}
+\begin{equation*}
+    \vec{E} = \frac{1}{4 \pi \epsilon_0} \int_Q dq \left(\frac{\vec{r}-\vec{r}_i}{|\vec{r}-\vec{r}_i|^3}\right)
+\end{equation*}
+
+\begin{equation*}
+    \lambda = \frac{q}{L} = \frac{dq}{dx}
+\end{equation*}
+\begin{equation*}
+    \sigma = \frac{q}{A} = \frac{dq}{dx\,dy}
+\end{equation*}
+\begin{equation*}
+    \rho = \frac{q}{V} = \frac{dq}{dx\,dy\,dz}
+\end{equation*}
+
+\end{document}
+
