@@ -1,0 +1,178 @@
+\chapter{Fuerzas disipativas}
+
+\section{Ejemplos}
+
+\subsection{Ejemplo 1}
+6.9. Una pequeña masa $m_1$, colgada de un resorte espiral ligero de longitud
+$r$, longitud normal $r_0$, y constante elástica $k$, puede oscilar como un
+péndulo, sobre el plano inclinado rugoso. Utilizando coordenadas polares,
+demostrar que para un desplazamiento virtual general (suponiendo que existe
+fricción dinámica):
+
+\begin{equation*}
+\begin{split}
+    \delta W_{total}=\left[
+        -k(r-r_0)+
+        mg\sen(\alpha)\cos(\theta)-
+        \frac{f\dot{r}}{{(\dot{r}^2+r^2{\theta}^2)}^{\frac{1}{2}}}
+    \right]\delta_r-\\
+    \left[
+        mgr\sen(\alpha)\sen(\theta)+
+        \frac{fr^2\dot{\theta}}{{(\dot{r}^2+r^2\dot{\theta}^2)}^{\frac{1}{2}}}
+    \right]\delta_{\theta}=F_r\delta_r+F_{\theta}\delta_{\theta}
+\end{split}
+\end{equation*}
+
+En donde, $f=\mu mg\cos(\alpha)$. ¿Con que condiciones pueden ser discontinuas
+las fuerzas de fricción?
+
+\subsection{Ejemplo 2}
+6.11. Una partícula se mueve en contacto con un tablero horizontal rugoso.
+Suponiendo que el coeficiente de fricción para movimiento en la dirección de $X$
+es $\mu_x$, y que en la dirección de $Y$ es $\mu_y$, demostrar que las fuerzas
+de fricción generalizadas, correspondientes a las coordenadas polares, son:
+
+\begin{equation*}
+    F_r=-f(\mu_x\cos(\theta)+\mu_y\sen(\theta))
+\end{equation*}
+\begin{equation*}
+    F_{\theta}=-fr(\mu_y\cos(\theta)-\mu_x\sen(\theta))
+\end{equation*}
+
+En donde $f$ es la fuerza normal entre la partícula y el tablero.
+
+\subsection{Ejemplo 3}
+Determinar las ecuaciones de movimiento de un niño que resbala por un plano
+inclinado.
+
+\subsection{Ejemplo 4}
+6.13. Sobre un tablero plano se ha dibujado un rectángulo de lados $2a$ y $2b$.
+En cada una de las esquinas del rectángulo se ha clavado una tachuela de cabeza
+redonda, pequeña. Se coloca entonces el tablero sobre las tachuelas, en contacto
+con una superficie rugosa, plana. Utilizando como coordenadas $x$, $y$ y
+$\theta$ ($x$ y $y$ son las coordenadas del centro del rectángulo y $\theta$ el
+ángulo entre el lado $2a$ y el eje $X$) y suponiendo que se presenta fricción en
+seco, demostrar que $\delta W_{total}$ viene dado por:
+
+\begin{equation*}
+\begin{split}
+    -\delta W_{total}=f_1\{
+        [\dot{x}+r\dot{\theta}\sen(\theta+\beta)]
+        [\delta x+r\delta\theta\sen(\theta+\beta)]+\\
+        [\dot{y}-r\dot{\theta}\cos(\theta+\beta)]
+        [\delta y-r\delta\theta\cos(\theta+\beta)]
+    \}\frac{1}{v_1}+\\
+    f_2\{
+        [\dot{x}-r\dot{\theta}\sen(\theta-\beta)]
+        [\delta x-r\delta\theta\sen(\theta-\beta)]+\\
+        [\dot{y}+r\dot{\theta}\cos(\theta-\beta)]
+        [\delta y+r\delta\theta\cos(\theta-\beta)]
+    \}\frac{1}{v_2}+\\
+    f_3\{
+        [\dot{x}-r\dot{\theta}\sen(\theta+\beta)]
+        [\delta x-r\delta\theta\sen(\theta+\beta)]+\\
+        [\dot{y}+r\dot{\theta}\cos(\theta+\beta)]
+        [\delta y+r\delta\theta\cos(\theta+\beta)]
+    \}\frac{1}{v_3}+\\
+    f_4\{
+        [\dot{x}+r\dot{\theta}\sen(\theta-\beta)]
+        [\delta x+r\delta\theta\sen(\theta-\beta)]+\\
+        [\dot{y}-r\dot{\theta}\cos(\theta-\beta)]
+        [\delta y-r\delta\theta\cos(\theta-\beta)]
+    \}\frac{1}{v_4}
+\end{split}
+\end{equation*}
+
+En donde:
+
+\begin{equation*}
+    r^2=a^2+b^2
+\end{equation*}
+\begin{equation*}
+    \tan(\beta)=b/a
+\end{equation*}
+\begin{equation*}
+    v_1={\{\dot{x}^2+\dot{y}^2+r^2\dot{\theta}^2+2r\dot{\theta}\}}^{\frac{1}{2}}
+\end{equation*}
+
+Con expresiones semejantes para $v_2$, $v_3$ y $v_4$. $f_1=\mu$ (fuerza normal
+sobre la cabeza de la primera tachuela), etc. Se suponen conocidas $f_1$, $f_2$,
+$f_3$ y $f_4$.
+
+Nótese que es posible leer el valor de las fuerzas generalizadas, en la
+expresión de $\delta W_{total}$.
+
+\subsection{Ejemplo 5}
+6.12. Los bloques $a$ y $b$ unidos rígidamente por medio de una varilla ligera,
+de longitud $l$, se deslizan en contacto con los bloques $c$ y $d$. El bloque
+$e$ puede moverse, sin fricción, a lo largo de la varilla lisa, mientras que el
+bloque $c$ puede moverse sobre el eje $X$ y $d$ permanece fijo. Los coeficientes
+de fricción de las superficies de contacto, son $\mu_1$, $\mu_2$ y $\mu_3$, como
+se índice. Nótese que el valor de las fuerzas normales depende de la posición de
+$m_4$.
+
+Suponiendo que el sistema esta en movimiento de tal manera que $\dot{x_2}$ y
+$\dot{x}_1$ son ambas positivas, y que $\dot{x}_2>\dot{x}_1$, demostrar que las
+fuerzas generalizadas correspondientes a $x_1$, $q_1$ y $q_2$, son:
+
+\begin{equation*}
+    F_{x_1}=-[\mu_1(m_1+m_2+m_4-m_4\frac{q_1}{l})+\mu_3(m_3+m_4\frac{q_1}{l})]g
+\end{equation*}
+\begin{equation*}
+    F_{q_2}=-[\mu_2(m_2+m_4-m_4\frac{q_1}{l})+\mu_3(m_3+m_4\frac{q_1}{l})]g
+\end{equation*}
+\begin{equation*}
+    F_{q_1}=0
+\end{equation*}
+
+¿Serán aun validas estas expresiones en el caso en que $\dot{x}_1>\dot{x}_2$?
+Evidentemente, las fuerzas de este tipo deber ser manejadas con cuidado.
+
+\subsection{Ejemplo 6}
+6.1. Una pequeña esfera esta suspendida por medio de una banda de caucho, dentro
+de un liquido viscoso. Suponiendo una fuerza viscosa sencilla que actúa sobre la
+esfera y que no hay resistencia sobre la banda, demostrar que las fuerzas
+viscosas generalizadas, correspondientes a las coordenadas esféricas, $r$,
+$\theta$ y $\phi$, son:
+
+\begin{equation*}
+    F_r=-a\dot{r}
+\end{equation*}
+\begin{equation*}
+    F_{\theta}=-ar^2\dot{\theta}
+\end{equation*}
+\begin{equation*}
+    F_{\phi}=-ar^2\sen^2(\theta)\dot{\phi}
+\end{equation*}
+
+En donde $a$ es la fuerza viscosa por unidad de velocidad que actúa en la
+esfera.
+
+\subsection{Ejemplo 7}
+6.5. En la figura, el imán de herradura y el disco de cobre están sostenidos por
+tres segmentos de cuerda de piano, de tal manera que se forma un péndulo doble
+de torsión. Las constantes de torsión de las cuerdas son $C_1$, $C_2$ y $C_3$,
+respectivamente. Existe una resistencia viscosa $a_1$, por unidad de velocidad
+entre el disco y los bloques de freno $B_1$ y $B_2$, y una resistencia semejante
+$a_2$, entre los polos magnéticos y el disco. Demostrar que las ecuaciones del
+movimiento del sistema son (suponiendo que $a_1$ y $a_2$ actúan a distancias
+radiales $r_1$ y $r_2$):
+
+\begin{equation*}
+    I_1\ddot{\theta}_1+
+    C_3\theta_1+
+    C_2(\theta_1-\theta_2)+
+    2a_1r_1^2\dot{\theta}_1+
+    2a_2r_2^2(\dot{\theta}_1-\dot{\theta}_2)=0
+\end{equation*}
+\begin{equation*}
+    I_2\ddot{\theta}_2-
+    C_2(\theta_1-\theta_2)+
+    C_1\theta_2-
+    2a_2r_2^2(\dot{\theta}_1-\dot{\theta}_2)=0
+\end{equation*}
+
+En donde $I_1$ e $I_2$ son los momentos de inercia del disco y del imán,
+respectivamente, y $\theta_1$ y $\theta_2$ son los desplazamientos angulares
+correspondientes.
+
