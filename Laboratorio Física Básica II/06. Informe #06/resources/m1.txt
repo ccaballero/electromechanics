@@ -1,0 +1,7 @@
+funcion =
+  function_handle with value:
+    @(z)interp1(x,y,z,'spline')
+
+area = 2.1172e+04
+t = 300
+equiv = 70.5735
