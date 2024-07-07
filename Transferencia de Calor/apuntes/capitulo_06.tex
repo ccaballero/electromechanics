@@ -1,0 +1,880 @@
+\chapter{CAMBIADORES DE CALOR}
+
+\section{Concepto}
+Es un equipo térmico en el que un fluido o medio mas ``caliente'' entrega calor
+al fluido o medio mas ``frío''.
+
+\section{Objetivos}
+\begin{itemize}
+    \item Optimización del uso de la energía mediante el aprovechamiento de la
+        energía de desecho.
+    \item Mejorar el control del proceso de transferencia de calor.
+    \item Manejo de grandes cantidades de calor.
+\end{itemize}
+
+\section{Tipos de cambiadores}
+\begin{itemize}
+    \item Cambiador de contacto directo.
+    \item Cambiador de contacto de superficie.
+    \item Regeneradores.
+\end{itemize}
+
+\subsection{Cambiador de contacto directo (CD)}
+
+% grafica ccd
+
+\textbf{Ventajas}
+\begin{itemize}
+    \item Diseño, calculo y construcción relativamente fáciles.
+    \item Costo bajo.
+\end{itemize}
+
+\textbf{Desventajas}
+\begin{itemize}
+    \item Solo intervienen fluidos de la misma naturaleza.
+    \item Fluidos con diferentes grados de fuerza, composición, etc.
+\end{itemize}
+
+% grafica aplicaciones
+
+\subsection{Cambiador de contacto de superficie (CS)}
+
+% grafica ccs
+
+\textbf{Ventajas}
+\begin{itemize}
+    \item Interviene cualquier tipo de fluido.
+    \item Mayor control de los fluidos participantes.
+    \item Aplicaciones industriales.
+    \item Manejo de grandes tasas de calor.
+\end{itemize}
+
+\textbf{Desventajas}
+\begin{itemize}
+    \item Calculo y diseño complejos.
+    \item Materiales y construcción caros.
+    \item Costos de mantenimiento elevados.
+\end{itemize}
+
+%\subsection{Regeneradores}
+% grafica regenerador
+
+% grafica aplicacion
+
+\section{Cambiadores de contacto de superficie}
+
+\subsection{Cambiador de superficies planas o de flujo transversal}
+
+% grafica ft
+
+\textbf{Ventajas}
+\begin{itemize}
+    \item Calculo y diseño no complejo.
+    \item Materiales y construcción relativamente económicos.
+\end{itemize}
+
+\textbf{Desventajas}
+\begin{itemize}
+    \item Presiones bajas a medias.
+    \item Áreas de transferencia de calor limitadas.
+\end{itemize}
+
+\subsection{Cambiador de horquillas o de tubos concéntricos}
+
+% grafica tc
+
+\textbf{Ventajas}
+\begin{itemize}
+    \item Diseño y calculo relativamente fácil.
+    \item Materiales y construcción económicos.
+\end{itemize}
+
+\textbf{Desventajas}
+\begin{itemize}
+    \item Área de transferencia de calor reducida.
+    \item Gran probabilidad de fugas.
+    \item Elevados costos de mantenimiento.
+\end{itemize}
+
+\subsection{Cambiador de superficies extendidas}
+El objetivo es disminuir las dimensiones del cambiador de calor.
+
+% grafica se
+
+\textbf{Ventajas}
+\begin{itemize}
+    \item Permite disminuir notablemente las dimensiones del equipo.
+\end{itemize}
+
+\textbf{Desventajas}
+\begin{itemize}
+    \item Diseño y calculo muy complejos.
+    \item Material caro adquirido de fabrica.
+    \item Mantenimiento caro.
+\end{itemize}
+
+\subsection{Cambiador de calor de coraza y tubos}
+
+% grafica cyt
+
+\textbf{Ventajas}
+\begin{itemize}
+    \item Medianas a elevadas áreas de transferencia de calor.
+    \item Permite el manejo de elevadas tasas de calor.
+    \item Mayor control del proceso.
+    \item Aplicación industrial.
+\end{itemize}
+
+\textbf{Desventajas}
+\begin{itemize}
+    \item Calculo y diseño complicado.
+    \item Materiales y fabricación caros.
+    \item Mantenimiento caro.
+\end{itemize}
+
+\section{Diseño y calculo de cambiadores de calor}
+
+\subsection{Áreas involucradas}
+\begin{itemize}
+    \item Área térmica.
+    \item Área fluida.
+    \item Área de materiales.
+    \item Área de fabricación.
+    \item Área de mantenimiento y operación.
+    \item Área económica.
+\end{itemize}
+
+\section{Calculo y diseño térmico de un cambiador}
+
+El balance de calor en condiciones adiabáticas, el calor perdido por el fluido
+caliente debe ser igual al calor ganado por el fluido frío.
+
+\begin{equation}
+    q_h = q_c
+\end{equation}
+
+Existen dos tipos de calor a considerarse:
+
+\begin{itemize}
+    \item Calor sensible ($q_s$).
+    \item Calor latente ($q_l$).
+\end{itemize}
+
+\begin{equation*}
+    -q_{sh} = q_{sc}
+\end{equation*}
+\begin{equation}
+    -\dot{m}_h\,C_{ph}\,(t_{ho} - t_{hi}) = \dot{m}_c\,C_{pc}\,(t_{co} - t_{ci})
+\end{equation}
+
+\begin{equation*}
+    -q_{lh} = q_{sc}
+\end{equation*}
+\begin{equation}
+    -\dot{m}_h\,(-\Delta H) = \dot{m}_c\,C_{pc}\,(t_{co} - t_{ci})
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $\dot{m}_h$, $\dot{m}_c$: Flujos másicos del fluido caliente y frío
+        respectivamente.
+    \item $C_{ph}$, $C_{pc}$: Calor especifico de los fluidos caliente y frío
+        respectivamente.
+    \item $t_{hi}$, $t_{ci}$: Temperaturas de entrada de los fluidos caliente y 
+        frío respectivamente.
+    \item $t_{ho}$, $t_{co}$: Temperaturas de salida de los fluidos caliente y 
+        frío respectivamente.
+    \item $\Delta H$: Calor de condensación del fluido caliente.
+\end{itemize}
+
+% grafica de cambio de fase
+
+Los objetivos de balance pueden ser:
+\begin{itemize}
+    \item Obtener el calor.
+    \item Obtener un dato flotante.
+\end{itemize}
+
+\underline{Ecuación del calor transmitido en el cambiador de calor}:
+
+\begin{equation}
+    q = U\,A\,\Delta t
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $q$: Calor transmitido.
+    \item $U$: Coeficiente global de transferencia de calor.
+    \item $A$: Área de transferencia de calor.
+    \item $\Delta t$: Diferencia de temperaturas en el cambiador de calor.
+\end{itemize}
+
+\begin{equation*}
+    -q_h = q_c = q
+\end{equation*}
+\begin{equation}
+    A = \frac{q}{U\,\Delta t}
+\end{equation}
+
+\section{Coeficiente global}
+
+\subsection{Pared vertical}
+
+% grafica u pared
+
+\begin{equation*}
+    q = \frac{t_i - t_o}{R_{ci} + R_p + R_{co}}
+\end{equation*}
+\begin{equation*}
+    q = \dfrac{t_i - t_o}{\frac{1}{h_i\,A_i} + \frac{\Delta x_p}{k_p\,A_p} + \frac{1}{h_o\,A_o}}
+\end{equation*}
+\begin{equation*}
+    A_i = A_p = A_o = A
+\end{equation*}
+\begin{equation*}
+    q = \dfrac{A\,(t_i - t_o)}{\frac{1}{h_i} + \frac{\Delta x_p}{k_p} + \frac{1}{h_o}}
+\end{equation*}
+
+\begin{equation}
+    U = \dfrac{1}{\frac{1}{h_i} + \frac{\Delta x_p}{k_p} + \frac{1}{h_o}}
+\end{equation}
+
+\subsection{Conductor cilíndrico}
+
+% grafica u cilindrico
+
+\begin{equation*}
+    q = \frac{\bar{t}_o - \bar{t}_i}{R_{co} + R_p + R_{ci}}
+\end{equation*}
+\begin{equation*}
+    q = \dfrac{\bar{t}_o - \bar{t}_i}{\frac{1}{h_o\,A_o} + \frac{\Delta r_p}{k_p\,A_p} + \frac{1}{h_i\,A_i}}
+\end{equation*}
+\begin{equation*}
+    A_o \neq A_p \neq A_i
+\end{equation*}
+
+Multiplicando por $A_o/A_o$:
+\begin{equation*}
+    q = \dfrac{A_o(\bar{t}_o - \bar{t}_i)}{\frac{1}{h_o} + \frac{A_o\,\Delta r_p}{k_p\,A_p} + \frac{A_o}{h_i\,A_i}}
+\end{equation*}
+
+Considerando:
+\begin{equation*}
+    A_o = \pi\,D_e\,l
+\end{equation*}
+\begin{equation*}
+    A_i = \pi\,D_i\,l
+\end{equation*}
+\begin{equation*}
+    \frac{A_o}{A_i} = \frac{D_e}{D_i}
+\end{equation*}
+
+\begin{equation*}
+    \frac{A_o\,\Delta r_p}{A_p} = \frac{\pi\,D_e\,l\,\Delta r_p}{\frac{A_o-A_i}{\ln(\frac{A_o}{A_i})}}
+\end{equation*}
+
+\begin{equation*}
+    \begin{split}
+        A_o - A_i
+            &= \pi\,D_e\,l - \pi\,D_i\,l\\
+            &= \pi\,l\,(D_e - \,D_i)\\
+            &= \pi\,l\,(2r_o - 2r_i)\\
+            &= 2\pi\,l\,(r_o - r_i)\\
+            &= 2\pi\,l\,\Delta r_p\\
+    \end{split}
+\end{equation*}
+
+\begin{equation*}
+    \begin{split}
+        \frac{A_o\,\Delta r_p}{A_p}
+            &= \frac{\pi\,D_e\,l\,\Delta r_p}{\frac{2\pi\,l\Delta r_p}{\ln(\frac{A_o}{A_i})}}\\
+            &= \frac{D_e}{2}\ln\left(\frac{D_e}{D_i}\right)\\
+    \end{split}
+\end{equation*}
+
+Por tanto:
+
+\begin{equation*}
+    q = \dfrac{A_o(\bar{t}_o - \bar{t}_i)}{\frac{1}{h_o} + \frac{D_e}{2k_p}\ln\left(\frac{D_e}{D_i}\right) + \frac{D_e}{h_i\,D_i}}
+\end{equation*}
+\begin{equation*}
+    q = U_o\,A_o\,\Delta t
+\end{equation*}
+
+$U_o$: Coeficiente global referido a la superficie externa.
+\begin{equation}
+    U_o = \dfrac{1}{\frac{1}{h_o} + \frac{D_e}{2k_p}\ln\left(\frac{D_e}{D_i}\right) + \frac{1}{h_i}\left(\frac{D_e}{D_i}\right)}
+\end{equation}
+
+Multiplicando por $A_i/A_i$:
+\begin{equation*}
+    q = \dfrac{A_i(\bar{t}_o - \bar{t}_i)}{\frac{A_i}{h_o\,A_o} + \frac{A_i\,\Delta r_p}{k_p\,A_p} + \frac{1}{h_i}}
+\end{equation*}
+
+Considerando:
+\begin{equation*}
+    \begin{split}
+    \frac{A_i\,\Delta r_p}{A_p}
+        &= \frac{\pi\,D_i\,l\,\Delta r_p}{\frac{A_o-A_i}{\ln(\frac{A_o}{A_i})}}\\
+            &= \frac{\pi\,D_i\,l\,\Delta r_p}{\frac{2\pi\,l\Delta r_p}{\ln(\frac{A_o}{A_i})}}\\
+            &= \frac{D_i}{2}\ln\left(\frac{D_e}{D_i}\right)\\
+    \end{split}
+\end{equation*}
+
+Por tanto:
+
+\begin{equation*}
+    q = \dfrac{A_i(\bar{t}_o - \bar{t}_i)}{\frac{1}{h_i} + \frac{D_i}{2k_p}\ln\left(\frac{D_e}{D_i}\right) + \frac{D_i}{h_o\,D_e}}
+\end{equation*}
+\begin{equation*}
+    q = U_i\,A_i\,\Delta t
+\end{equation*}
+
+$U_i$: Coeficiente global referido a la superficie interna.
+\begin{equation}
+    U_i = \dfrac{1}{\frac{1}{h_i} + \frac{D_i}{2k_p}\ln\left(\frac{D_e}{D_i}\right) + \frac{1}{h_o}\left(\frac{D_i}{D_e}\right)}
+\end{equation}
+
+Igualando las expresiones:
+\begin{equation*}
+    U_o\,A_o\,\Delta t = U_i\,A_i\,\Delta t
+\end{equation*}
+
+\begin{equation}
+    \frac{U_o}{U_i} = \frac{A_i}{A_o} = \frac{D_i}{D_e}
+\end{equation}
+
+\section{Incrustaciones, costras, o ensuciamiento}
+
+% grafica incrustaciones
+
+\begin{equation*}
+    q = \frac{\Delta t}{R_{ci} + R_{di} + R_p + R_{do} + R_{co}}
+\end{equation*}
+\begin{equation*}
+    \frac{1}{U_d} = \frac{1}{U} + \sum R_d
+\end{equation*}
+\begin{equation*}
+    \sum R_d = R_{di} + R_{do}
+\end{equation*}
+
+\begin{equation}
+    \frac{1}{U_{do}} = \frac{1}{U_o} + \sum R_d
+\end{equation}
+\begin{equation}
+    \frac{1}{U_{di}} = \frac{1}{U_i} + \sum R_d
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $U_d$: Coeficiente de diseño (con incrustaciones).
+    \item $U$: Coeficiente limpio (sin incrustaciones).
+\end{itemize}
+
+\begin{equation}
+    q = U_d\,A_d\,\Delta t = U_{do}\,A_{do}\,\Delta t = U_{di}\,A_{di}\,\Delta t
+\end{equation}
+
+\section{Disposiciones de los fluidos en un cambiador}
+Pueden ser:
+
+\begin{itemize}
+    \item En contracorriente o contra flujo.
+    \item En corriente paralela.
+    \item Con cambio de fase.
+\end{itemize}
+
+% grafica cambiadores
+
+\subsection{Calculo del gradiente}
+El gradiente de temperatura se puede aproximar por medio de:
+\begin{equation*}
+    \Delta t = \frac{1}{2}\,(\Delta t_1 + \Delta t_2)
+\end{equation*}
+
+Para el calculo del valor exacto se procede de la siguiente manera:
+
+% grafica gradiente
+
+\begin{equation*}
+    dq = U\,\Delta t\,dA
+\end{equation*}
+
+Del gráfico puede verse que:
+\begin{equation*}
+    \frac{d\Delta t}{dq} = \frac{\Delta t_1 - \Delta t_2}{q}
+\end{equation*}
+
+Combinando ambas expresiones:
+\begin{equation*}
+    \frac{d\Delta t}{U\,\Delta t\,dA} = \frac{\Delta t_1 - \Delta t_2}{q}
+\end{equation*}
+\begin{equation*}
+    \frac{d\Delta t}{U\,\Delta t} = \frac{\Delta t_1 - \Delta t_2}{q}\,dA
+\end{equation*}
+
+Se simplifica la expresión considerando que $U$ es constante y no esta en
+función de la gradiente de temperatura.
+\begin{equation*}
+    \int\frac{d\Delta t}{U\,\Delta t} = \int\frac{\Delta t_1 - \Delta t_2}{q}\,dA
+\end{equation*}
+\begin{equation*}
+    \frac{1}{U}\,\ln\left(\frac{\Delta t_1}{\Delta t_2}\right) = \frac{\Delta t_1 - \Delta t_2}{q}\,A
+\end{equation*}
+\begin{equation*}
+    q = U\,A\,\frac{\Delta t_1 - \Delta t_2}{\ln\left(\frac{\Delta t_1}{\Delta t_2}\right)}
+\end{equation*}
+
+Por tanto el gradiente logarítmico es:
+\begin{equation}
+    \Delta t_{log} = \frac{\Delta t_1 - \Delta t_2}{\ln\left(\frac{\Delta t_1}{\Delta t_2}\right)}
+\end{equation}
+
+\subsection{Pasos del cambiador}
+
+% grafico cambiadores
+
+\subsection{Factor de corrección ($F_c$)}
+
+\begin{equation*}
+    \Delta t = F_c\,\Delta t_{log}
+\end{equation*}
+
+Donde:
+\begin{itemize}
+    \item $\Delta_{log}$ para un cambiador 1:1 en contracorriente.
+\end{itemize}
+
+Para cambiadores 1:1 y condensadores el factor de corrección $F_c = 1$.
+
+Para hallar el factor de corrección se usa la tabla de corrección usando los
+valores $X$ y $Z$:
+
+\begin{equation}
+    X = \frac{t_{c2} - t_{c1}}{t_{h1} - t_{c1}}
+\end{equation}
+\begin{equation}
+    Z = \frac{t_{h1} - t_{h2}}{t_{c2} - t_{c1}}
+\end{equation}
+
+\subsection{Eficacia de un cambiador}
+
+\begin{enumerate}
+    \item $Z > 1$:
+        \begin{equation}
+            \eta = \frac{t_{c2} - t_{c1}}{t_{h2} - t_{c1}}
+        \end{equation}
+    \item $Z < 1$:
+        \begin{equation}
+            \eta = \frac{t_{h1} - t_{h2}}{t_{h1} - t_{c1}}
+        \end{equation}
+\end{enumerate}
+
+\section{Calculo del numero de tubos ($N_T$)}
+
+\subsection{Criterio de la transferencia de calor}
+
+\begin{equation*}
+    A_o = \pi\,D_e\,L_t
+\end{equation*}
+\begin{equation*}
+    L_t = \frac{A_o}{\pi\,D_e}
+\end{equation*}
+\begin{equation*}
+    N_T = \frac{L_t}{L}
+\end{equation*}
+
+Donde:
+\begin{itemize}
+    \item $L_t$: Longitud de tramo o longitud de $1$ tubo.
+\end{itemize}
+
+\subsection{Criterio del flujo másico}
+
+\begin{equation*}
+    N_T = \frac{\dot{m}}{\dot{m}_1}
+\end{equation*}
+
+Donde:
+\begin{itemize}
+    \item $\dot{m}$: Flujo másico total (fluido interno).
+    \item $\dot{m}_1$: Flujo másico por $1$ tubo.
+\end{itemize}
+
+\begin{equation*}
+    \dot{m} = v\,A_t\,\rho
+\end{equation*}
+\begin{equation*}
+    \dot{m}_1 = v\,A_{t1}\,\rho
+\end{equation*}
+\begin{equation*}
+    N_T = \frac{A_t}{A_{t1}}
+\end{equation*}
+
+\underline{Caso 1:1}:
+\begin{equation*}
+    N_T\Biggr|_q = N_T\Biggr|_{\dot{m}}
+\end{equation*}
+
+\underline{Caso 1:2}:
+\begin{equation*}
+    N_T\Biggr|_q = 2\,N_T\Biggr|_{\dot{m}}
+\end{equation*}
+
+\underline{Caso 1:3}:
+\begin{equation*}
+    N_T\Biggr|_q = 3\,N_T\Biggr|_{\dot{m}}
+\end{equation*}
+
+\section{Flujograma para el calculo de un cambiador de calor}
+
+% grafica flujograma
+
+\section{Ebullición}
+
+% grafica ebullición
+
+\begin{itemize}
+    \item $I$: Convección libre.
+    \item $II$: Formación de burbujas individuales.
+    \item $III$: Formación de burbujas en columnas.
+    \item $IV$: Película inestable.
+    \item $V$: Película estable.
+    \item $VI$: Radiación afecta la película.
+\end{itemize}
+
+\section{Condensación}
+Es el proceso por el que vapor saturado se convierte en liquido, mediante la
+extracción de calor latente.
+
+% grafica condensación
+
+Tipos de condensación:
+\begin{enumerate}
+    \item Condensación en forma de película.
+    \item Condensación en forma de gotas.
+\end{enumerate}
+
+Depende de factores como: el tipo de valor o el tipo de superficie.
+
+\begin{equation*}
+    q = h_{\text{cond}}\,A\,(t_v - t_s)
+\end{equation*}
+\begin{equation*}
+    q = \dot{m}_v\,(\Delta H)
+\end{equation*}
+
+Donde:
+\begin{itemize}
+    \item $h_{\text{cond}}$: Coeficiente de condensación $[kcal/m^2 h ^\circ C]$.
+    \item $A$: Superficie de condensación $[m^2]$.
+    \item $t_v$: Temperatura de vapor.
+    \item $t_s$: Temperatura de superficie fría.
+    \item $\dot{m}_v$: Flujo másico del condensado o del vapor $[kg/h]$.
+    \item $\Delta H$: Calor de condensación $[kcal/kg]$.
+\end{itemize}
+
+\subsection{Calculo de $h$ de condensación}
+
+\underline{Para superficies verticales}:
+
+Para placas:
+\begin{equation}
+    h = 1.13\,\left(\frac{k_f^3\,\rho_f^2\,g\,\Delta H}{L\,\mu_f\,(t_v - t_s)}\right)^{\frac{1}{4}}
+\end{equation}
+Para tubos:
+\begin{equation}
+    h = 1.18\,\left(\frac{k_f^3\,\rho_f^2\,g\,\pi\,D}{\mu_f\,W}\right)^{\frac{1}{3}}
+\end{equation}
+
+\underline{Para tubos horizontales}:
+\begin{equation}
+    h = 0.725\,\left(\frac{k_f^3\,\rho_f^2\,g\,\Delta H}{N^{2/3}\,D\,\mu_f\,(t_v - t_s)}\right)^{\frac{1}{4}}
+\end{equation}
+
+Las propiedades del fluido se calculan a la temperatura media de la película
+condensada:
+
+\begin{equation}
+    t_f = t_v - \frac{3}{4}\,(t_v - t_s)
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $L$: Altura de la superficie.
+    \item $D$: Diámetro externo.
+    \item $W$: Flujo másico de condensado.
+        \begin{equation*}
+            W = \frac{\dot{m}_v}{N_T}
+        \end{equation*}
+    \item $N$: Numero de tubos por columna.
+\end{itemize}
+
+\subsection{Calculo de $A$}
+
+\begin{equation*}
+    q = h_{\text{cond}}\,A\,(t_v - t_s)
+\end{equation*}
+\begin{equation*}
+    q = \dot{m}_v\,(\Delta H)
+\end{equation*}
+
+\begin{equation}
+    A = \frac{\dot{m}_v\,(\Delta H)}{h_{\text{cond}}\,A\,(t_v - t_s)}
+\end{equation}
+
+\section{Método NUT (Numero de unidades térmicas)}
+Su importancia radica en que no es necesario conocer las temperaturas de salida
+de los fluidos.
+
+\begin{equation}
+    \epsilon = \frac{q_r}{q_{\text{max}}}
+\end{equation}
+\begin{equation*}
+    q_{\text{max}} = C_{\text{min}}\,(t_{h1} - t_{c1})
+\end{equation*}
+\begin{equation*}
+    C_{\text{min}} = \min(C_h, C_c)
+\end{equation*}
+
+\begin{equation*}
+    C_h = \dot{m}_h\,C_{ph}
+\end{equation*}
+\begin{equation*}
+    C_c = \dot{m}_c\,C_{pc}
+\end{equation*}
+
+Donde:
+\begin{itemize}
+    \item $q_r$: Calor real transmitido.
+        \begin{equation*}
+            q_r = -q_h = q_c
+        \end{equation*}
+    \item $q_{\text{max}}$: Calor máximo transmitido en un cambiador de calor
+        1:1 de área infinita.
+    \item $C$: Capacidad térmica.
+        \begin{equation*}
+            C = \dot{m}\,C_p
+        \end{equation*}
+\end{itemize}
+
+\begin{equation}
+    \text{NUT} = \frac{U\,A}{C_{\text{min}}}
+\end{equation}
+
+Físicamente en NUT nos da la idea del tamaño del cambiador.
+
+\section{Superficies aletadas, aleteadas o extendidas}
+
+% grafica aleta
+
+\underline{Balance}:
+\begin{equation*}
+    q\Biggr|_x = q\Biggr|_{x+\Delta x} + q_c
+\end{equation*}
+
+Donde:
+\begin{itemize}
+    \item $q\Biggr|_x$: Calor que ingresa el VC.
+    \item $q\Biggr|_{x+\Delta x}$: Calor que sale del VC.
+    \item $q_c$: Calor que se transfiere por convección del VC al medio exterior.
+    \item VC: Volumen de control.
+\end{itemize}
+
+\begin{equation*}
+    q\Biggr|_x - q\Biggr|_{x+\Delta x} - q_c = 0
+\end{equation*}
+\begin{equation*}
+    -k_x\,A(x)\,\frac{dt}{dx}\Biggr|_x - \left(-k_x\,A(x)\,\frac{dt}{dx}\Biggr|_{x + \Delta x}\right) - h\,S(x)\,(t-t_{\infty}) = 0
+\end{equation*}
+\begin{equation*}
+    S(x) = P(x)\,A(x)
+\end{equation*}
+\begin{equation*}
+    -k_x\,A(x)\,\frac{dt}{dx}\Biggr|_x + k_x\,A(x)\,\frac{dt}{dx}\Biggr|_{x + \Delta x} - h\,P(x)\,A(x)\,(t-t_{\infty}) = 0
+\end{equation*}
+
+\textbf{Ecuación general de una superficie extendida}:
+\begin{equation}
+    \frac{d}{dx}\left[k_x\,A(x)\,\frac{dt}{dx}\right] - h\,P(x)\,(t-t_{\infty}) = 0
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $A(x)$: Área transversal de la aleta.
+    \item $P(x)$: Perímetro de la aleta.
+    \item $t$: Temperatura de la aleta.
+    \item $t_{\infty}$: Temperatura del medio exterior.
+    \item $h$: Coeficiente de convección de la aleta.
+\end{itemize}
+
+\subsection{Caso: Superficie con sección transversal uniformemente variable}
+
+% grafica aleta1
+
+\begin{equation}
+    \frac{d}{dx}\left[\left[A_o + (A_L - A_o)\,\frac{x}{L}\right]\,\frac{dt}{dx}\right] - \frac{h}{k}\left[P_o + (P_L - P_o)\,\frac{x}{L}\right]\,(t - t_{\infty}) = 0
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $A_o$: Área en la base.
+    \item $P_o$: Perímetro en la base.
+    \item $A_L$: Área en el extremo.
+    \item $P_L$: Perímetro en el extremo.
+\end{itemize}
+
+\subsection{Caso: Aletas de sección transversal uniforme}
+
+% grafica aleta2
+
+\begin{equation}
+    \frac{d^2 t}{dx^2} - \frac{h\,P}{k\,A}\,(t - t_{\infty}) = 0
+\end{equation}
+
+\subsection{Caso: Aletas circulares de espesor constante}
+
+% grafica aleta3
+
+\begin{equation*}
+    \frac{d}{dr}\left(r\,\frac{dt}{dr}\right)-\frac{h\,r}{k\,t}\,(t-t_{\infty}) = 0
+\end{equation*}
+
+Soluciones para aletas de sección transversal constante:
+\begin{equation*}
+    \frac{d^2 t}{dx^2} - \frac{h\,P}{k\,A}\,(t - t_{\infty}) = 0
+\end{equation*}
+\begin{equation*}
+    \theta = t - t_{\infty}
+\end{equation*}
+\begin{equation*}
+    m^2 = \frac{h\,P}{k\,A}
+\end{equation*}
+\begin{equation}
+    \frac{d^2 t}{dx^2} - m^2\,\theta = 0
+\end{equation}
+
+\underline{Solución general}:
+\begin{equation*}
+    \theta = C_1\,e^{mx} + C_2\,e^{-mx}
+\end{equation*}
+\begin{equation*}
+    \theta = A\,\cosh(mx) + B\,\senh(mx)
+\end{equation*}
+
+\underline{Solución particular}:
+Se debe resolver los coeficientes con las condiciones de contorno.
+
+\begin{enumerate}
+    \item \textbf{Aletas muy largas}:
+        \begin{equation*}
+            x = 0 \rightarrow \theta = \theta_0
+        \end{equation*}
+        \begin{equation*}
+            x = \infty \rightarrow \theta = \theta
+        \end{equation*}
+        \begin{equation*}
+            \frac{\theta}{\theta_0} = e^{-mx}
+        \end{equation*}
+        \begin{equation}
+            \frac{t - t_{\infty}}{t_i - t_{\infty}} = e^{-mx}
+        \end{equation}
+    \item \textbf{Temperatura conducida en $x = L$}:
+        \begin{equation*}
+            x = 0 \rightarrow \theta = \theta_0
+        \end{equation*}
+        \begin{equation*}
+            x = L \rightarrow \theta = \theta_L
+        \end{equation*}
+        \begin{equation*}
+            \theta_L = t_L - t_{\infty}
+        \end{equation*}
+        \begin{equation*}
+            \theta_0 = t_0 - t_{\infty}
+        \end{equation*}
+        \begin{equation*}
+            \theta = t - t_{\infty}
+        \end{equation*}
+        \begin{equation}
+            \frac{\theta}{\theta_0} = \frac{t - t_{\infty}}{t_0 - t_{\infty}} = \left(\frac{\theta_L}{\theta_0} - e^{-mL}\right)\left(\frac{e^{mx} - e^{-mx}}{e^{mL} - e^{-mL}}\right) + e^{-mx}
+        \end{equation}
+    \item \textbf{Extremo de la aleta aislado}:
+        \begin{equation*}
+            x = 0 \rightarrow \theta = \theta_0
+        \end{equation*}
+        \begin{equation*}
+            x = L \rightarrow \frac{d\theta}{dx} = \theta_0
+        \end{equation*}
+        \begin{equation}
+            \frac{\theta}{\theta_0} = \frac{t - t_{\infty}}{t_0 - t_{\infty}} = \frac{e^{mx}}{1 + e^{2mL}} + \frac{e^{-mx}}{1 + e^{-2mL}}
+        \end{equation}
+    \item \textbf{Conducción en el extremo es igual a la convección en el extremo}:
+        \begin{equation*}
+            x = 0 \rightarrow \theta = \theta_0
+        \end{equation*}
+        \begin{equation*}
+            x = L \rightarrow k\,\frac{d\theta}{dx} = h\,\theta
+        \end{equation*}
+        \begin{equation}
+            \frac{\theta}{\theta_0} = \dfrac{t - t_{\infty}}{t_0 - t_{\infty}} = \frac{\cosh(m(L-x))+(\frac{h}{m\,k})\senh(m(L-x))}{\cosh(mL)+(\frac{h}{m\,k})\senh(mL)}
+        \end{equation}
+\end{enumerate}
+
+\subsection{Método de la eficiencia de aleta}
+
+% grafica aleta4
+
+\begin{equation}
+    \frac{\theta}{\theta_0} = \dfrac{t - t_{\infty}}{t_0 - t_{\infty}} = \frac{I_o(n\,r)\,K(n\,r_0)+K_0(n\,r)\,I_1(n\,r_2)}{I_0(n\,r_1)\,K_1(n\,r_2)+K_0(n\,r)\,I_1(n\,r_2)}
+\end{equation}
+\begin{equation*}
+    n = \sqrt{\frac{2h}{kr}}
+\end{equation*}
+
+Donde:
+\begin{itemize}
+    \item $I_o$: Ecuación de \emph{Bessel} modificada de primera especie.
+    \item $K_1$: Ecuación de \emph{Bessel} modificada de segunda especie.
+\end{itemize}
+
+\underline{Balance}:
+\begin{equation*}
+    q_t = q_a + q_{s/a}
+\end{equation*}
+\begin{equation*}
+    q_a = \eta_a\,h_a\,A_a\,(t - t_{\infty})
+\end{equation*}
+\begin{equation*}
+    q_{s/a} = h_o\,A_{s/a}\,(t - t_{\infty})
+\end{equation*}
+\begin{equation*}
+    q_t = \eta_a\,h_a\,A_a\,(t - t_{\infty}) + h_o\,A_{s/a}\,(t - t_{\infty})
+\end{equation*}
+
+\begin{equation*}
+    A_{s/a} = N_a\,A_{s/a1}
+\end{equation*}
+\begin{equation*}
+    A_{a} = N_a\,A_{a1}
+\end{equation*}
+
+\begin{equation*}
+    q = N_a\,[h_o\,A_{s/a1}\,(t_o - t_{\infty} + \eta_a\,h_a\,A_{a1}\,(t - t_{\infty}]
+\end{equation*}
+
+Donde:
+\begin{itemize}
+    \item $N_a$: Numero de aletas.
+    \item $A_{s/a1}$: Área libre entre dos aletas.
+    \item $A_{a1}$: Área de una aleta.
+\end{itemize}
+
+\underline{Simplificación}:
+\begin{equation*}
+    h_o \approx h_a
+\end{equation*}
+
+\begin{equation*}
+    q = N_a\,h_o\,(t_o - t_{\infty})(A_{s/a1} + \eta\,A_{a1})
+\end{equation*}
+

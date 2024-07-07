@@ -1,0 +1,123 @@
+\chapter{GENERALIDADES}
+
+\section{Conceptos de termodinámica}
+
+\subsection{Calor}
+Es la energía transferida a un sistema o sus alrededores debido a la diferencia
+de temperatura.
+\subsection{Temperatura}
+En un parámetro de estado que mide el estado de movilidad de los átomos y
+moléculas que componen el sistema.
+\subsection{Energía interna}
+Es una forma de energía cinética de los átomos y moléculas.
+\subsection{Parámetros de estado}
+Son las magnitudes que se emplean para describir el estado de un sistema
+termodinámico.
+\subsection{Proceso}
+Es cualquier cambio en el estado de un sistema.
+\subsection{Entalpía}
+Cantidad de energía que un sistema termodinámico intercambia con su medio
+ambiente en condiciones de presión constante.
+\subsection{Primera ley de la termodinámica}
+Es un enunciado de conservación de energía, que nos dice que un sistema puede
+intercambiar energía con su entorno mediante la transmisión de calor y la
+realización de trabajo.
+\subsection{Segunda ley de la termodinámica}
+Es un hecho experimental que nos dice que no es posible ningún proceso
+espontáneo cuyo único resultado sea el paso de calor de un recinto a otro de
+mayor temperatura.
+\subsection{Entropía}
+Es la magnitud física que mide la parte de la energía que no puede utilizarse
+para producir trabajo.
+
+\section{Mecanismos de transferencia de calor}
+
+\subsection{Conducción}
+Es un mecanismo de transferencia de calor propio de los medios solidos a nivel
+atómico.
+
+\subsubsection{Ley de \emph{Fourier}}
+\begin{equation}
+    q=k\,A\,\frac{\Delta T}{\Delta x}
+\label{conduccion}
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item \emph{$k$}: Coeficiente de conducción.
+    \item \emph{$A$}: Área de transferencia de calor.
+    \item \emph{$\Delta T$}: Gradiente de temperatura ($t_1-t_0$).
+    \item \emph{$\Delta x$}: Espesor del campo.
+\end{itemize}
+
+\subsection{Convección}
+Es un mecanismo de transferencia de calor propio de los medios fluidos.
+\begin{equation}
+    q=h\,A\,\Delta T
+\label{conveccion}
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item \emph{$h$}: Coeficiente de convección.
+    \item \emph{$A$}: Área de transferencia de calor.
+    \item \emph{$\Delta T$}: Gradiente de temperatura ($t_1-t_0$).
+\end{itemize}
+
+\subsection{Radiación}
+
+\subsubsection{Ley de \emph{Stefan}-\emph{Boltzmann}}
+\begin{equation}
+    q=A\,\sigma\,T^4
+\label{radiacion}
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item \emph{$A$}: Área de transferencia de calor.
+    \item \emph{$\sigma$}: Constante de \emph{Boltzmann}.
+    \item \emph{$T$}: Temperatura del cuerpo radiante.
+\end{itemize}
+
+\section{Analogías}
+\begin{equation}
+    \text{Flujo}=\frac{\text{Potencial}}{\text{Resistencia}}
+\label{analogias}
+\end{equation}
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|>{\centering}m{2.0cm}<{\centering}
+                |>{\centering}m{2.0cm}<{\centering}
+                |>{\centering}m{3.6cm}<{\centering}
+                |>{\centering}m{3.6cm}<{\centering}|}
+\hline
+\textbf{Área} & \textbf{Flujo} & \textbf{Potencial} & \textbf{Resistencia}
+\tabularnewline \hline
+Térmica & Calor & Diferencia de temperatura & Resistencia al calor
+\tabularnewline \hline
+Eléctrica & Corriente  & Diferencia de voltaje & Resistencia a la corriente
+\tabularnewline \hline
+Fluida & Caudal & Diferencia de presiones & Resistencia al caudal
+\tabularnewline \hline
+Trabajo mecánico & Trabajo & Diferencia de presiones & Resistencia al trabajo
+\tabularnewline \hline
+Económica & Ganancia & Mercado & Resistencia a la ganancia
+\tabularnewline \hline
+\end{tabular}
+\caption{Ejemplos de analogías en diversas áreas.}
+\label{cuadro1}
+\end{center}
+\end{table}
+
+\begin{equation*}
+\def\arraystretch{1.4}
+\begin{array}{@{}cll@{}}
+\toprule
+\text{Problema de calor} & \rightleftarrows & \text{Problema eléctrico} \\
+\cmidrule(l){1-3}
+q=\dfrac{\Delta T}{R_T} & & I=\dfrac{\Delta V}{R} \\
+\bottomrule
+\end{array}
+\end{equation*}
+
