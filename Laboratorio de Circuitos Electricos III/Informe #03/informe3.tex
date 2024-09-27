@@ -100,7 +100,7 @@ se hallan las corrientes de linea para los siguientes casos:
 \centering
 \includegraphics[scale=0.9]{figura1.eps}
 \caption{Circuito trifásico desequilibrado sin linea de neutro.}
-\label{simulacion1}
+\label{circuito1}
 \end{figure}
 
 \subsubsection{Secuencia positiva}
@@ -249,7 +249,7 @@ A partir del voltaje de neutro se calculan las corrientes de linea:
 \centering
 \includegraphics[scale=0.9]{figura2.eps}
 \caption{Circuito trifásico desequilibrado con linea de neutro.}
-\label{simulacion1}
+\label{circuito2}
 \end{figure}
 
 \subsubsection{Secuencia positiva}
@@ -343,7 +343,8 @@ Con las corrientes de linea se calcula la corriente de neutro:
     \begin{tabular}{|c|c||c|c|c||c|c|}
     \hline
     \multicolumn{2}{|c||}{} &
-    $I_{L_1}[\text{A}]$ & $I_{L_2}[\text{A}]$ & $I_{L_3}[\text{A}]$ & $U_0[\text{V}]$ & $I_0[\text{A}]$
+    $I_{L_1}[\text{A}]$ & $I_{L_2}[\text{A}]$ & $I_{L_3}[\text{A}]$ &
+    $U_0[\text{V}]$ & $I_0[\text{A}]$
     \tabularnewline \hline \hline
     $(+)$ & \textbf{SN} &
     $0.38\phase{2.86^{\circ}}$ &
@@ -375,94 +376,72 @@ Con las corrientes de linea se calcula la corriente de neutro:
 \section{Simulación}
 Se utilizó el software \emph{Electronic Workbench v5.12.} para simular
 los circuitos, estos pueden verse en las figuras: (\ref{simulacion1}),
-(\ref{simulacion2}), (\ref{simulacion3}), (\ref{simulacion4}),
-(\ref{simulacion5}) y (\ref{simulacion6}).
+(\ref{simulacion2}), (\ref{simulacion3}) y (\ref{simulacion4}).
 
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[scale=1.08]{simulacion/practica2.1.eps}
-%\caption{Simulación del circuito resistivo.}
-%\label{simulacion1}
-%\end{figure}
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.99]{simulacion/practica3.1.eps}
+\caption{Simulación del circuito sin linea de neutro secuencia positiva.}
+\label{simulacion1}
+\end{figure}
 
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[scale=1.08]{simulacion/practica2.2.eps}
-%\caption{Simulación del circuito resistivo-inductivo.}
-%\label{simulacion2}
-%\end{figure}
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.99]{simulacion/practica3.2.eps}
+\caption{Simulación del circuito sin linea de neutro secuencia negativa.}
+\label{simulacion2}
+\end{figure}
 
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[scale=1.08]{simulacion/practica2.3.eps}
-%\caption{Simulación del circuito resistivo-capacitivo.}
-%\label{simulacion3}
-%\end{figure}
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.99]{simulacion/practica3.3.eps}
+\caption{Simulación del circuito con linea de neutro secuencia positiva.}
+\label{simulacion3}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.99]{simulacion/practica3.4.eps}
+\caption{Simulación del circuito con linea de neutro secuencia negativa.}
+\label{simulacion4}
+\end{figure}
 
 \section{Tablas y mediciones}
 En las tablas siguientes, se presentan los resultados obtenidos con las
 mediciones realizadas en laboratorio.
 
-\subsection{Carga Resistiva}
-
 \begin{center}
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|c|c||c|c|c||c|c|c||c|c|}
     \hline
-    $I_{L_1}$ & $I_{L_2}$ & $I_{L_3}$
+    \multicolumn{2}{|c||}{} &
+    $U_{L_1-N}[\text{V}]$ & $U_{L_2-N}[\text{V}]$ & $U_{L_3-N}[\text{V}]$ &
+    $I_{L_1}[\text{A}]$ & $I_{L_2}[\text{A}]$ & $I_{L_3}[\text{A}]$ &
+    $U_0[\text{V}]$ & $I_0[\text{A}]$
     \tabularnewline \hline \hline
-    $0.75[A]$ & $0.76[A]$ & $0.76[A]$
+    $(+)$ & \textbf{SN} & $224$ & $222$ & $225$ & $0.36$ & $0.43$ & $0.35$ & $159$ & $-$
+    \tabularnewline \hline
+          & \textbf{CN} & $225$ & $222$ & $224$ & $0.2$ & $0.53$ & $0.36$ & $0$ & $0.63$
+    \tabularnewline \hline
+    $(-)$ & \textbf{SN} & $225$ & $222$ & $224$ & $0.12$ & $0.59$ & $0.53$ & $109$ & $-$
+    \tabularnewline \hline
+          & \textbf{CN} & $225$ & $222$ & $226$ & $0.2$ & $0.53$ & $0.37$ & $0$ & $0.43$
     \tabularnewline \hline
     \end{tabular}
 \end{center}
 
 \begin{center}
-    \begin{tabular}{|c||c|c|c|}
+    \begin{tabular}{|c|c||c|c|c|}
     \hline
-    & $Z_{1}$ & $Z_{2}$ & $Z_{3}$
+    \multicolumn{2}{|c||}{} &
+    $U_{Z_1}[\text{V}]$ & $U_{Z_2}[\text{V}]$ & $U_{Z_3}[\text{V}]$
     \tabularnewline \hline \hline
-    $U_{\text{FASE}}$ & $225[V]$ & $227[V]$ & $225[V]$
+    $(+)$ & \textbf{SN} & $384$ & $184$ & $218$
     \tabularnewline \hline
-    $I_{\text{FASE}}$ & $0.42[A]$ & $0.42[A]$ & $0.42[A]$
+          & \textbf{CN} & $225$ & $173$ & $225$
     \tabularnewline \hline
-    \end{tabular}
-\end{center}
-
-\subsection{Carga Resistiva-Inductiva}
-
-\begin{center}
-    \begin{tabular}{|c|c|c|}
-    \hline
-    $I_{L_1}$ & $I_{L_2}$ & $I_{L_3}$
-    \tabularnewline \hline \hline
-    $0.70[A]$ & $0.71[A]$ & $0.71[A]$
+    $(-)$ & \textbf{SN} & $146$ & $244$ & $328$
     \tabularnewline \hline
-    \end{tabular}
-\end{center}
-
-\subsection{Carga Resistiva-Capacitiva}
-
-\begin{center}
-    \begin{tabular}{|c|c|c|}
-    \hline
-    $I_{L_1}$ & $I_{L_2}$ & $I_{L_3}$
-    \tabularnewline \hline \hline
-    $0.73[A]$ & $0.74[A]$ & $0.74[A]$
-    \tabularnewline \hline
-    \end{tabular}
-\end{center}
-
-\begin{center}
-    \begin{tabular}{|c||c|c|c|}
-    \hline
-    & $Z_{1}$ & $Z_{2}$ & $Z_{3}$
-    \tabularnewline \hline \hline
-    $U_{\text{FASE}}$ & $226[V]$ & $228[V]$ & $227[V]$
-    \tabularnewline \hline
-    $U_{\text{R}}$ & $219[V]$ & $217[V]$ & $216[V]$
-    \tabularnewline \hline
-    $U_{\text{C}}$ & $67.5[V]$ & $67[V]$ & $65.9[V]$
-    \tabularnewline \hline
-    $I_{\text{FASE}}$ & $0.42[A]$ & $0.42[A]$ & $0.41[A]$
+          & \textbf{CN} & $225$ & $222$ & $226$
     \tabularnewline \hline
     \end{tabular}
 \end{center}
@@ -471,146 +450,28 @@ mediciones realizadas en laboratorio.
 
 \begin{enumerate}
 
-\item \textbf{Los voltajes de fase medidos, ¿son perfectamente equilibrados? ¿A
-qué se debe el desequilibrio?}
+\item \textbf{¿Existe variación en los valores medidos al cambiar la secuencia
+del generador? Qué sucedería en caso de que el sistema fuera equilibrado habría
+también variación?. Justifique su respuesta.}
 
-Los valores de los voltajes de fase medidos difieren levemente, considerando que
-la variación máxima es de $2 [\text{V}]$ para una medición de $225 [\text{V}]$ o
-superior, se puede considerar un error despreciable; causado por los
-instrumentos de medición, al proceso de medida y al leve desbalance de las
-cargas conectadas.
+\item \textbf{Demostrar el teorema de \emph{Millman} y verifique el valor
+calculado con el valor medido en laboratorio. Explique el por qué de las
+variaciones si existen.}
 
-\item \textbf{Con los datos de laboratorio determine las relaciones entre
-corrientes de linea y de fase. ¿Este factor cumple las relaciones establecidas
-en teoría?. Explique las variaciones en ambos casos claramente si los hubiera.}
+\item \textbf{Verificar la ley de corrientes de \emph{Kirchhoff} sin neutro
+conectado con los valores teóricos calculados, cuánto debería ser y cuánto es lo
+que se obtiene?}
 
-Considerando los siguientes datos obtenidos:
-\begin{center}
-    \begin{tabular}{|c||c|c||c|}
-    \hline
-    & \textbf{Corriente} & \textbf{Corriente} & \textbf{Relación}
-    \tabularnewline
-    & \textbf{de linea} & \textbf{de fase} & \textbf{$L/F$}
-    \tabularnewline
-    & \textbf{(Promedio)} & \textbf{(Promedio)} & 
-    \tabularnewline \hline \hline
-    \textbf{Carga resistiva} & $0.7567[A]$ & $0.42[A]$ & $1.8017$
-    \tabularnewline \hline
-    \textbf{Carga resistiva-inductiva} & $0.7067[A]$ & $0.4067[A]$ & $1.7376$
-    \tabularnewline \hline
-    \textbf{Carga resistiva-capacitiva} & $0.7367[A]$ & $0.4167[A]$ & $1.7679$
-    \tabularnewline \hline
-    \end{tabular}
-\end{center}
+\item \textbf{Con los datos tomados en el circuito con neutro conectado. ¿El
+valor medido de $I_0$ concuerda con lo aprendido en la teoría?}
 
-La relación teórica de $\sqrt{3}\,(1.7321)$ varia ligeramente en las mediciones
-de laboratorio con respecto a la teoría y a la simulación; nuevamente son
-cantidades despreciables de error.
-
-\item \textbf{Verificar con las tensiones medidas, la ley de voltajes de
-\emph{Kirchhoff} en cada impedancia $R-L$ y $R-C$. Dibuje el diagrama fasorial
-para cada caso y determine el ángulo de desface entre la tensión de fase en la
-carga y la corriente de fase.}
-
-\underline{$R-L$:}
-\begin{equation*}
-    \begin{split}
-        \sum V &= 227\phase{0^{\circ}}+227\phase{-120^{\circ}}+225\phase{120^{\circ}}\\
-               &= 2\phase{-60^{\circ}} \approx 0
-    \end{split}
-\end{equation*}
-
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[scale=3.5]{figura1.eps}
-%\caption{Diagrama fasorial para la suma de voltajes en $R-L$.}
-%\end{figure}
-
-\begin{equation*}
-    \begin{split}
-        I &=\frac{V}{Z}\\
-          &=\frac{227\phase{0^{\circ}}}{500+j50\pi}\\
-          &=0.433\phase{-17.44^{\circ}}[\text{A}]\\
-    \end{split}
-\end{equation*}
-
-El \textbf{ángulo de desfase} es $-17.44^{\circ}$.
-
-\underline{$R-C$:}
-\begin{equation*}
-    \begin{split}
-        \sum V &= 226\phase{0^{\circ}}+228\phase{-120^{\circ}}+227\phase{120^{\circ}}\\
-               &= 1.732\phase{-150} \approx 0
-    \end{split}
-\end{equation*}
-
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[scale=3.5]{figura2.eps}
-%\caption{Diagrama fasorial para la suma de voltajes en $R-C$.}
-%\end{figure}
-
-\begin{equation*}
-    \begin{split}
-        I &=\frac{V}{Z}\\
-          &=\frac{226\phase{0^{\circ}}}{500-j\frac{500}{\pi}}\\
-          &=0.431\phase{17.66^{\circ}}[\text{A}]\\
-    \end{split}
-\end{equation*}
-
-El \textbf{ángulo de desfase} es $17.66^{\circ}$.
-
-\item \textbf{Investigue cuales son las ventajas y/o desventajas de este sistema
-delta frente al sistema estrella.}
-
-\underline{\textbf{Conexión estrella-estrella:}}
-
-\underline{Ventajas}:
-\begin{itemize}
-    \item Posibilidad de sacar un neutro, lo cual permite obtener dos tensiones
-        o bien conectar a tierra como medida de seguridad.
-    \item Buen funcionamiento en pequeñas potencias.
-\end{itemize}
-
-\underline{Desventajas}:
-\begin{itemize}
-    \item Si las cargas en el circuito de transformador no están equilibradas,
-        entonces los voltajes en las fases pueden llegar a desequilibrarse
-        severamente.
-\end{itemize}
-
-\underline{\textbf{Conexión delta-delta:}}
-
-\underline{Ventajas}:
-\begin{itemize}
-    \item No tiene desplazamiento de fase.
-    \item No tiene problemas con cargas desequilibradas o armónicos.
-\end{itemize}
-
-\underline{Desventajas}:
-\begin{itemize}
-    \item No dispone de salida de neutro.
-\end{itemize}
+\item \textbf{Con los datos de laboratorio, ¿existen diferencias de tensiones y
+corrientes tanto de fase como de linea, sin neutro y con neutro?. Justifique su
+respuesta.}
 
 \end{enumerate}
 
-\section{Conclusiones}
-Se demostró experimentalmente la relación entre voltajes de linea y fase para 
-un circuito trifásico fuente delta con carga delta equilibrada, comprobándose la
-relación hallada en la teoría de circuitos eléctricos.
-
-Se calcularon también las corrientes de linea y fase con diferentes impedancias
-y también se comprobó que los valores teóricos, simulados, y hallados
-experimentalmente no difieren mas allá de lo aceptable.
-
-\begin{thebibliography}{99}
-
-\bibitem{Rangel} Rangel, Stephani (2017, Octubre).\\
-Ventajas y Desventajas de los diferentes tipos de conexiones para transformadores trifásicos.\\
-Extraído el 24 de Septiembre del 2024, de:\\
-https://es.scribd.com/document/362503390/Ventajas-y-Desventajas-de-Los-Diferentes-Tipos-de-Conexiones-Para-Transformadores-Trifasicos
-
-\end{thebibliography}
+\section{Conclusiones y Recomendaciones}
 
 \end{document}
 
