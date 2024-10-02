@@ -78,7 +78,7 @@
     Ing. Marco Antonio Vallejo Camacho.\\
     \newline
     \textbf{Grupo:} 2F (Martes).\\
-\textbf{Fecha de entrega:} 2 de Octubre del 2024.\\
+\textbf{Fecha de entrega:} 1 de Octubre del 2024.\\
 \end{titlepage}
 
 \section{Cálculos teóricos}
@@ -454,24 +454,141 @@ mediciones realizadas en laboratorio.
 del generador? Qué sucedería en caso de que el sistema fuera equilibrado habría
 también variación?. Justifique su respuesta.}
 
+La secuencia del generador determina la fase de los voltajes de fase pero no su
+magnitud, como puede verse en las mediciones tomadas.
+
+Las corrientes de fase por otro lado son determinadas mediante la ley de
+\emph{Ohm}:
+
+\begin{equation*}
+    I_f = \frac{U_f}{Z_Y}
+\end{equation*}
+
+Y por tanto, varían según la impedancia conectada en la fase; si las impedancias
+conectadas son iguales, las corrientes de fase tendrían la misma magnitud.
+
 \item \textbf{Demostrar el teorema de \emph{Millman} y verifique el valor
 calculado con el valor medido en laboratorio. Explique el por qué de las
 variaciones si existen.}
+
+Considerando una conexión estrella-estrella:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=1.4]{figura3.eps}
+\end{figure}
+
+Se calcula el voltaje de neutro por medio del método de voltajes de
+nodo:
+
+\begin{equation*}
+    \frac{\bar{U}_{n} - \bar{U}_a}{Z_a} + \frac{\bar{U}_{n} - \bar{U}_b}{Z_b} +
+    \frac{\bar{U}_{n} - \bar{U}_c}{Z_c} = 0
+\end{equation*}
+\begin{equation*}
+    \frac{\bar{U}_{n}}{Z_a} - \frac{\bar{U}_a}{Z_a} +
+    \frac{\bar{U}_{n}}{Z_b} - \frac{\bar{U}_b}{Z_b} +
+    \frac{\bar{U}_{n}}{Z_c} - \frac{\bar{U}_c}{Z_c} = 0
+\end{equation*}
+\begin{equation*}
+    \frac{\bar{U}_{n}}{Z_a} + \frac{\bar{U}_{n}}{Z_b} +
+    \frac{\bar{U}_{n}}{Z_c} =
+    \frac{\bar{U}_a}{Z_a} + \frac{\bar{U}_b}{R_b} +
+    \frac{\bar{U}_c}{Z_c}
+\end{equation*}
+\begin{equation*}
+    \bar{U}_{n}\left(\frac{1}{Z_a} + \frac{1}{Z_b} +
+    \frac{1}{Z_c} \right) =
+    \frac{\bar{U}_a}{Z_a} + \frac{\bar{U}_b}{Z_b} +
+    \frac{\bar{U}_c}{Z_c}
+\end{equation*}
+\begin{equation*}
+    \bar{U}_{n}= \dfrac{\dfrac{\bar{U}_a}{Z_a} + \dfrac{\bar{U}_b}{Z_b} +
+    \dfrac{\bar{U}_c}{Z_c}}{\dfrac{1}{Z_a} + \dfrac{1}{Z_b} + \dfrac{1}{Z_c}}
+\end{equation*}
+
+Los voltajes de neutro a verificar son:
+\begin{center}
+    \begin{tabular}{|c||c|c|c|}
+    \hline
+    \textbf{Secuencia} & \textbf{Calculado} & \textbf{Laboratorio} &
+    \textbf{Porcentaje de error}
+    \tabularnewline \hline \hline
+    \textbf{Positiva} & $159.99[V]$ & $159[V]$ & $0.6188\%$
+    \tabularnewline \hline
+    \textbf{Negativa} & $111.57[V]$ & $109[V]$ & $2.3035\%$
+    \tabularnewline \hline
+    \end{tabular}
+\end{center}
+
+Las variaciones entre el valor calculado y la medición en laboratorio son
+mínimas, ocasionadas por la medición.
 
 \item \textbf{Verificar la ley de corrientes de \emph{Kirchhoff} sin neutro
 conectado con los valores teóricos calculados, cuánto debería ser y cuánto es lo
 que se obtiene?}
 
+En un circuito trifásico estrella-estrella la corriente de linea y la corriente
+de fase son iguales, por tanto aplicando la ley de corrientes de
+\emph{Kirchhoff} sobre el nodo central de las cargas, se obtiene:
+
+\begin{equation*}
+    \begin{split}
+        I_{L_1}+I_{L_2}+I_{L_3}=0\\
+        0.38\phase{2.86^{\circ}}[\text{A}]+
+        0.44\phase{-125.59^{\circ}}[\text{A}]+
+        0.36\phase{109.35^{\circ}}[\text{A}]=0\\
+        0\phase{11.06}=0\\
+    \end{split}
+\end{equation*}
+
+El valor es prácticamente $0$.
+
 \item \textbf{Con los datos tomados en el circuito con neutro conectado. ¿El
 valor medido de $I_0$ concuerda con lo aprendido en la teoría?}
+
+Las corrientes en la conexión a neutro son:
+\begin{center}
+    \begin{tabular}{|c||c|c|c|}
+    \hline
+    \textbf{Secuencia} & \textbf{Calculado} & \textbf{Laboratorio} &
+    \textbf{Porcentaje de error}
+    \tabularnewline \hline \hline
+    \textbf{Positiva} & $0.66[A]$ & $0.63[A]$ & $4.54\%$
+    \tabularnewline \hline
+    \textbf{Negativa} & $0.46[A]$ & $0.43[A]$ & $6.52\%$
+    \tabularnewline \hline
+    \end{tabular}
+\end{center}
+
+La discrepancia entre el valor calculado y el medido son despreciables.
 
 \item \textbf{Con los datos de laboratorio, ¿existen diferencias de tensiones y
 corrientes tanto de fase como de linea, sin neutro y con neutro?. Justifique su
 respuesta.}
 
+La variación en los voltajes de fase son mínimos ya sea con conexión a tierra o
+sin esta.
+
+La variación en los voltajes de cada impedancia depende de la carga conectada,
+que en este caso es diferente para cada conexión.
+
+Respecto a las corrientes de linea/fase estas dependen tanto de la carga
+conectada, como del voltaje entre neutros, y también si existe o no conexión
+entre ellos, como se describen en las ecuaciones planteadas en la sección de
+cálculos.
+
 \end{enumerate}
 
 \section{Conclusiones y Recomendaciones}
+
+Se calcularon, simularon y armaron los diversos circuitos trifásicos, y se pudo
+comprobar la variación según la secuencia del generador y la conexión de
+neutros para cargas desequilibradas.
+
+Es recomendable al armar los circuitos en laboratorio revisar apropiadamente los
+multímetros para la medición de corriente y voltaje, ya que puede ser peligroso
+para los equipos cualquier descuido.
 
 \end{document}
 
