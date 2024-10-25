@@ -1,0 +1,139 @@
+\chapter{Ecuaciones de \emph{Lagrange} para un sistema de partículas}
+
+\section{Ejemplos}
+
+\subsection{Ejemplo 1}
+4.7. (a) El bloque de masa $m$ puede deslizarse a lo largo del plano inclinado
+sobre el carro, bajo la acción de la gravedad y del resorte. El cuerpo del carro
+tiene una masa $M_1$, y cada una de las ruedas una masa $M$, un radio $r$ y un
+momento de inercia $I$, con respecto al eje. Sobre el carro se ejerce una fuerza
+constante $f$. Despreciando la fricción de los cojinetes, demostrar que:
+
+\begin{equation*}
+    \left(M_1+4M+\frac{4I}{r^2}+m\right)\ddot{x}+
+    \frac{m}{\tan(\theta)}\ddot{y}=f
+\end{equation*}
+\begin{equation*}
+    \frac{m}{\sen^2(\theta)}\ddot{y}+
+    \frac{m}{\tan(\theta)}\ddot{x}=
+    -mg+
+    \frac{k}{\sen(\theta)}\left(\frac{y_0-y}{\sen(\theta)}-q_0\right)
+\end{equation*}
+
+en donde $q_0$ es el valor de $q$ cuando el resorte tiene su longitud normal.
+
+(b) Plantear las ecuaciones del movimiento en función de las coordenadas $x$ y
+$q$. Demostrar que $F_x=f$ y que $F_q=+mg\sen(\theta)-k(q-q_0)$.
+
+\subsection{Ejemplo 2}
+4.8. Si un mecanismo impulsor liviano (por ejemplo, un pistón operado por medio
+de aire comprimido) hace que el bloque oscile a lo largo del plano inclinado, de
+tal forma que sus desplazamientos con respecto al plano vienen dados por
+$A\,\sen(\omega t)$, demostrar que:
+
+\begin{equation*}
+    T=\frac{1}{2}\left(M_1+4M+\frac{4I}{r^2}+m\right)\dot{x}^2+
+    \frac{1}{2}m(
+        -2\dot{x}A\omega\cos(\omega t)\cos(\theta)+
+        A^2\omega^2 \cos^2(\omega t)
+    )
+\end{equation*}
+
+y que si se supone que $f$ no actúa, el movimiento del carro estaría determinado
+por:
+
+\begin{equation*}
+    \left(M_1+4M+\frac{4I}{r^2}+m\right)\dot{x}-
+    mA\omega\cos(\theta)\cos(\omega t)=\text{constante}
+\end{equation*}
+
+\subsection{Ejemplo 3}
+4.9. Las partículas de masas $m_1$ y $m_2$ respectivamente, están conectadas por
+medio de un hilo en el que se ha intercalado un resorte. El hilo pasa alrededor
+de una polea liviana y las partículas pueden deslizarse libremente en el
+interior de los tubos lisos. Los tubos, junto con el eje, tienen un momento de
+inercia $I$, con relación al eje vertical.
+(a) Utilizando las coordenadas $\theta$, $r_1$ y $r_2$ y suponiendo que no
+existe ningún torque aplicado al eje vertical, demostrar que:
+
+\begin{equation*}
+    (I+m_1r^2_1+m_2r^2_2)\dot{\theta}=P_{\theta}=\text{constante}
+\end{equation*}
+\begin{equation*}
+    m_1\ddot{r}_1-m_1 r_1\dot{\theta}^2=-k(r_1+r_2-c)
+\end{equation*}
+\begin{equation*}
+    m_2\ddot{r}_2-m_2 r_2\dot{\theta}^2=-k(r_1+r_2-c)
+\end{equation*}
+
+(b) Suponiendo que el eje se encuentra impulsado por un motor a velocidad
+constante $\dot{\theta}=\omega$, escribir las ecuaciones del movimiento para
+$m_1$ y $m_2$.
+
+\subsection{Ejemplo 4}
+4.6. El plano $XY$ es horizontal. Un eje fijo $S$, se extiende en la dirección
+de $Z$. Las varillas $A$ y $B$ se encuentran sostenidas por cojinetes lisos
+montados en el eje, el uno sobre el otro. Un resorte de reloj con constante de
+torsión $k$, conecta a $A$ con $B$. Los momentos de inercia de las varillas son
+$I_1$ e $I_2$. Las varillas pueden girar alrededor del eje bajo la acción del
+resorte. Utilizando a $\theta_1$ y $\alpha$ como coordenadas, demostrar que:
+
+\begin{equation*}
+    \frac{I_1 I_2}{I_1+I_2}\ddot{\alpha}=-k\alpha
+\end{equation*}
+
+y que:
+
+\begin{equation*}
+    (I_1+I_2)\dot{\theta}_1-I_2\dot{\alpha}=P_{\theta_1}=\text{constante}
+\end{equation*}
+
+Integrar estas ecuaciones y describir brevemente el movimientos.
+
+Demostrar que si $\theta_1$ y $\theta_2$ se consideran como coordenadas, las
+fuerzas generalizadas son $F_{\theta_1}=F_{\theta_2}=-k(\theta_1+\theta_2)$.
+Supóngase que el resorte se encuentra en su configuración normal cuando $A$ y
+$B$ son colineales.
+
+\subsection{Ejemplo 5}
+4.14. En el sistema de piñones los ejes $S_1$, \ldots, $S_4$ están sostenidos
+por los cojinetes fijos $b_1$, \ldots, $b_4$. Los piñones $A$, $D$, $E$ y $F$
+son solidarios con sus ejes. Una extensión del eje $S_3$ forma una manivela,
+según se muestra. El piñón $C$ puede girar libremente en la manivela. $B$ es un
+``molde de pastel'' (se muestra en un corte) que tiene dientes de engranaje $g$,
+en su borde exterior, y $g'$ en el borde interior. $B$ puede girar libremente
+sobre $S_1$. Se observa que si, por ejemplo, se deja fijo $D$ mientras se hace
+girar $A$, $C$ y la manivela (y por tanto $E$ y $F$) giran.
+Los momentos de inercia de los piñones, incluyendo el eje al que cada uno se
+halla sujeto, son los indicados en la figura. Los radios de los piñones son
+$r_1$, $r_2$, etc. Adheridos a los ejes $S_2$ y $S_4$ se encuentran los resortes
+de torsión cuyas constantes respectivas son $k_1$ y $k_2$, según se indica. Si
+se mide $\theta_3$ con respecto a la manivela $C$ y todos los demás ángulos con
+relación a lineas verticales fijas, demostrar que:
+
+\begin{equation*}
+\begin{split}
+    T=
+    \frac{1}{2}I_1\dot{\theta_1}^2+
+    \frac{1}{2}\left[
+        I_2+
+        I_4{\left(
+            \frac{r_2}{r_4}
+        \right)}^2
+    \right]\dot{\theta_2}^2+
+    \frac{1}{2}\left(
+        \frac{I_3}{4r_3^2}
+    \right)
+    {[(R+r_3)\dot{\theta_2}-r_1\dot{\theta_1}]}^2+\\
+    \frac{1}{2}\left[
+        \frac{I_5+MR^2}{4R^2}+
+        \frac{I_6}{4R^2}{\left(\frac{r_5}{r_6}\right)}^2
+    \right]
+    {(r_1\dot{\theta_1}+R\dot{\theta_2}+r_3\dot{\theta_2})}^2
+\end{split}
+\end{equation*}
+
+Escribir las ecuaciones del movimiento y hallar las expresiones de
+$F_{\theta_1}$ y $F_{\theta_2}$ suponiendo que cada uno de los resortes ejerce
+un torque proporcional al desplazamiento angular del eje al que esta sujeto.
+

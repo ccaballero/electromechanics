@@ -1,0 +1,832 @@
+\chapter{Serie compleja de \emph{Fourier} y espectros discretos de frecuencia}
+
+\section{Números complejos}
+\begin{figure}[H]
+    \centering
+    \input{figura_03_01.tex}
+\end{figure}
+\begin{center}
+    Unidad imaginaria: $i=j=\sqrt{-1}$\\
+    Forma rectangular: $z=a+jb$\\
+    Módulo: $|z|=\sqrt{a^2+b^2}$\\
+    Argumento: $\theta=\arctan(\frac{b}{a})$\\
+\end{center}
+
+Forma polar:
+\begin{equation*}
+    z=|z|\cos(\theta)+j|z|\sen(\theta)
+        =|z|(\cos(\theta)+j\sen(\theta))
+\end{equation*}
+
+Formula de \emph{Euler}:
+\begin{equation}
+    e^{j\theta}=\cos(\theta)+j\sen(\theta)
+\end{equation}
+
+Por tanto:
+\begin{equation*}
+    z=|z|e^{j\theta}
+\end{equation*}
+
+Forma exponencial o fasorial:
+\begin{equation*}
+    z=|z|\angle\theta
+\end{equation*}
+
+\subsection{Formas complejas del seno y coseno}
+\begin{equation}
+    e^{j\theta}=\cos(\theta)+j\sen(\theta)
+    \label{e1}
+\end{equation}
+\begin{equation}
+    e^{-j\theta}=\cos(\theta)-j\sen(\theta)
+    \label{e2}
+\end{equation}
+
+Sumando las ecuaciones~\ref{e1} y~\ref{e2}:
+\begin{equation*}
+    e^{j\theta}+e^{-j\theta}=2\cos(\theta)
+\end{equation*}
+\begin{equation}
+    \cos(\theta)=\frac{e^{j\theta}+e^{-j\theta}}{2}
+\end{equation}
+
+Restando las ecuaciones~\ref{e1} y~\ref{e2}:
+\begin{equation*}
+    e^{j\theta}-e^{-j\theta}=2j\sen(\theta)
+\end{equation*}
+\begin{equation}
+    \sen(\theta)=\frac{e^{j\theta}-e^{-j\theta}}{2j}
+\end{equation}
+
+\subsection{Conjugado}
+\begin{figure}[H]
+    \centering
+    \input{figura_03_02.tex}
+\end{figure}
+\begin{equation*}
+    z=a+jb=|z|\angle\theta
+\end{equation*}
+\begin{equation*}
+    z*=a-jb=|z|\angle-\theta
+\end{equation*}
+\begin{equation*}
+    (z)(z*)={|z|}^2
+\end{equation*}
+
+\section{Serie compleja de \emph{Fourier}}
+Partiendo de la serie trigonométrica de \emph{Fourier}:
+\begin{equation*}
+    f(t)=\frac{a_0}{2}+
+    \sum_{n=1}^{\infty}\left[
+        a_n\cos(n\omega_0\,t)+
+        b_n\sen(n\omega_0\,t)
+    \right]
+\end{equation*}
+\begin{equation*}
+    f(t)=\frac{a_0}{2}+
+    \sum_{n=1}^{\infty}\left[
+        a_n\left(
+            \frac{e^{jn\omega_0\,t}+e^{-jn\omega_0\,t}
+            }{2}
+        \right)+
+        b_n\left(
+            \frac{e^{jn\omega_0\,t}+e^{-jn\omega_0\,t}
+            }{2j}
+        \right)
+    \right]
+\end{equation*}
+\begin{equation*}
+    \frac{1}{j}=-j
+\end{equation*}
+\begin{equation*}
+    f(t)=\frac{a_0}{2}+
+    \sum_{n=1}^{\infty}\left[
+        a_n\left(
+            \frac{e^{jn\omega_0\,t}+e^{-jn\omega_0\,t}
+            }{2}
+        \right)-
+        jb_n\left(
+            \frac{e^{jn\omega_0\,t}+e^{-jn\omega_0\,t}
+            }{2}
+        \right)
+    \right]
+\end{equation*}
+\begin{equation*}
+    f(t)=\frac{a_0}{2}+
+    \sum_{n=1}^{\infty}\left[
+        \left(\frac{a_n-jb_n}{2}\right)e^{jn\omega_0\,t}+
+        \left(\frac{a_n+jb_n}{2}\right)e^{-jn\omega_0\,t}
+    \right]
+\end{equation*}
+\begin{equation*}
+    f(t)=\frac{a_0}{2}+
+    \sum_{n=1}^{\infty}\left[
+        \left(\frac{a_n-jb_n}{2}\right)e^{jn\omega_0\,t}
+    \right]+
+    \sum_{n=1}^{\infty}\left[
+        \left(\frac{a_n+jb_n}{2}\right)e^{-jn\omega_0\,t}
+    \right]
+\end{equation*}
+\begin{equation*}
+    f(t)=\frac{a_0}{2}+
+    \sum_{n=1}^{\infty}\left[
+        \left(\frac{a_n-jb_n}{2}\right)e^{jn\omega_0\,t}
+    \right]+
+    \sum_{-n=1}^{\infty}\left[
+        \left(\frac{a_{-n}+jb_{-n}}{2}\right)e^{jn\omega_0\,t}
+    \right]
+\end{equation*}
+\begin{equation*}
+    f(t)=\frac{a_0}{2}+
+    \sum_{n=1}^{\infty}\left[
+        \left(\frac{a_n-jb_n}{2}\right)e^{jn\omega_0\,t}
+    \right]+
+    \sum_{n=-1}^{-\infty}\left[
+        \left(\frac{a_n+jb_n}{2}\right)e^{jn\omega_0\,t}
+    \right]
+\end{equation*}
+\begin{equation*}
+    f(t)=\frac{a_0}{2}+
+    \sum_{\substack{n=-\infty\\n\neq0}}^{\infty}
+        \left(\frac{a_n-jb_n}{2}\right)e^{jn\omega_0\,t}
+\end{equation*}
+
+Sean los coeficientes complejos de \emph{Fourier}:
+\begin{equation*}
+    c_n=\frac{a_n-jb_n}{2}
+\end{equation*}
+\begin{equation*}
+    c_0=\frac{a_0}{2}
+\end{equation*}
+
+Entonces:
+\begin{equation*}
+    f(t)=c_0+\sum_{\substack{n=-\infty\\n\neq0}}^{\infty}c_n\,e^{jn\omega_0\,t}
+\end{equation*}
+\begin{equation}
+    f(t)=\sum_{n=-\infty}^{\infty}c_n\,e^{jn\omega_0\,t}
+\end{equation}
+
+\subsection{Evaluación del coeficiente complejo de \emph{Fourier}}
+\begin{equation*}
+\begin{split}
+    c_n
+        &=\frac{a_n-jb_n}{2}\\
+        &=\frac{1}{2}\left[
+            \frac{2}{T}\int_0^T\,f(t)\cos(n\omega_0\,t)\,dt
+            -j\frac{2}{T}\int_0^T\,f(t)\sen(n\omega_0\,t)\,dt
+        \right]\\
+        &=\frac{1}{T}\int_0^T\,f(t)\left[
+            \cos(n\omega_0\,t)-j\sen(n\omega_0\,t)
+        \right]dt\\
+        &=\frac{1}{T}\int_0^T\,f(t)\,e^{-jn\omega_0\,t}\,dt\\
+\end{split}
+\end{equation*}
+\begin{equation}
+    c_n=\frac{1}{T}\int_0^T\,f(t)\,e^{-jn\omega_0\,t}\,dt
+\end{equation}
+
+En particular:
+\begin{equation}
+    c_0=\frac{1}{T}\int_0^T\,f(t)\,dt
+\end{equation}
+
+\subsection{Relación entre el coeficiente complejo y los coeficientes
+trigonométricos}
+\begin{equation*}
+    c_n=\frac{a_n-jbn}{2}
+        =\frac{a_n}{2}+j\frac{-b_n}{2}
+\end{equation*}
+\begin{equation*}
+    \frac{a_n}{2}=\mathbb{R}e\{c_n\}
+\end{equation*}
+\begin{equation}
+    a_n=2\,\mathbb{R}e\{c_n\}
+\end{equation}
+\begin{equation*}
+    -\frac{b_n}{2}=\mathbb{I}m\{c_n\}
+\end{equation*}
+\begin{equation}
+    b_n=-2\,\mathbb{I}m\{c_n\}
+\end{equation}
+
+\section{Ondas senoidales rectificadas}
+\subsection{Rectificación de media onda}
+\begin{equation*}
+    f(t)=\begin{cases}
+        A\sen(\omega_0\,t)&0<t<T/2\\
+        0&T/2<t<T\\
+    \end{cases}
+\end{equation*}
+\begin{equation*}
+    T=\frac{2\pi}{\omega_0}
+\end{equation*}
+\begin{figure}[H]
+    \centering
+    \input{figura_03_03.tex}
+\end{figure}
+
+El periodo de la onda rectificada es el mismo que de la onda original.
+
+\subsection{Rectificación de onda completa}
+\begin{equation*}
+    f(t)=A\,|\sen(\omega_0\,t)|
+\end{equation*}
+\begin{figure}[H]
+    \centering
+    \input{figura_03_04.tex}
+\end{figure}
+
+El periodo de la onda rectificada es la mitad del periodo de la onda original.
+
+\section{Función escalón unitario}
+\begin{equation}
+    u(t)=\begin{cases}
+        0&t<0\\
+        1&t>0\\
+    \end{cases}
+\end{equation}
+\begin{figure}[H]
+    \centering
+    \input{figura_03_05.tex}
+\end{figure}
+
+Una variante es:
+\begin{equation*}
+    u(-t)=\begin{cases}
+        1&t<0\\
+        0&t>0\\
+    \end{cases}
+\end{equation*}
+\begin{figure}[H]
+    \centering
+    \input{figura_03_06.tex}
+\end{figure}
+
+De manera general:
+\begin{equation}
+    k\,u(t-t_0)=\begin{cases}
+        0&t<t_0\\
+        k&t>t_0\\
+    \end{cases}
+\end{equation}
+\begin{figure}[H]
+    \centering
+    \input{figura_03_07.tex}
+\end{figure}
+
+Si: $\phi(t)$ es una función de prueba:
+\begin{figure}[H]
+    \centering
+    \input{figura_03_08.tex}
+\end{figure}
+\begin{equation}
+    \phi(t)u(t-t_0)=\begin{cases}
+        0&t<t_0\\
+        \phi(t)&t>t_0\\
+    \end{cases}
+\end{equation}
+\begin{figure}[H]
+    \centering
+    \input{figura_03_09.tex}
+\end{figure}
+\begin{equation*}
+    \phi(t)(u(t-t_1)-u(t-t_2))=\begin{cases}
+        0&t\notin[t_1,t_2]\\
+        \phi(t)&t\in[t_1,t_2]\\
+    \end{cases}
+\end{equation*}
+\begin{figure}[H]
+    \centering
+    \input{figura_03_10.tex}
+\end{figure}
+
+\section{La función impulso}
+Pulso rectangular de área igual a 1.
+\begin{figure}[H]
+    \centering
+    \input{figura_03_11.tex}
+\end{figure}
+
+Si $\xi\to0$, entonces $\frac{1}{2\xi}\to\infty$.
+\begin{figure}[H]
+    \centering
+    \input{figura_03_12.tex}
+\end{figure}
+\begin{equation*}
+    \delta(t)=\begin{cases}
+        0&t\neq0\\
+        \infty&t=0\\
+    \end{cases}
+\end{equation*}
+
+Tal que:
+\begin{equation*}
+    \int_{-\xi}^{\xi}\delta(t)\,dt=1
+\end{equation*}
+
+Por tanto:
+\begin{equation}
+    k\delta(t)=\begin{cases}
+        0&t\neq0\\
+        \pm\infty&t=0\\
+    \end{cases}
+\end{equation}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_03_13.tex}
+    \end{minipage}
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_03_14.tex}
+    \end{minipage}
+\end{figure}
+
+Si: $\phi(t)$ es una función de prueba:
+\begin{equation}
+    \phi(t)\delta(t-t_0)=\phi(t_0)\delta(t-t_0)
+\end{equation}
+\begin{figure}[H]
+    \centering
+    \input{figura_03_15.tex}
+\end{figure}
+
+Para $t\neq0$
+\begin{equation*}
+    \phi(t)\delta(t-t_0)=0
+\end{equation*}
+
+Para $t=0$
+\begin{equation*}
+    \phi(t)\delta(t-t_0)=\phi(t_0)\delta(t-t_0)
+\end{equation*}
+
+\subsection{Propiedades de la función impulso}
+\subsubsection*{Propiedad 1}
+\begin{equation*}
+    \int_a^b\delta(t-t_0)\,dt=\begin{cases}
+        1&t_0\in[a,b]\\
+        0&t_0\notin[a,b]\\
+    \end{cases}
+\end{equation*}
+
+En general:
+\begin{equation}
+    \int_{-\infty}^{\infty}\delta(t-t_0)\,dt=1
+\end{equation}
+
+\subsubsection*{Propiedad 2}
+\begin{equation*}
+    \int_a^b\phi(t)\,\delta(t-t_0)\,dt=\begin{cases}
+        \phi(t_0)&t_0\in[a,b]\\
+        0&t_0\notin[a,b]\\
+    \end{cases}
+\end{equation*}
+
+En general:
+\begin{equation}
+    \int_{-\infty}^{\infty}\phi(t_0)\,\delta(t-t_0)\,dt=\phi(t_0)
+\end{equation}
+
+\underline{Prueba}:
+\begin{equation*}
+\begin{split}
+    \int_{-\infty}^{\infty}\phi(t)\delta(t-t_0)\,dt
+        &=\int_{-\infty}^{\infty}\phi(t_0)\delta(t-t_0)\,dt\\
+        &=\phi(t_0)\int_{-\infty}^{\infty}\delta(t-t_0)\,dt\\
+        &=\phi(t_0)\\
+\end{split}
+\end{equation*}
+
+\subsubsection*{Propiedad 3}
+\begin{equation}
+    \int_{-\infty}^{\infty}\phi(t)\,\delta(at)\,dt
+        =\frac{1}{|a|}\int_{-\infty}^{\infty}
+            \phi\left(\frac{t}{a}\right)\delta(t)\,dt
+        =\frac{\phi(0)}{|a|};a\neq0
+\end{equation}
+
+\underline{Prueba}:
+
+Realizando un cambio de variable:
+\begin{equation*}
+    \tau=at
+\end{equation*}
+\begin{equation*}
+    d\tau=a\,dt
+\end{equation*}
+
+Para $a>0$:
+\begin{equation*}
+    \int_{-\infty}^{\infty}
+        \phi\left(\frac{\tau}{a}\right)\delta(\tau)\,\frac{d\tau}{a}
+        =\frac{1}{a}\int_{-\infty}^{\infty}
+            \phi\left(\frac{\tau}{a}\right)\delta(\tau)d\tau
+\end{equation*}
+
+Para $a<0$:
+\begin{equation*}
+    \int_{-\infty}^{\infty}
+        \phi\left(\frac{\tau}{a}\right)\delta(\tau)\,\frac{d\tau}{a}
+        =-\frac{1}{a}\int_{-\infty}^{\infty}
+            \phi\left(\frac{\tau}{a}\right)\delta(\tau)d\tau
+\end{equation*}
+
+Como:
+\begin{equation*}
+    |a|=\begin{cases}
+        -a&a<0\\
+        a&a>0\\
+    \end{cases}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+    \int_{-\infty}^{\infty}\phi(t)\,\delta(at)\,dt
+        &=\frac{1}{|a|}\int_{-\infty}^{\infty}
+            \phi\left(\frac{\tau}{a}\right)\delta(\tau)\,d\tau\\
+        &=\frac{1}{|a|}\phi\left(\frac{0}{a}\right)\\
+        &=\frac{\phi(0)}{|a|}\\
+\end{split}
+\end{equation*}
+
+\subsubsection*{Propiedad 4}
+\begin{equation}
+    \delta(at)=\frac{1}{|a|}\delta(t)
+\end{equation}
+
+En particular:
+\begin{equation}
+    \delta(-t)=\delta(t)
+\end{equation}
+
+Por tanto $\delta(t)$ es una función \textbf{par}.
+
+\underline{Prueba}:
+\begin{equation*}
+\begin{split}
+    \int_{-\infty}^{\infty}\phi(t)\,\delta(at)\,dt
+        &=\frac{1}{|a|}\phi(0)\\
+        &=\frac{1}{|a|}\int_{-\infty}^{\infty}\phi(t)\,\delta(t)\,dt\\
+\end{split}
+\end{equation*}
+\begin{equation*}
+    \phi(t)\,\delta(at)=\frac{1}{|a|}\phi(t)\,\delta(t)
+\end{equation*}
+\begin{equation*}
+    \delta(at)=\frac{1}{|a|}\,\delta(t)
+\end{equation*}
+
+Para $a=-1$:
+\begin{equation*}
+    \delta(-t)=\frac{1}{|-1|}\,\delta(t)=\delta(t)
+\end{equation*}
+
+\subsubsection*{Propiedad 5}
+\begin{equation*}
+    t\,\delta(t)=0
+\end{equation*}
+\begin{equation}
+    t^n\,\delta(t)=0;n\in\mathbb{N}
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+    \int_{-\infty}^{\infty}t^n\,\delta(t)\,dt=0^n=0
+\end{equation*}
+
+Derivando ambos miembros:
+\begin{equation*}
+    t^n\,\delta(t)\,dt=0
+\end{equation*}
+
+\section{Derivada de la función impulso}
+\begin{equation*}
+    \delta'(t)=\frac{d}{dt}(\delta(t))
+\end{equation*}
+\begin{equation}
+    \int_{-\infty}^{\infty}\phi(t)\delta'(t)\,dt
+        =-\int_{-\infty}^{\infty}\phi'(t)\delta(t)\,dt
+        =-\phi'(0)
+\end{equation}
+
+\underline{Prueba}:
+
+Realizando la integración por partes:
+\begin{equation*}
+    u=\phi(t)
+\end{equation*}
+\begin{equation*}
+    du=\phi'(t)\,dt
+\end{equation*}
+\begin{equation*}
+    dv=\delta'(t-t_0)\,dt
+\end{equation*}
+\begin{equation*}
+    v=\delta(t-t_0)
+\end{equation*}
+\begin{equation*}
+\begin{split}
+    \int_{-\infty}^{\infty}\phi(t)\delta'(t-t_0)\,dt
+        &=(\phi(t)\delta(t-t_0)\Big|_{-\infty}^{\infty})
+        -\int_{-\infty}^{\infty}\delta(t-t_0)\phi'(t)\,dt\\
+        &=0-\int_{-\infty}^{\infty}\delta(t-t_0)\phi'(t)\,dt\\
+        &=-\phi'(t_0)
+\end{split}
+\end{equation*}
+
+\subsubsection{Derivadas de orden superior}
+\begin{equation*}
+\begin{split}
+    \int_{-\infty}^{\infty}\phi(t)\delta''(t)\,dt
+        &=\int_{-\infty}^{\infty}\phi(t)(\delta'(t))'\,dt\\
+        &=-\int_{-\infty}^{\infty}\phi'(t)\delta'(t)\,dt\\
+        &=\int_{-\infty}^{\infty}\phi''(t)\delta(t)\,dt\\
+        &=\phi''(0)\\
+\end{split}
+\end{equation*}
+
+De igual manera:
+\begin{equation*}
+    \int_{-\infty}^{\infty}\phi(t)\delta^{\prime\prime\prime}(t-t_0)\,dt
+        =-\phi^{\prime\prime\prime}(t_0)
+\end{equation*}
+
+En general:
+\begin{equation}
+    \int_{-\infty}^{\infty}\phi(t)\delta^{(n)}(t-t_0)\,dt
+        ={(-1)}^n\phi^{(n)}(t_0)
+\end{equation}
+
+\section{Derivada de la función escalón unitario}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_03_16.tex}
+    \end{minipage}
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_03_17.tex}
+    \end{minipage}
+\end{figure}
+\begin{equation}
+    u'(t-t_0)=\delta(t-t_0)
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+    \int_{-\infty}^{\infty}u'(t)\phi(t)\,dt
+\end{equation*}
+
+Realizando la integración por partes:
+\begin{equation*}
+    u=\phi(t)
+\end{equation*}
+\begin{equation*}
+    du=\phi'(t)\,dt
+\end{equation*}
+\begin{equation*}
+    dv=u'(t)\,dt
+\end{equation*}
+\begin{equation*}
+    v=u(t)
+\end{equation*}
+\begin{equation*}
+\begin{split}
+    \int_{-\infty}^{\infty}\phi(t)u'(t)\,dt
+        &=(\phi(t)u(t)\Big|_{-\infty}^{\infty})
+        -\int_{-\infty}^{\infty}u(t)\phi'(t)\,dt\\
+        &=-\int_{-\infty}^{\infty}u(t)\phi'(t)\,dt\\
+        &=-\int_{0}^{\infty}1\,\phi'(t)\,dt\\
+        &=-\phi(t)\Big|_0^{\infty}\\
+        &=-\phi(\infty)+\phi(0)\\
+\end{split}
+\end{equation*}
+
+Asumiendo que $\phi(\pm\infty)=0$:
+\begin{equation*}
+    \int_{-\infty}^{\infty}\phi(t)u'(t)\,dt=\phi(0)
+\end{equation*}
+
+Sabiendo que:
+\begin{equation*}
+    \int_{-\infty}^{\infty}\phi(t)\delta(t)\,dt=\phi(0)
+\end{equation*}
+
+Por tanto:
+\begin{equation*}
+    \int_{-\infty}^{\infty}\phi(t)u'(t)\,dt
+        =\int_{-\infty}^{\infty}\phi(t)\delta(t)\,dt
+\end{equation*}
+\begin{equation*}
+    \phi(t)u'(t)=\phi(t)\delta(t)
+\end{equation*}
+\begin{equation*}
+    u'(t)=\delta(t)
+\end{equation*}
+
+\section{Derivada de una función con discontinuidades de salto}
+Las derivadas de los saltos de subida y bajada, van a originar impulsos hacia
+arriba y hacia abajo, respectivamente.
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_03_18.tex}
+    \end{minipage}
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_03_19.tex}
+    \end{minipage}
+\end{figure}
+
+\section{Series de \emph{Fourier} por el método de diferenciación}
+\begin{minipage}{.5\linewidth}
+    \begin{equation*}
+        f(t)=\sum_{n=-\infty}^{\infty}c_n\,e^{jn\omega_0\,t}
+    \end{equation*}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+    \begin{equation*}
+        c_n=\frac{1}{T}\int_0^T\,f(t)\,e^{-jn\omega_0\,t}\,dt
+    \end{equation*}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+    \begin{equation*}
+        f^\prime(t)=\sum_{n=-\infty}^{\infty}jn\omega_0\,c_n\,e^{jn\omega_0\,t}
+    \end{equation*}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+    \begin{equation}
+        \gamma^\prime_n=\frac{1}{T}\int_0^T\,f^\prime(t)\,e^{-jn\omega_0\,t}\,dt
+    \end{equation}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+    \begin{equation*}
+        f^{\prime\prime}(t)
+            =\sum_{n=-\infty}^{\infty}{(jn\omega_0)}^2\,c_n\,e^{jn\omega_0\,t}
+    \end{equation*}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+    \begin{equation}
+        \gamma^{\prime\prime}_n
+            =\frac{1}{T}\int_0^T\,f^{\prime\prime}(t)\,e^{-jn\omega_0\,t}\,dt
+    \end{equation}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+    \begin{equation*}
+        f^{(k)}(t)
+            =\sum_{n=-\infty}^{\infty}{(jn\omega_0)}^k\,c_n\,e^{jn\omega_0\,t}
+    \end{equation*}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+    \begin{equation}
+        \gamma^{(k)}_n
+            =\frac{1}{T}\int_0^T\,f^{(k)}(t)\,e^{-jn\omega_0\,t}\,dt
+    \end{equation}
+\end{minipage}
+
+\begin{itemize}
+    \item Se deriva $f(t)$ hasta anularla y calcular para cada derivada:
+    $\gamma^{(k)}_n$
+    \item Las derivadas de $f(t)$ solo van a tomar en cuenta los impulsos
+    obtenidos de los saltos previos.
+    \item El coeficiente complejo $c_n$ se obtendrá de la forma:
+    \begin{equation}
+        c_n=c^\prime_n+c^{\prime\prime}_n+\cdots+c^{(k)}_n
+    \end{equation}
+    Donde:
+    \begin{equation}
+        c^\prime_n=\frac{\gamma^\prime_n}{jn\omega_0}
+    \end{equation}
+    \begin{equation}
+        c^{\prime\prime}_n=\frac{\gamma^{\prime\prime}_n}{{(jn\omega_0)}^2}
+    \end{equation}
+    \begin{equation}
+        c^{(k)}_n=\frac{\gamma^{(k)}_n}{{(jn\omega_0)}^k}
+    \end{equation}
+\end{itemize}
+
+\section{Espectros de frecuencia discreta}
+Los espectros de frecuencia serán gráficas discretas de modulo y argumento del
+coeficiente complejo de \emph{Fourier} en función de múltiplos de la frecuencia:
+$\omega_0$.
+\begin{equation*}
+    f(t)=\sum_{n=-\infty}^\infty\,c_n\,e^{jn\omega_0\,t}
+\end{equation*}
+\begin{equation*}
+    c_n=A_n+jB_n
+\end{equation*}
+\begin{equation*}
+\left.\begin{aligned}
+    |c_n|&=\sqrt{A_n^2+B_n^2}\\
+    \theta_n&=\arctan\left(\frac{B_n}{A_n}\right)\\
+\end{aligned}\right\}
+\text{funciones discretas de }n\omega_0\quad\,n\in\mathbb{Z}
+\end{equation*}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_03_20.tex}
+        \captionsetup{labelformat=empty}
+        \caption{Espectro de amplitud o módulo}
+    \end{minipage}
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_03_21.tex}
+        \captionsetup{labelformat=empty}
+        \caption{Espectro de fase o argumento}
+    \end{minipage}
+\end{figure}
+
+\section{Teorema de la multiplicación}
+Dadas dos funciones periódicas con el mismo periodo $T$: $f_1(t)$ y $f_2(t)$.
+
+Donde: $c_1n$ y $c_2n$, son los respectivos coeficientes complejos de
+\emph{Fourier}.
+\begin{equation}
+    \frac{1}{T}\int_0^T\,f_1(t)f_2(t)\,dt
+        =\sum_{n={-\infty}}^\infty\,c_1(n)\,c_2(-n)
+        =\sum_{n={-\infty}}^\infty\,c_1(-n)\,c_2(n)
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+\begin{split}
+    \frac{1}{T}\int_0^T\,f_1(t)f_2(t)\,dt
+        &=\frac{1}{T}\int_0^T\left[
+            \sum_{n={-\infty}}^\infty\,c_1(n)\,e^{jn\omega_0\,t}
+        \right]\,f_2(t)\,dt\\
+        &=\sum_{n={-\infty}}^\infty\,c_1(n)\,\frac{1}{T}
+            \int_0^T\,f_2(t)\,e^{jn\omega_0\,t}\,dt\\
+        &=\sum_{n={-\infty}}^\infty\,c_1(n)c_2(-n)
+\end{split}
+\end{equation*}
+
+\section{Teorema de \emph{Parseval}}
+Sea: $f_1(t)=f_2(t)=f(t)$, con coeficientes de \emph{Fourier}:
+$c_1(n)=c_2(n)=c_n$:
+
+Partiendo del teorema de multiplicación:
+\begin{equation*}
+\begin{split}
+    \frac{1}{T}\int_0^T\,f^2(t)\,dt
+        &=\sum_{n={-\infty}}^\infty\,c_{(n)}\,c_{(-n)}\\
+        &=\sum_{n={-\infty}}^\infty\,c_{(n)}\,c_{(n)}^*\\
+        &=\sum_{n={-\infty}}^\infty\,{|c_n|}^2\\
+        &=c_0^2+\sum_{\substack{n=-\infty\\n\neq0}}^\infty\,{|c_n|}^2\\
+\end{split}
+\end{equation*}
+\begin{equation*}
+    c_n=\frac{a_n-jb_n}{2}
+\end{equation*}
+\begin{equation*}
+    {|c_n|}^2=\frac{a_n^2+b_n^2}{4}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+    \frac{1}{T}\int_0^T\,f^2(t)\,dt
+        &=c_0^2+\sum_{\substack{n=-\infty\\n\neq0}}^\infty
+            \frac{a_n^2+b_n^2}{4}\\
+        &=c_0^2+\frac{1}{4}\sum_{n=1}^\infty(a_n^2+b_n^2)
+            +\frac{1}{4}\sum_{n=-1}^{-\infty}(a_n^2+b_n^2)\\
+\end{split}
+\end{equation*}
+
+Cambiando $n$ por $-n$:
+\begin{equation*}
+\begin{split}
+    \frac{1}{T}\int_0^T\,f^2(t)\,dt
+        &=c_0^2+\frac{1}{4}\sum_{n=1}^\infty(a_n^2+b_n^2)
+            +\frac{1}{4}\sum_{-n=-1}^{-\infty}(a_{(-n)}^2+b_{(-n)}^2)\\
+\end{split}
+\end{equation*}
+
+Sabiendo que:
+\begin{equation*}
+    a_n^2=a_{(-n)}^2
+\end{equation*}
+\begin{equation*}
+    {(-b_n)}^2=b_n^2
+\end{equation*}
+\begin{equation*}
+\begin{split}
+    \frac{1}{T}\int_0^T\,f^2(t)\,dt
+        &=c_0^2+\frac{1}{4}\sum_{n=1}^\infty(a_n^2+b_n^2)
+            +\frac{1}{4}\sum_{n=1}^\infty(a_n^2+b_n^2)\\
+        &=c_0^2+\frac{1}{2}\sum_{n=1}^\infty(a_n^2+b_n^2)
+\end{split}
+\end{equation*}
+
+\begin{equation}
+    \frac{1}{T}\int_0^T\,f^2(t)\,dt
+        =c_0^2+\frac{1}{2}\sum_{n=1}^\infty(a_n^2+b_n^2)
+\end{equation}
+

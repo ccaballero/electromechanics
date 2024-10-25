@@ -1,0 +1,102 @@
+\documentclass[letter,oneside,11pt]{book}
+
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage[labelfont=bf]{caption}
+
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{pstricks}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{enumitem}
+
+\usepackage{anysize}
+\marginsize{3cm}{2cm}{2cm}{3cm}
+
+\setlength{\parskip}{6pt}
+\special{papersize=215.9mm,279.4mm}
+
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{Dinámica}
+\fancyhead[RO]{}
+\fancyfoot[CO,CE]{\thepage}
+
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+
+\usepackage[
+    pdfauthor={Carlos Eduardo Caballero Burgoa},%
+    pdftitle={Dinámica},%
+    pdfsubject={Apuntes},%
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black,
+    breaklinks]{hyperref}
+\usepackage{breakurl}
+
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \begin{minipage}[]{.55\linewidth}
+            \centering
+            \large{\textbf{UNIVERSIDAD MAYOR DE SAN SIMÓN}} \newline
+            \large{\textbf{FACULTAD DE CIENCIAS Y TECNOLOGÍA}} \newline
+            \large{\textbf{CARRERA DE ELECTROMECÁNICA}} \newline
+        \end{minipage}
+
+        \vspace*{8.4cm}
+        {\Large \textbf{DINÁMICA}}\\
+        \vspace*{0.3cm}
+        {\Large \textbf{Apuntes de clase}}\\
+    \end{center}
+
+    \vspace*{8.4cm}
+    \leftskip=7.95cm
+    \noindent
+    \textbf{Docente:}\\
+    Ing. Andrés Garrido Vargas.\\
+\end{titlepage}
+
+\clearpage
+\setcounter{page}{1}
+
+\tableofcontents
+\newpage
+
+\section*{Bibliografía recomendada}
+\begin{enumerate}[{label=[\arabic{*}]}]
+\item Dare A. Wells. \emph{Teoría y Problemas de Dinámica de \emph{Lagrange}}.
+\end{enumerate}
+
+\include{capitulo_01}
+\include{capitulo_02}
+\include{capitulo_03}
+\include{capitulo_04}
+\include{capitulo_05}
+%\include{capitulo_06}
+%\include{capitulo_07}
+
+\end{document}
+

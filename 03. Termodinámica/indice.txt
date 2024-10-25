@@ -1,0 +1,82 @@
+
+
+Termodinamica
+
+Contenido:
+    Cap I:      Introduccion a la termodinamica.
+    Cap II:     Substancia pura. Calor y trabajo.
+    Cap III:    1ra Ley de la termodinamica P/sistema.
+    Cap IV:     1ra Ley de la termodinamica P/volumen de control.
+    Cap V:      2da Ley de la termodinamica.
+    Cap VI:     Entropia.
+    Cap VII:    Ciclos de potencia (Q->W).
+    Cap VIII:   Ciclos de refrigeración.
+
+Bibliografia:
+    Fundamentos de termodinamica
+    Serie Van Wglen: Bornakke - Sonntang
+
+    Termodinamica
+    Cengel-Boeles
+
+    Termodinamica
+    J.P. Holman
+
+Nota:
+    1er Parcial: 45% examen + 5% practicas
+    2do Parcial: 45% examen + 5% practicas
+
+
+CAP I: Intro
+
+Termodinamica es una ciencia que estudia la energia, las transformaciones de
+energia y las propiedades de los fluidos que intervienen en dichas
+transformaciones.
+
+Existen muchos tipos de energia, como ser: Energia cinetica, energia potencial,
+calor, trabajo, energia electrica, etc.
+
+Calor: El calor es una energia desorganizada, cuyos efectos son el aumento de
+temperatura de un cuerpo o el cambio de fase (liquido - vapor).
+
+Trabajo: El trabajo, es una energia organizada.
+
+Aplicaciones:
+La termodinamica tiene una infinidad de aplicaciones, por ejemplo: el sistema
+de aire acondicionado, el equipo de refrigeración, la secadora de cabello, la
+olla de presion, etc.
+
+
+Funcionamiento:
+
+1: Agua en estado liquido y a baja presion ingresa a la bomba donde aumenta su
+presion para luego ingresar al caldero, donde recibe calor hasta llegar a
+evaporarse y salir del caldero en esas condiciones. Vapor con elevada presion
+ingresa a la turbina donde hace girar el rodete del cual se genera un trabajo
+mecanico; de la turbina el agua sale aun en estado de vapor pero a baja presion
+para ingresar al condensador donde es enfriado hasta llegar a condensarse y
+salir en estado liquido para volver a ingresar a la bomba y repetir el ciclo
+termodinamico.
+
+En esta maquina termica se observa la transformacion de energia calorifica en
+trabajo.
+
+Existen varios tipos de maquinas termicas que realizan estas transformaciones.
+
+Transformacion de trabajo en calor.
+
+Funcionamiento:
+
+Refrigerante con baja temperatura (T4 = -10C) ingresa al evaporador donde
+absorve el calor de los productos que se encuentran dentro el refrigerador, a la
+salida del evaporador el refrigerante esta en estado de vapor e ingresa al
+compresor donde al comprimirse aumenta su presion y temperatura (T2 = 40C); en
+ese estado el refrigerante ingresa al condensador donde debido a la diferencia
+de temperaturas con el ambiente pierde calor hasta llegar a condensarse. El
+refrigerante en estado liquido y con elevada presion ingresa a la valvula de
+expansion donde debido a una fuerte restriccion del area se produce una caida de
+presion y temperatura para salir en el estado 4 a una temperatura de -10C. En
+esas condiciones el refrigerante vuelve a ingresar al evaporador para repetir el
+ciclo termidinamico. En este equipo se observa la transformacion de trabajo en
+calor.
+

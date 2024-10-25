@@ -1,0 +1,204 @@
+\chapter{Transformada inversa de \emph{Fourier}}
+
+\begin{equation}
+    \mathcal{F}\{f(t)\}=F(\omega)
+    \rightarrow
+    \mathcal{F}^{-1}\{F(\omega)\}=f(t)
+\end{equation}
+
+Con la transformada inversa de \emph{Fourier} se regresa del dominio de
+``$\omega$'' al dominio de ``$t$''.
+
+\section{Tabla de transformadas de \emph{Fourier} inversas}
+
+\begin{equation*}
+\def\arraystretch{1.4}
+\begin{array}{@{}cll@{}}
+\toprule
+ & F(\omega) & f(t)=\mathcal{F}^{-1}\{F(\omega)\}\\
+\cmidrule(l){1-3}
+ 1 & \dfrac{1}{a+j\omega}
+   & e^{-at}\,u(t)\quad\,a>0\\
+\cmidrule(l){1-3}
+ 2 & \dfrac{1}{a-j\omega}
+   & e^{at}\,u(-t)\quad\,a>0\\
+\cmidrule(l){1-3}
+ 3 & \dfrac{2a}{a^2+\omega^2}
+   & e^{-a|t|}\quad\,a>0\\
+\cmidrule(l){1-3}
+ 4 & \frac{1}{\omega}\sen(a\omega)
+   & \frac{1}{2}[u(t+a)-u(t-a)]\\
+\cmidrule(l){1-3}
+ 5 & k
+   & k\delta(t)\\
+\cmidrule(l){1-3}
+ 6 & \dfrac{1}{\omega}
+   & \frac{1}{2}j\,\sgn(t)\\
+\bottomrule
+\end{array}
+\end{equation*}
+
+\section{Propiedades de la transformada inversa de \emph{Fourier}}
+
+\subsection{Linealidad}
+\begin{equation}
+    \mathcal{F}^{-1}\{a_1\,F_1(\omega)+a_2\,F_2(\omega)\}
+    =a_1\,f_1(t)+a_2\,f_2(t)
+\end{equation}
+
+\subsection{Desplazamiento en $t$}
+Si $\mathcal{F}^{-1}\{F(\omega)\}=f(t)$:
+\begin{equation}
+    \mathcal{F}^{-1}\{F(\omega)\,e^{-ja\omega}\}=f(t-a)
+\end{equation}
+
+\subsection{Desplazamiento en $\omega$}
+Si $\mathcal{F}^{-1}\{F(\omega)\}=f(t)$:
+\begin{equation}
+    \mathcal{F}^{-1}\{F(\omega-a)\}=f(t)\,e^{jat}
+\end{equation}
+
+\section{Convolución}
+Dadas dos funciones $f_1(t)$ y $f_2(t)$ definimos la convolución mediante la
+siguiente integral:
+
+\begin{equation}
+    f(t)=f_1(t)*f_2(t)=\int_{-\infty}^{\infty}f_1(\tau)\,f_2(t-\tau)\,d\tau
+\end{equation}
+
+\begin{itemize}
+    \item En $f_1(t)$ se reemplaza ``$t$'' por ``$\tau$'', permanece fija y no
+    cambia.
+    \item En $f_2(t)$ se reemplaza ``$t$'' por ``$t-\tau$''.La gráfica se
+    refleja respecto al eje vertical, y luego se desplaza un ``$t$'' variable.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_05_01.tex}
+    \end{minipage}
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_05_02.tex}
+    \end{minipage}
+\end{figure}
+El intervalo de integración será el intervalo donde ambas gráficas se
+superponen.
+
+\section{Propiedades de la convolución}
+
+\subsection{Conmutatividad}
+\begin{equation}
+    f_1(t)*f_2(t)=f_2(t)*f_1(t)
+\end{equation}
+
+\subsection{Asociatividad}
+\begin{equation}
+    f_1(t)*[f_2(t)*f_3(t)]=[f_1(t)*f_2(t)]*f_3(t)
+\end{equation}
+
+\subsection{Distributividad}
+\begin{equation}
+    f_1(t)*[f_2(t)+f_3(t)]=f_1(t)*f_2(t)+f_1(t)*f_3(t)
+\end{equation}
+
+\subsection{Función impulso}
+\begin{equation}
+    f_1(t)*\delta(t-t_0)=f_1(t-t_0)
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+    f_1(t)*\delta(t-t_0)
+    =\int_{-\infty}^{\infty}\,f_1(t-\tau)\,\delta(\tau-t_0)\,d\tau
+    =f_1(t-t_0)
+\end{equation*}
+
+\subsection{Función escalón unitario}
+Si $f_1(t)=f_1(t)\,u(t)$ y $f_2(t)=f_2(t)\,u(t)$:
+\begin{equation}
+    f_1(t)*f_2(t)=\int_0^t\,f_1(\tau)\,f_2(t-\tau)\,d\tau
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_05_03.tex}
+    \end{minipage}
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \input{figura_05_04.tex}
+    \end{minipage}
+\end{figure}
+
+\section{Transformada de \emph{Fourier} y convolución}
+\begin{equation}
+    \mathcal{F}\{f_1(t)*f_2(t)\}=F_1(\omega)\,F_2(\omega)
+\end{equation}
+Donde:
+\begin{equation*}
+    F_1(\omega)=\mathcal{F}\{f_1(t)\}
+\end{equation*}
+\begin{equation*}
+    F_2(\omega)=\mathcal{F}\{f_2(t)\}
+\end{equation*}
+
+\underline{Prueba}:
+\begin{equation*}
+\begin{split}
+    \mathcal{F}\{f_1(t)*f_2(t)\}
+        &=\int_{-\infty}^{\infty}\left[
+            \int_{\infty}^{\infty}f_1(\tau)f_2(t-\tau)d\tau
+        \right]\,e^{-jn\omega_0\,t}\,dt\\
+        &=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+            f_1(\tau)f_2(t-\tau)\,e^{-jn\omega_0\,t}\,d\tau\,dt\\
+        &=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+            f_1(\tau)f_2(t-\tau)\,e^{-jn\omega_0\,t}\,dt\,d\tau\\
+        &=\int_{-\infty}^{\infty}f_1(\tau)d\tau\,\int_{-\infty}^{\infty}
+            f_2(t-\tau)\,e^{-jn\omega_0\,t}\,dt\\
+\end{split}
+\end{equation*}
+\begin{equation*}
+    u=t-\tau\rightarrow\,t=u+\tau
+\end{equation*}
+\begin{equation*}
+    du=dt
+\end{equation*}
+\begin{equation*}
+\begin{split}
+    \mathcal{F}\{f_1(t)*f_2(t)\}
+        &=\int_{-\infty}^{\infty}f_1(\tau)d\tau\,\int_{-\infty}^{\infty}
+            f_2(u)\,e^{-jn\omega_0(u+\tau)}\,du\\
+        &=\int_{-\infty}^{\infty}f_1(\tau)\,e^{-jn\omega_0\tau}\,d\tau\,
+            \int_{-\infty}^{\infty}f_2(u)\,e^{-jn\omega_0\,u}\,du\\
+        &=F_1(\omega)\,F_2(\omega)\\
+\end{split}
+\end{equation*}
+
+\section{Transformada inversa de \emph{Fourier} por convolución}
+\begin{equation}
+    \mathcal{F}^{-1}\{F_1(\omega)\,F_2(\omega)\}=f_1(t)*f_2(t)
+\end{equation}
+Donde:
+\begin{equation*}
+    f_1(t)=\mathcal{F}^{-1}\{F_1(\omega)\}
+\end{equation*}
+\begin{equation*}
+    f_2(t)=\mathcal{F}^{-1}\{F_2(\omega)\}
+\end{equation*}
+
+\section{Ecuaciones diferenciales ordinarias}
+\begin{equation*}
+    \mathcal{F}\{f'(t)\}=j\omega\,F(\omega)
+\end{equation*}
+\begin{equation*}
+    \mathcal{F}\{f''(t)\}={(j\omega)}^2\,F(\omega)
+\end{equation*}
+\begin{equation*}
+    \mathcal{F}\{f^{(n)}(t)\}={(j\omega)}^n\,F(\omega)
+\end{equation*}
+

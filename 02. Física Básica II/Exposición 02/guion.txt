@@ -1,0 +1,73 @@
+Hola y bienvenidos a esta exposición sobre                                     |
+                                                                               |
+Esfuerzo, deformación, y módulos de elasticidad                                | carátula
+2da parte                                                                      |
+esfuerzo y deformación, por volumen y corte                                    |
+                                                                               |
+Mi nombre es Carlos Caballero                                                  |
+<200201226@est.umss.edu>                                                       |
+                                                                               |
+y como siempre esta es una                                                     |
+Exposición basada en la sección 4ta del capitulo 11 del libro Física           | libro de física
+Universitaria. de Sears y Zemansky                                             |
+                                                                               |
+                                                                               |
+Anteriormente se estudió el esfuerzo y la deformación por tensión, aquella en  |
+que la tensión es representada por un vector fuerza en una solo dirección, la  |
+cual es transversal al mismo material.                                         |
+                                                                               |
+En el caso del esfuerzo y la deformación por volumen, existe una fuerza que    |
+actúa sobre toda la superficie del material por parte de un fluido o           |
+contenedor que lo rodea, por tanto, esta fuerza es perpendicular a la          |
+superficie en todos sus puntos.                                                |
+                                                                               |
+Tal fuerza por unidad de área ejercida sobre la superficie del material es     |
+denominada presión.                                                            | \rho = \frac{F_{perp}}{A}
+                                                                               |
+La presión dentro de un fluido aumenta con la profundidad, sin embargo si el   |
+material es relativamente pequeño se puede asumir un mismo valor para todos    |
+los puntos en la superficie.                                                   |
+                                                                               |
+La presión representa el esfuerzo en una deformación volumétrica, por tanto,   |
+si para el esfuerzo por tensión se utilizaba la ecuación:                      |
+                                                                               |
+modulo de elasticidad es igual al esfuerzo sobre la deformación                | modulo de elasticidad = esfuerzo (\sigma)
+                                                                               |                         deformación (\épsilon)
+                                                                               |
+donde el esfuerzo sigma es igual a la Fuerza perpendicular sobre el            | \sigma = F_{\perp}
+Área de la sección transversal                                                 |          A
+                                                                               |
+y épsilon la razón entre el incremento de longitud sobre la longitud           | \épsilon = \Delta x = x - x_0
+original                                                                       |                x         x
+                                                                               |
+en este caso se tiene la constante denominada modulo volumétrico, que es la    |
+variación de la presión sobre la deformación volumétrica, pero con signo       |
+negativo, ya que un aumento de presión causa una reducción del volumen.        |
+                                                                               |
+El reciproco del modulo volumétrico es denominado compresibilidad, se pueden   |
+apreciar algunos valores de compresibilidad para varios líquidos.              |
+                                                                               |
+Un modulo volumétrico pequeño y compresibilidad grande es fácil de comprimir.  |
+                                                                               |
+
+El ultimo tipo de escenario que veremos, es el esfuerzo de corte, donde
+fuerzas de igual magnitud pero de sentido opuesto actúan de forma tangente a
+la superficie, por tanto, y siguiendo la misma formula que en los casos
+anteriores, diremos que:
+
+El esfuerzo de corte o sigma es igual a la fuerza tangente a la superficie
+sobre el área en la cual actúa.
+
+y la deformación por corte será la razón entre el desplazamiento x y la medida
+transversal h del objeto.
+
+Siendo el modulo de corte igual a sigma sobre épsilon como en los casos
+anteriores.
+
+Se pueden apreciar algunos valores del modulo de corte, se debe tener en cuenta
+que este tipo de esfuerzo solo es aplicable a materiales solidos.
+
+Para terminar, se debe recordar que todas estas ecuaciones son validas dentro
+el limite de proporcionalidad en la región elástica, como ha sido explicado en
+la primera parte de esta exposición.
+

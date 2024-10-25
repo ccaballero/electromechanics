@@ -1,0 +1,456 @@
+\chapter{Ecuaciones de \emph{Lagrange} para una partícula}
+
+\section{Introducción}
+
+Ecuación de \emph{Lagrange}:
+
+\begin{equation*}
+    \frac{d}{dt}\left(\frac{\partial T}{\partial \dot{q}_r}\right)-
+    \frac{\partial T}{\partial q_r}=F_{q_r}
+\end{equation*}
+
+Principio de \emph{d'Alembert}:
+
+\begin{equation*}
+    m(\ddot{x}\delta x+\ddot{y}\delta y+\ddot{z}\delta z)=
+    F_x\delta x+F_y\delta y+F_z\delta z
+\end{equation*}
+
+\section{Deducción de la ecuación de \emph{Lagrange}}
+
+\begin{equation*}
+    \begin{cases}
+        x=x(q_1,q_2)\\
+        y=y(q_1,q_2)\\
+        z=z(q_1,q_2)
+    \end{cases}
+\end{equation*}
+
+\begin{equation*}
+    \delta_x=\frac{\partial x}{\partial q_1}\delta q_1+
+             \frac{\partial x}{\partial q_2}\delta q_2
+\end{equation*}
+\begin{equation*}
+    \delta_y=\frac{\partial y}{\partial q_1}\delta q_1+
+             \frac{\partial y}{\partial q_2}\delta q_2
+\end{equation*}
+\begin{equation*}
+    \delta_z=\frac{\partial z}{\partial q_1}\delta q_1+
+             \frac{\partial z}{\partial q_2}\delta q_2
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+    m\left(
+        \ddot{x}\left(
+            \frac{\partial x}{\partial q_1}\delta q_1+
+            \frac{\partial x}{\partial q_2}\delta q_2
+        \right)+
+        \ddot{y}\left(
+            \frac{\partial y}{\partial q_1}\delta q_1+
+            \frac{\partial y}{\partial q_2}\delta q_2
+        \right)+
+        \ddot{z}\left(
+            \frac{\partial z}{\partial q_1}\delta q_1+
+            \frac{\partial z}{\partial q_2}\delta q_2
+        \right)
+    \right)=\\
+    F_x\left(
+        \frac{\partial x}{\partial q_1}\delta q_1+
+        \frac{\partial x}{\partial q_2}\delta q_2
+    \right)+
+    F_y\left(
+        \frac{\partial y}{\partial q_1}\delta q_1+
+        \frac{\partial y}{\partial q_2}\delta q_2
+    \right)+
+    F_z\left(
+        \frac{\partial z}{\partial q_1}\delta q_1+
+        \frac{\partial z}{\partial q_2}\delta q_2
+    \right)
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+    m\left(
+        \ddot{x}\frac{\partial x}{\partial q_1}\delta q_1+
+        \ddot{y}\frac{\partial y}{\partial q_1}\delta q_1+
+        \ddot{z}\frac{\partial z}{\partial q_1}\delta q_1
+    \right)+
+    m\left(
+        \ddot{x}\frac{\partial x}{\partial q_2}\delta q_2+
+        \ddot{y}\frac{\partial y}{\partial q_2}\delta q_2+
+        \ddot{z}\frac{\partial z}{\partial q_2}\delta q_2
+    \right)=\\
+    \left(
+        F_x\frac{\partial x}{\partial q_1}\delta q_1+
+        F_y\frac{\partial y}{\partial q_1}\delta q_1+
+        F_z\frac{\partial z}{\partial q_1}\delta q_1
+    \right)+
+    \left(
+        F_x\frac{\partial x}{\partial q_2}\delta q_2+
+        F_y\frac{\partial y}{\partial q_2}\delta q_2+
+        F_z\frac{\partial z}{\partial q_2}\delta q_2
+    \right)
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+    m\left(
+        \left(
+            \ddot{x}\frac{\partial x}{\partial q_1}+
+            \ddot{y}\frac{\partial y}{\partial q_1}+
+            \ddot{z}\frac{\partial z}{\partial q_1}
+        \right)\delta q_1
+    \right)+
+    m\left(
+        \left(
+            \ddot{x}\frac{\partial x}{\partial q_2}+
+            \ddot{y}\frac{\partial y}{\partial q_2}+
+            \ddot{z}\frac{\partial z}{\partial q_2}
+        \right)\delta q_2
+    \right)=\\
+    \left(
+        F_x\frac{\partial x}{\partial q_1}+
+        F_y\frac{\partial y}{\partial q_1}+
+        F_z\frac{\partial z}{\partial q_1}
+    \right)\delta q_1+
+    \left(
+        F_x\frac{\partial x}{\partial q_2}+
+        F_y\frac{\partial y}{\partial q_2}+
+        F_z\frac{\partial z}{\partial q_2}
+    \right)\delta q_2
+\end{split}
+\end{equation*}
+
+Si $q_2=0$:
+
+\begin{equation}
+    m\left(
+        \left(
+            \ddot{x}\frac{\partial x}{\partial q_1}+
+            \ddot{y}\frac{\partial y}{\partial q_1}+
+            \ddot{z}\frac{\partial z}{\partial q_1}
+        \right)\delta q_1
+    \right)=
+    \left(
+        F_x\frac{\partial x}{\partial q_1}+
+        F_y\frac{\partial y}{\partial q_1}+
+        F_z\frac{\partial z}{\partial q_1}
+    \right)\delta q_1
+    \label{general1}
+\end{equation}
+
+Sabiendo que por la regla de la cadena:
+
+\begin{equation*}
+    \frac{d}{dt}\left(\dot{x}\frac{\partial x}{\partial q_1}\right)=
+    \ddot{x}\frac{\partial x}{\partial q_1}+
+    \dot{x}\frac{d}{dt}\left(\frac{\partial x}{\partial q_1}\right)
+\end{equation*}
+
+\begin{equation}
+    \ddot{x}\frac{\partial x}{\partial q_1}=
+    \frac{d}{dt}\left(\dot{x}\frac{\partial x}{\partial q_1}\right)-
+    \dot{x}\frac{d}{dt}\left(\frac{\partial x}{\partial q_1}\right)
+    \label{base}
+\end{equation}
+
+Por otro lado, derivando $x=x(q_1,q_2)$ con respecto al tiempo:
+
+\begin{equation*}
+    \dot{x}=\frac{\partial x}{\partial q_1}\dot{q_1}+
+            \frac{\partial x}{\partial q_2}\dot{q_2}
+\end{equation*}
+
+Y derivando con respecto a $\dot{q_1}$:
+
+\begin{equation}
+    \frac{\partial \dot{x}}{\partial \dot{q_1}}=\frac{\partial x}{\partial q_1}
+    \label{primerTermino}
+\end{equation}
+
+Por otro lado:
+
+\begin{equation}
+    \frac{d}{dt}\left(\frac{\partial x}{\partial q_1}\right)=
+    \frac{\partial}{\partial q_1}\left(\frac{dx}{dt}\right)=
+    \frac{\partial \dot{x}}{\partial q_1}
+    \label{segundoTermino}
+\end{equation}
+
+Combinando~\ref{primerTermino} y~\ref{segundoTermino} en~\ref{base}, se obtiene:
+
+\begin{equation}
+    \ddot{x}\frac{\partial x}{\partial q_1}=
+    \frac{d}{dt}\left(\dot{x}\frac{\partial \dot{x}}{\partial \dot{q_1}}\right)-
+    \dot{x}\frac{\partial \dot{x}}{\partial q_1}
+    \label{condensado}
+\end{equation}
+
+Por otro lado:
+
+\begin{equation}
+    \frac{\partial}{\partial q_1}\left(\frac{1}{2}\dot{x}^2\right)=
+    \frac{1}{2}2\dot{x}\frac{\partial\dot{x}}{\partial q_1}=
+    \dot{x}\frac{\partial\dot{x}}{\partial q_1}
+    \label{cinetica1}
+\end{equation}
+
+\begin{equation}
+    \frac{\partial}{\partial \dot{q}_1}\left(\frac{1}{2}\dot{x}^2\right)=
+    \frac{1}{2}2\dot{x}\frac{\partial\dot{x}}{\partial \dot{q}_1}=
+    \dot{x}\frac{\partial\dot{x}}{\partial \dot{q}_1}
+    \label{cinetica2}
+\end{equation}
+
+Combinando~\ref{cinetica1} y~\ref{cinetica2} en~\ref{condensado}:
+
+\begin{equation}
+    \ddot{x}\frac{\partial x}{\partial q_1}=
+    \frac{d}{dt}\left(\frac{\partial}{\partial \dot{q}_1}
+        \left(\frac{1}{2}\dot{x}^2\right)
+    \right)-
+    \frac{\partial}{\partial q_1}\left(\frac{1}{2}\dot{x}^2\right)
+    \label{condensado2}
+\end{equation}
+
+Sustituyendo~\ref{condensado2}, agregando las relaciones para $y$ y $z$ y
+reagrupando términos en~\ref{general1}:
+
+\begin{equation*}
+\begin{split}
+    \left[
+        \frac{d}{dt}\left(
+            \frac{\partial}{\partial\dot{q}_1}\left(
+                \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2)
+            \right)
+        \right)-
+        \frac{\partial}{\partial q_1}\left(
+            \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2)
+        \right)
+    \right]\delta q_1=\\
+    \left(
+        F_x\frac{\partial x}{\partial q_1}+
+        F_y\frac{\partial y}{\partial q_1}+
+        F_z\frac{\partial z}{\partial q_1}
+    \right)\delta q_1
+\end{split}
+\end{equation*}
+
+Considerando que $\frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2)$ representa la
+energía cinética ($T$), finalmente se obtiene:
+
+\begin{equation*}
+    \frac{d}{dt}\left(
+        \frac{\partial T}{\partial\dot{q}_1}
+    \right)-
+    \frac{\partial T}{\partial q_1}=
+    F_x\frac{\partial x}{\partial q_1}+
+    F_y\frac{\partial y}{\partial q_1}+
+    F_z\frac{\partial z}{\partial q_1}
+    \label{lagrange}
+\end{equation*}
+
+\section{Determinación de la aceleración}
+La componente $a'$ del vector aceleración $a$, sobre una linea cuyos cosenos
+directores son: $l$, $m$, $n$, esta dada por:
+
+\begin{equation*}
+    a'=\ddot{x}l+\ddot{y}m+\ddot{z}n
+\end{equation*}
+
+Si debe hallarse $a'$ en la dirección de la tangente a una curva en el espacio
+en un punto $p$ determinado.
+
+\begin{align*}
+    l&=\frac{dx}{ds}; & m&=\frac{dy}{ds}; & n&=\frac{dz}{ds}
+\end{align*}
+\begin{equation*}
+    ds^2=dx^2+dy^2+dz^2
+\end{equation*}
+
+Entonces, partiendo de las ecuaciones de la curva en el espacio, puede hallarse
+$l$, $m$, $n$, supóngase que se desea determinar una expresión general para la
+componente de la aceleración en la dirección de la tangente a la coordenada
+$q_1$, teniendo en cuenta que las coordenadas generalizadas $q_1$, $q_2$, $q_3$
+se relacionan con las rectangulares por medio de:
+
+\begin{align*}
+    x&=x(q_1,q_2,q_3,t); & y&=y(q_1,q_2,q_3,t); & z=z(q_1,q_2,q_3,t)
+\end{align*}
+
+La linea coordenada de $q_1$ se determina haciendo que permanezcan constantes
+$q_2$, $q_3$, $t$. En forma semejante se obtienen las lineas coordenadas de
+$q_2$ y $q_3$. Tomando las derivadas se obtienen:
+
+\begin{align*}
+    dx&=\frac{\partial x}{\partial q_1}dq_1; &
+    dy&=\frac{\partial y}{\partial q_1}dq_1; &
+    dz&=\frac{\partial z}{\partial q_1}dq_1
+\end{align*}
+
+Por tanto:
+
+\begin{equation*}
+    {ds}^2=\left[
+        {\left(\frac{\partial x}{\partial q_1}\right)}^2+
+        {\left(\frac{\partial y}{\partial q_1}\right)}^2+
+        {\left(\frac{\partial z}{\partial q_1}\right)}^2
+    \right] dq^2_1
+\end{equation*}
+
+En donde $ds$ es un elemento de longitud medido sobre la curva de $q$
+
+\begin{equation*}
+    l_1=\frac{dx}{dq_1{\left[
+            {\left(\frac{\partial x}{\partial q_1}\right)}^2+
+            {\left(\frac{\partial y}{\partial q_1}\right)}^2+
+            {\left(\frac{\partial z}{\partial q_1}\right)}^2
+        \right]}^\frac{1}{2}}
+       =\frac{1}{h_1}\frac{\partial x}{\partial q_1}
+\end{equation*}
+
+En donde el significado de $h_1$ es claro, y donde se ha escrito $dx/dq_1$ como
+$\partial x/\partial q_1$ puesto que $q_2$, $q_3$ y $t$ se consideran todavía
+constantes. En forma semejante
+$m_1=\frac{1}{h_1}\frac{\partial y}{\partial q_1}$ y
+$n_1=\frac{1}{h_1}\frac{\partial y}{\partial q_1}$. Igualmente los cosenos
+directores de la tangente a la curva coordenada de $q_2$, son:
+
+\begin{align*}
+    l_2&=\frac{1}{h_2}\frac{\partial x}{\partial q_2}; &
+    m_2&=\frac{1}{h_2}\frac{\partial y}{\partial q_2}; &
+    n_2&=\frac{1}{h_2}\frac{\partial z}{\partial q_2};
+\end{align*}
+
+Designando $a'$ como $a_{q_1}$ la ecuación se convierte en:
+
+\begin{equation*}
+    a'=a_{q_1}=\frac{1}{h_1}\left(
+        \ddot{x}\frac{\partial x}{\partial q_1}+
+        \ddot{y}\frac{\partial y}{\partial q_1}+
+        \ddot{z}\frac{\partial z}{\partial q_1}
+    \right)
+\end{equation*}
+
+Teniendo en cuenta las etapas que condujeron al miembro izquierdo de la ecuación
+de \emph{Lagrange}, evidentemente puede escribirse en la siguiente forma:
+
+\begin{equation*}
+    a_{q_r}=\frac{1}{h_{q_r}}\left[
+        \frac{d}{dt}\left(\frac{\partial T'}{\partial\dot{q}_r}\right)-
+        \frac{\partial T'}{\partial q_r}
+    \right]
+\end{equation*}
+\begin{equation*}
+    T'=\frac{1}{2}v^2=\frac{1}{2}(\dot{x}^2+\dot{y}^2+\dot{z}^2)
+\end{equation*}
+
+\section{Ejemplos}
+
+\subsection{Ejemplo 1}
+Determinar las ecuaciones de movimiento de una partícula que se mueve por acción
+de una fuerza $F$. Suponer que el movimiento es en un plano.
+
+\subsection{Ejemplo 2}
+Determinar las ecuaciones de movimiento de una partícula de masa $m$ por la
+acción de una fuerza, la misma que tiene movimiento lineal, y angular, la fuerza
+que hace posible el movimiento es $F$.
+
+\subsection{Ejemplo 3}
+3.5. Una cuenta puede moverse restringida a una espiral cónica lisa. Suponiendo
+que $\rho=az$ y que $\phi=-bz$, en donde $a$ y $b$ son constantes, demostrar que
+la ecuación del movimiento es:
+
+\begin{equation*}
+    \ddot{z}(a^2+1+a^2b^2z^2)+a^2b^2z\dot{z}^2=-g
+\end{equation*}
+
+\subsection{Ejemplo 4}
+3.7. La masa $m$ del péndulo esta suspendida por medio de un hilo inextensible
+del punto $p$. Este punto puede moverse libremente sobre una horizontal bajo la
+acción de los resortes, los cuales tienen una constante $k$. Despreciando la
+masa de los resortes, demostrar que el péndulo oscila con un periodo igual a:
+
+\begin{equation*}
+    P=2r\sqrt{\frac{mg+2kr}{2kg}}
+\end{equation*}
+
+\subsection{Ejemplo 5}
+Determinar la frecuencia de las pequeñas oscilaciones de un péndulo envolvente
+en el campo gravitacional. El radio $r$ del cilindro y la longitud libre $l_0$
+de la soga en su posición de equilibrio son datos conocidos.
+
+\subsection{Ejemplo 6}
+Un segmento cilíndrico se balancea sobre un plano rugoso por la acción del campo
+gravitacional. Determinar el periodo de oscilación, los datos son: la masa $m$,
+el momento inercial $I_s$ con respecto al centro de gravedad y la excentricidad
+del centro de gravedad $e$.
+
+\subsection{Ejemplo 7}
+3.1. Suponiendo que el movimiento está restringido al plano $Q_1 Q_2$ y que la
+gravedad actúa en la dirección negativa del eje vertical $Y$, establézcanse las
+ecuaciones del movimiento de un proyectil en función de las coordenadas $q_1$ y
+$q_2$.
+
+
+\subsection{Ejemplo 8}
+Determinar las ecuaciones de aceleración para una partícula en coordenadas
+esféricas.
+
+\subsection{Ejemplo 9}
+Determinar las ecuaciones de aceleración para una partícula en coordenadas
+polares.
+
+\subsection{Ejemplo 10}
+3.16. Un disco pesado uniforme, de radio $R$, rueda por un plano inclinado sin
+resbalar. Los ejes $X$ y $Y$ están adheridos a la superficie del disco con el
+origen en el centro. Una partícula de masa $m$ puede moverse libremente en el
+plano del disco bajo la acción de la gravedad y de un sistema de resortes cuyos
+detalles no es necesario especificar. Por consideraciones elementales puede
+decirse que despreciando  la pequeña masa de la partícula, el centro del disco
+se mueve con aceleración lineal $a=\frac{2}{3}g\sen(\alpha)$, en donde $\alpha$
+es el ángulo de inclinación del plano. Demostrar que la energía cinética de la
+partícula en coordenadas polares $r$ y $\theta$ ($\theta$ medido a partir del
+eje $X$ adherido al disco) esta dada por: ($\beta$ se mide entre $X$ y una recta
+fija normal al plano inclinado)
+
+\begin{equation*}
+    T=\frac{1}{2}m[
+        a^2t^2+
+        \dot{r}^2+
+        r^2{(\dot{\beta}-\dot{\theta})}^2+
+        2at\dot{r}\sen(\beta-\theta)+
+        2atr(\dot{\beta}-\dot{\theta})\cos(\beta-\theta)
+    ]
+\end{equation*}
+
+en donde $\dot{\beta}=(a/R)t$.
+
+\subsection{Ejemplo 11}
+3.21. Un alambre rígido parabólico que gira de una cierta manera alrededor del
+eje $Z_2$ al mismo tiempo que la plataforma a la cual se halla adherido el
+sistema $X_2$, $Y_2$, $Z_2$ se mueve con aceleración constante $a$, paralela al
+eje $Y_1$. La cuenta de masa $m$ puede deslizarse a lo largo del alambre liso
+bajo la fuerza de la gravedad. (a) Demostrar que:
+
+\begin{equation*}
+    T=\frac{1}{2}m[
+        \dot{r}^2+
+        r^2\dot{\phi}^2+
+        a^2t^2+
+        2\dot{r}at\sen(\phi)+
+        2r\dot{\phi}at\cos(\phi)+
+        4b^2r^2\dot{r}^2
+    ]
+\end{equation*}
+
+Suponiendo $\dot{\phi}=\omega=\text{constante}$, plantear la ecuación del
+movimiento correspondiente a $r$, y demostrar que:
+
+\begin{equation*}
+    F_r=-2mgbr
+\end{equation*}
+

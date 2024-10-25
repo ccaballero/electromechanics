@@ -1,0 +1,486 @@
+\chapter{Series de \emph{Fourier}}
+
+\section{Funciones periódicas}
+\begin{figure}[H]
+    \centering
+    \input{figura_01_01.tex}
+    \caption{Función periódica}\label{figura_01}
+\end{figure}
+
+Una función periódica es aquella cuya gráfica se repite infinitas veces, cada
+cierto intervalo (\textbf{Figura~\ref{figura_01}}).
+
+El menor intervalo de repetición se llama \emph{periodo} ($T$).
+
+Matemáticamente una función periódica es aquella que verifica:
+\begin{equation}
+    f(t)=f(t+nT);n\in\mathbb{Z}
+\label{funcion_periodica}
+\end{equation}
+
+Donde $T$ es el periodo (la menor constante que verifica la igualdad).
+
+\section{Propiedades de la funciones periódicas}
+Si $f(t)=f(t+nT)$:
+\subsection*{Propiedad 1}
+\begin{equation}
+    \int_a^b\,f(t)\,dt=\int_{a+nT}^{b+nT}f(t)\,dt\quad\,n\in\mathbb{Z}
+\label{propiedad1}
+\end{equation}
+
+\underline{Prueba}:
+\begin{equation*}
+    \int_a^b\,f(t)\,dt=\int_{a}^{b}\,f(t+nT)\,dt
+\end{equation*}
+
+Cambiando la variable:
+\begin{equation*}
+    \tau=t+nT
+\end{equation*}
+\begin{equation*}
+    d\tau=dt
+\end{equation*}
+\begin{equation*}
+\begin{split}
+    \int_a^b\,f(t)\,dt
+        &=\int_{a+nT}^{b+nT}\,f(\tau)\,d\tau\\
+        &=\int_{a+nT}^{b+nT}\,f(t)\,dt
+\end{split}
+\end{equation*}
+
+Puede verse gráficamente en la \textbf{Figura~\ref{figura_02}}.
+\begin{figure}[H]
+    \centering
+    \input{figura_01_02.tex}
+    \caption{Demostración gráfica}\label{figura_02}
+\end{figure}
+
+\subsection*{Propiedad 2}
+\begin{equation}
+    \int_{a-T/2}^{a+T/2}f(t)\,dt=\int_{-T/2}^{T/2}f(t)\,dt
+\label{propiedad2}
+\end{equation}
+
+\underline{Prueba}:
+\begin{equation*}
+\begin{split}
+    \int_{a-T/2}^{a+T/2}f(t)\,dt
+        &=\int_{a-T/2}^{T/2}f(t)\,dt+\int_{T/2}^{a+T/2}f(t)\,dt\\
+        &=\int_{a-T/2}^{T/2}f(t)\,dt+\int_{T/2-T}^{a+T/2-T}f(t)\,dt\\
+        &=\int_{a-T/2}^{T/2}f(t)\,dt+\int_{-T/2}^{a-T/2}f(t)\,dt\\
+        &=\int_{-T/2}^{T/2}f(t)\,dt
+\end{split}
+\end{equation*}
+
+Puede verse gráficamente en la \textbf{Figura~\ref{figura_03}}.
+\begin{figure}[H]
+    \centering
+    \input{figura_01_03.tex}
+    \caption{Demostración gráfica}\label{figura_03}
+\end{figure}
+
+\subsection*{Propiedad 3}
+\begin{equation}
+    \int_{0}^{T}f(t)\,dt=\int_{-T/2}^{T/2}f(t)\,dt
+\label{propiedad3}
+\end{equation}
+
+\underline{Prueba}:
+
+Si en la ecuación (\ref{propiedad2}) $a=T/2$:
+\begin{equation*}
+\begin{split}
+    \int_{-T/2}^{T/2}f(t)\,dt
+        &=\int_{a-T/2}^{a+T/2}f(t)\,dt\\
+        &=\int_{T/2-T/2}^{T/2+T/2}f(t)\,dt\\
+        &=\int_{0}^{T}f(t)\,dt
+\end{split}
+\end{equation*}
+
+Puede verse gráficamente en la \textbf{Figura~\ref{figura_04}}.
+\begin{figure}[H]
+    \centering
+    \input{figura_01_04.tex}
+    \caption{Demostración gráfica}\label{figura_04}
+\end{figure}
+
+\subsection*{Propiedad 4}
+Si $b-a=T$:
+\begin{equation}
+    \int_{0}^{T}f(t)\,dt=\int_{a}^{b}f(t)\,dt
+\label{propiedad4}
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+\begin{split}
+    \int_{a}^{b}f(t)\,dt
+        &=\int_{a}^{a+T}f(t)\,dt\\
+        &=\int_{a}^{T}f(t)\,dt+\int_{T}^{a+T}f(t)\,dt\\
+        &=\int_{a}^{T}f(t)\,dt+\int_{T-T}^{a+T-T}f(t)\,dt\\
+        &=\int_{a}^{T}f(t)\,dt+\int_{0}^{a}f(t)\,dt\\
+        &=\int_{0}^{T}f(t)\,dt
+\end{split}
+\end{equation*}
+
+Puede verse gráficamente en la \textbf{Figura~\ref{figura_05}}.
+\begin{figure}[H]
+    \centering
+    \input{figura_01_05.tex}
+    \caption{Demostración gráfica}\label{figura_05}
+\end{figure}
+
+\subsection{Funciones seno y coseno}
+\begin{equation*}
+    f(t)=A\,\sen(\omega_0\,t)
+\end{equation*}
+\begin{equation*}
+    f(t)=A\,\cos(\omega_0\,t)
+\end{equation*}
+
+Donde:\\
+\indent\indent$A$: Amplitud.\\
+\indent\indent$\omega_0$: Frecuencia angular.\\
+\indent\indent$T=2\pi/\omega_0$: Periodo.\\
+
+\textbf{Ejemplo}: Hallar el periodo de la siguiente función:
+\begin{equation*}
+    f(t)=\sen(4t)+\sen(3t/2)+\sen(10t)
+\end{equation*}
+
+El periodo buscado debe contener un numero entero de veces a los 3 periodos
+hallados:
+\begin{equation*}
+    T=\begin{cases}
+        a\,T_1;&\,a\in\mathbb{N}\\
+        b\,T_2;&\,b\in\mathbb{N}\\
+        c\,T_3;&\,c\in\mathbb{N}\\
+    \end{cases}
+\end{equation*}
+\begin{equation*}
+    a\,T_1=b\,T_2=c\,T_3
+\end{equation*}
+\begin{equation*}
+    a\,\frac{2\pi}{4}=b\,\frac{2\pi}{3/2}=c\,\frac{2\pi}{10}
+\end{equation*}
+\begin{equation*}
+    a\,\frac{\pi}{2}=b\,\frac{4\pi}{3}=c\,\frac{\pi}{5};x30
+\end{equation*}
+\begin{equation*}
+    15a=40b=6c
+\end{equation*}
+\begin{equation*}
+    M.C.M.(15,40,6)=120
+\end{equation*}
+\begin{equation*}
+\left.\begin{aligned}
+    120=15a\rightarrow\,a=8\\
+    120=40b\rightarrow\,b=3\\
+    120=6c\rightarrow\,c=20\\
+\end{aligned}\right\}=T=8\left(\frac{\pi}{2}\right)=4\pi
+\end{equation*}
+
+Puede verse gráficamente en la \textbf{Figura~\ref{figura_06}}.
+\begin{figure}[H]
+    \centering
+    \input{figura_01_06.tex}
+    \caption{Periodo de la función}\label{figura_06}
+\end{figure}
+
+\subsection{Propiedades ortogonales del seno y el coseno}
+\subsection*{Propiedad 1}
+\begin{equation}
+    \int_{0}^{T}\sen(n\omega_0\,t)\,dt=0\quad\,n\in\mathbb{Z}
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}\sen(n\omega_0\,t)\,dt
+        &=-\frac{\cos(n\omega_0\,t)}{n\omega_0}\Biggr|_{0}^{T}\\
+        &=-\frac{\cos(n\omega_0\,T)}{n\omega_0}+\frac{\cos(0)}{n\omega_0}\\
+        &=-\frac{\cos(n\,2\pi)}{n\omega_0}+\frac{\cos(0)}{n\omega_0}\\
+        &=-\frac{1}{n\omega_0}+\frac{1}{n\omega_0}\\
+        &=0\\
+\end{split}
+\end{equation*}
+\begin{equation}
+    \int_{0}^{T}\cos(n\omega_0\,t)\,dt=0\quad\,n\in\mathbb{Z}
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}\cos(n\omega_0\,t)\,dt
+        &=\frac{\sen(n\omega_0\,t)}{n\omega_0}\Biggr|_{0}^{T}\\
+        &=\frac{\sen(n\omega_0\,T)}{n\omega_0}-\frac{\sen(0)}{n\omega_0}\\
+        &=\frac{\sen(n\,2\pi)}{n\omega_0}-\frac{\sen(0)}{n\omega_0}\\
+        &=\frac{0}{n\omega_0}-\frac{0}{n\omega_0}\\
+        &=0\\
+\end{split}
+\end{equation*}
+
+\subsection*{Propiedad 2}
+\begin{equation}
+    \int_{0}^{T}\sen(m\omega_0\,t)\sen(n\omega_0\,t)\,dt=0
+    \quad\,m,n\,\in\mathbb{Z}\quad\,m\neq\,n
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}\sen(m\omega_0\,t)\sen(n\omega_0\,t)\,dt
+        &=\int_{0}^{T}\frac{1}{2}(\cos((m-n)\omega_0\,t)-
+          \cos((m+n)\omega_0\,t))dt\\
+        &=\frac{1}{2}\left(\int_{0}^{T}\cos((m-n)\omega_0\,t)dt-
+          \int_{0}^{T}\cos((m+n)\omega_0\,t)dt\right)\\
+        &=\frac{1}{2}(0-0)\\
+        &=0\\
+\end{split}
+\end{equation*}
+\begin{equation}
+    \int_{0}^{T}\cos(m\omega_0\,t)\cos(n\omega_0\,t)\,dt=0
+    \quad\,m,n\,\in\mathbb{Z}\quad\,m\neq\,n
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}\cos(m\omega_0\,t)\cos(n\omega_0\,t)\,dt
+        &=\int_{0}^{T}\frac{1}{2}(\cos((m-n)\omega_0\,t)+
+          \cos((m+n)\omega_0\,t))dt\\
+        &=\frac{1}{2}\left(\int_{0}^{T}\cos((m-n)\omega_0\,t)dt+
+          \int_{0}^{T}\cos((m+n)\omega_0\,t)dt\right)\\
+        &=\frac{1}{2}(0+0)\\
+        &=0\\
+\end{split}
+\end{equation*}
+\begin{equation}
+    \int_{0}^{T}\sen(m\omega_0\,t)\cos(n\omega_0\,t)\,dt
+    =0\quad\,m,n\,\in\mathbb{Z}
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}\sen(m\omega_0\,t)\cos(n\omega_0\,t)\,dt
+        &=\int_{0}^{T}\frac{1}{2}(\sen((m-n)\omega_0\,t)+
+          \sen((m+n)\omega_0\,t))dt\\
+        &=\frac{1}{2}\left(\int_{0}^{T}\sen((m-n)\omega_0\,t)dt+
+          \int_{0}^{T}\cos((m+n)\omega_0\,t)dt\right)\\
+        &=\frac{1}{2}(0+0)\\
+        &=0\\
+\end{split}
+\end{equation*}
+
+\subsection*{Propiedad 3}
+\begin{equation}
+    \int_{0}^{T}\sen^2(n\omega_0\,t)\,dt=\frac{T}{2}\quad\,n\,\in\mathbb{Z}
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}\sen^2(n\omega_0\,t)\,dt
+        &=\int_{0}^{T}\sen(n\omega_0\,t)\sen(n\omega_0\,t)dt\\
+        &=\frac{1}{2}\left(\int_{0}^{T}\cos((n-n)\omega_0\,t)dt-
+          \int_{0}^{T}\cos((n+n)\omega_0\,t)dt\right)\\
+        &=\frac{1}{2}\left(\int_{0}^{T}\cos(0)dt-
+          \int_{0}^{T}\cos((2n)\omega_0\,t)dt\right)\\
+        &=\frac{1}{2}\left(\int_{0}^{T}dt-
+          \int_{0}^{T}\cos(2n\omega_0\,t)dt\right)\\
+        &=\frac{1}{2}(t\Biggr|_0^T-0)\\
+        &=\frac{T}{2}\\
+\end{split}
+\end{equation*}
+\begin{equation}
+    \int_{0}^{T}\cos^2(n\omega_0\,t)\,dt=\frac{T}{2}\quad\,n\,\in\mathbb{Z}
+\end{equation}
+
+\underline{Prueba}:
+
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}\cos^2(n\omega_0\,t)\,dt
+        &=\int_{0}^{T}\cos(n\omega_0\,t)\cos(n\omega_0\,t)dt\\
+        &=\frac{1}{2}\left(\int_{0}^{T}\cos((n-n)\omega_0\,t)dt+
+          \int_{0}^{T}\cos((n+n)\omega_0\,t)dt\right)\\
+        &=\frac{1}{2}\left(\int_{0}^{T}\cos(0)dt+
+          \int_{0}^{T}\cos((2n)\omega_0\,t)dt\right)\\
+        &=\frac{1}{2}\left(\int_{0}^{T}dt+
+          \int_{0}^{T}\cos(2n\omega_0\,t)dt\right)\\
+        &=\frac{1}{2}(t\Biggr|_0^T+0)\\
+        &=\frac{T}{2}\\
+\end{split}
+\end{equation*}
+
+\section{Series de \emph{Fourier}}
+Una función periódica que cumple ciertas condiciones puede desarrollarse
+mediante la serie:
+\begin{equation}
+    f(t)=\frac{a_0}{2}+
+    \sum_{n=1}^{\infty}[a_n\cos(n\omega_0\,t)+b_n\sen(n\omega_0\,t)]
+\end{equation}
+
+Donde:\\
+\indent\indent$\omega_0=2\pi/T$: Frecuencia angular de $f(t)$.\\
+\indent\indent$T$: Periodo de $f(t)$.\\
+\indent\indent$a_0;a_n;b_n$: Coeficientes de \emph{Fourier}.\\
+\indent\indent$a_0/2$: Termino constante.\\
+\indent\indent$a_n\cos(n\omega_0\,t);b_n\sen(n\omega_0\,t)$: Armónicos, términos
+seno y coseno con frecuencias angulares múltiples de $\omega_0$\\
+
+\indent\indent$a_1\cos(\omega_0\,t)+b_1\sen(\omega_0\,t)$: Primer armónico.\\
+\indent\indent$a_2\cos(2\omega_0\,t)+b_2\sen(2\omega_0\,t)$: Segundo armónico.\\
+\indent\indent$a_3\cos(3\omega_0\,t)+b_3\sen(2\omega_0\,t)$: Tercer armónico.\\
+
+\subsection{Condiciones de \emph{Dirichlet}}
+Para que una función periódica $f(t)=f(t+nT);\,n\in\mathbb{Z}$, se desarrolle
+como una serie de \emph{Fourier} debe cumplir:
+
+\begin{itemize}
+\item $f(t)$ debe ser continua por tramos en 1 periodo.
+    \begin{figure}[H]
+        \centering
+        \input{figura_01_07.tex}
+    \end{figure}
+    \begin{itemize}
+    \item Debe existir un numero finito de discontinuidades (en 1 periodo).
+    \item Debe existir un numero finito de extremos relativos (en 1 periodo).
+    \end{itemize}
+\item La integral $\int_0^T|f(t)|\,dt<\infty$ debe ser finita.
+\end{itemize}
+
+\textbf{Ejemplo}:
+\begin{equation*}
+    f(t)=\tan(t);\quad\,0<t<\pi;\quad\,T=\pi
+\end{equation*}
+\begin{figure}[H]
+    \centering
+    \input{figura_01_08.tex}
+\end{figure}
+\begin{equation*}
+    \int_0^\pi|\tan(t)|\,dt\rightarrow\infty
+\end{equation*}
+\begin{equation*}
+    t=\frac{\pi}{2}:|\tan(t)|\rightarrow\infty
+\end{equation*}
+\\
+\begin{equation*}
+    \therefore\,\text{Esta función no tiene serie de \emph{Fourier}.}
+\end{equation*}
+
+\section{Evaluación de los coeficientes de \emph{Fourier}}
+\begin{equation*}
+    f(t)=\frac{a_0}{2}+
+    \sum_{n=1}^{\infty}[a_n\cos(n\omega_0\,t)+b_n\sen(n\omega_0\,t)]
+\end{equation*}
+
+Integrando ambas partes:
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}f(t)\,dt
+        &=\int_{0}^{T}\frac{a_0}{2}\,dt+
+          \sum_{n=1}^{\infty}\left[\int_{0}^{T}a_n\cos(n\omega_0\,t)\,dt+
+          \int_{0}^{T}b_n\sen(n\omega_0\,t)\,dt\right]\\
+        &=\frac{a_0}{2}t\Biggr|_{0}^{T}\\
+        &=\frac{a_0}{2}T\\
+\end{split}
+\end{equation*}
+\begin{equation}
+    a_0=\frac{2}{T}\int_{0}^{T}f(t)\,dt
+\end{equation}
+
+Para calcular ``$a_n$'' multiplicamos por $\cos(m\omega_0\,t);m\in\mathbb{N}$ e
+integramos en 1 periodo.
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}f(t)\cos(m\omega_0\,t)\,dt
+        &=\int_{0}^{T}\frac{a_0}{2}\cos(m\omega_0\,t)\,dt\\
+        &+\sum_{n=1}^{\infty}\left[
+          \int_{0}^{T}a_n\cos(n\omega_0\,t)\cos(m\omega_0\,t)\,dt+
+          \int_{0}^{T}b_n\sen(n\omega_0\,t)\cos(m\omega_0\,t)\,dt\right]\\
+        &=0+\sum_{n=1}^{\infty}\left[
+          \int_{0}^{T}a_n\cos(n\omega_0\,t)\cos(m\omega_0\,t)\,dt+0\right]\\
+\end{split}
+\end{equation*}
+
+Para $n\neq m$ todos los elementos de la sumatoria serán igual a $0$.
+Por tanto:
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}f(t)\cos(n\omega_0\,t)\,dt
+        &=\int_{0}^{T}a_n\cos^2(n\omega_0\,t)\,dt\\
+        &=a_n\frac{T}{2}\\
+\end{split}
+\end{equation*}
+\begin{equation}
+    a_n=\frac{2}{T}\int_{0}^{T}f(t)\cos(n\omega_0\,t)\,dt
+\end{equation}
+
+Para calcular ``$b_n$'' multiplicamos por $\sen(m\omega_0\,t);m\in\mathbb{N}$ e
+integramos en 1 periodo.
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}f(t)\sen(m\omega_0\,t)\,dt
+        &=\int_{0}^{T}\frac{a_0}{2}\sen(m\omega_0\,t)\,dt\\
+        &+\sum_{n=1}^{\infty}\left[
+          \int_{0}^{T}a_n\cos(n\omega_0\,t)\sen(m\omega_0\,t)\,dt+
+          \int_{0}^{T}b_n\sen(n\omega_0\,t)\sen(m\omega_0\,t)\,dt\right]\\
+        &=0+\sum_{n=1}^{\infty}\left[
+          0+\int_{0}^{T}b_n\sen(n\omega_0\,t)\sen(m\omega_0\,t)\,dt\right]\\
+\end{split}
+\end{equation*}
+
+Para $n\neq\,m$ todos los elementos de la sumatoria serán igual a $0$.
+Por tanto:
+\begin{equation*}
+\begin{split}
+    \int_{0}^{T}f(t)\sen(n\omega_0\,t)\,dt
+        &=\int_{0}^{T}b_n\sen^2(n\omega_0\,t)\,dt\\
+        &=b_n\,\frac{T}{2}\\
+\end{split}
+\end{equation*}
+\begin{equation}
+    b_n=\frac{2}{T}\int_{0}^{T}f(t)\sen(n\omega_0\,t)\,dt
+\end{equation}
+
+\section{Formulas para las series de \emph{Fourier}}
+\begin{equation*}
+    \sen(\pi\,n)=0;\quad\,n\in\mathbb{N}
+\end{equation*}
+\begin{equation*}
+    \cos(\pi\,n)={(-1)}^n;\quad\,n\in\mathbb{N}
+\end{equation*}
+\begin{equation*}
+    \sen(2\pi\,n)=0;\quad\,n\in\mathbb{N}
+\end{equation*}
+\begin{equation*}
+    \cos(2\pi\,n)=1;\quad\,n\in\mathbb{N}
+\end{equation*}
+\begin{equation*}
+    \int\,\sen(at)\,dt=-\frac{\cos(at)}{a}
+\end{equation*}
+\begin{equation*}
+    \int\,\cos(at)\,dt=\frac{\sen(at)}{a}
+\end{equation*}
+\begin{equation*}
+    \int\,t\sen(at)\,dt=-\frac{t}{a}\cos(at)+\frac{1}{a^2}\sen(at)
+\end{equation*}
+\begin{equation*}
+    \int\,t\cos(at)\,dt=\frac{t}{a}\sen(at)+\frac{1}{a^2}\cos(at)
+\end{equation*}
+\begin{equation*}
+    \int\,{e}^{at}\,dt=\frac{1}{a}e^{at}
+\end{equation*}
+\begin{equation*}
+    \int\,t\,{e}^{at}\,dt=\frac{t}{a}\,{e}^{at}-\frac{1}{a^2}{e}^{at}
+\end{equation*}
+
