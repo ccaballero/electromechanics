@@ -1,0 +1,40 @@
+\section{Introducción}
+Todos los dispositivos electrónicos activos requieren una fuente de corriente
+directa (cd) constante que provenga de una batería o una fuente de
+alimentación. La \textbf{fuente de alimentación de cd} convierte el voltaje de
+corriente alterna (ca) estándar de $220[\text{V}]$ a $50[\text{Hz}]$ disponible
+en las tomas de corriente de pared en un voltaje de cd constante.
+
+En la \textbf{figura~\ref{diagrama}} se muestra un diagrama de bloques básico de
+una fuente de alimentación completa.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=1.50]{diagramas/00.diagrama.eps}
+\caption{Fuente de alimentación completa.}
+\label{diagrama}
+\end{figure}
+
+En general, el voltaje de linea de entrada de ca se reduce a un voltaje de ca
+más bajo con un \textbf{transformador}. Este cambia voltajes de ca con base en
+la relación de vueltas entre el primario y el secundario. Si éste tiene más
+vueltas que el primario, el voltaje de salida a través del secundario será más
+alto y la corriente será más pequeña. Si el secundario tiene menos vueltas que
+el primario, el voltaje de salida a través del secundario será más bajo y la
+corriente será más alta.
+
+El \textbf{rectificador} puede ser de media onda o de onda completa, este
+convierte el voltaje de entrada de ca en un voltaje de cd pulsante.
+
+El \textbf{filtro} elimina los rizos de voltaje en el rectificador y produce un
+voltaje de cd relativamente uniforme.
+
+El \textbf{regulador} es un circuito que mantiene un voltaje de cd constante
+frente a las variaciones de voltaje de linea de entrada o de la carga. Los
+reguladores varían desde un dispositivo de un solo semiconductor hasta circuitos
+integrados mas complejos.
+
+La \textbf{carga} es un circuito o dispositivo conectado a la salida de la
+fuente de alimentación y opera con el voltaje y la corriente de la fuente de
+alimentación \cite{Floyd}.
+

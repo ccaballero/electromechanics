@@ -1,6 +1,6 @@
 <Qucs Schematic 24.3.1>
 <Properties>
-  <View=91,250,1091,831,1.57659,0,0>
+  <View=-3,132,1538,1147,1.23563,100,70>
   <Grid=10,10,1>
   <DataSet=01.transformador.dat>
   <DataDisplay=01.transformador.dpl>
