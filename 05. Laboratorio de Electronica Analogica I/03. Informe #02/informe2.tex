@@ -1,4 +1,4 @@
-\documentclass[letter,twoside,11pt]{article}
+\documentclass[letter,twoside,11pt]{report}
 
 \usepackage[spanish,es-nodecimaldot]{babel}
 \usepackage[utf8]{inputenc}
@@ -53,6 +53,7 @@
 }
 
 \renewcommand{\arraystretch}{1.2}
+\renewcommand{\thesection}{\arabic{section}}
 
 \begin{document}
 
@@ -92,12 +93,23 @@
 \blankpage
 \addtocounter{page}{-1}
 
+\tableofcontents
+\blankpage
+
 \input{01.introduccion}
 \input{02.objetivos}
 \input{03.transformador}
-\input{04.rectificador}
-\input{05.filtro}
-\input{06.regulador}
+\input{04.rectificador1}
+\input{04.rectificador2}
+\input{04.rectificador3}
+\input{05.filtro1}
+\input{05.filtro2}
+\input{05.filtro3}
+\input{06.regulador1}
+\input{06.regulador2}
+\input{06.regulador3}
+\input{06.regulador4}
+\input{06.regulador5}
 \input{07.conclusiones}
 
 \begin{thebibliography}{99}
