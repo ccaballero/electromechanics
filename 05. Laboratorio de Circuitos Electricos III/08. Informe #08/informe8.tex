@@ -1,0 +1,483 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage{framed}
+\usepackage[svgnames]{xcolor}
+\colorlet{shadecolor}{Gainsboro!50}
+
+\usepackage[labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{pstricks}
+
+\usepackage{anysize}
+\marginsize{3cm}{2cm}{2cm}{3cm}
+
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{csquotes}
+\usepackage{steinmetz}
+\usepackage{stmaryrd}
+\usepackage{multirow}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Laboratorio de Circuitos Eléctricos III}
+\fancyfoot[CO,CE]{\thepage\ de \pageref{LastPage}}
+
+\special{papersize=215.9mm,279.4mm}
+
+\usepackage[
+    pdfauthor={Carlos Eduardo Caballero Burgoa},%
+    pdftitle={Laboratorio de Circuitos Eléctricos III},%
+    pdfsubject={Medida del factor de potencia trifásico},%
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black,
+    breaklinks]{hyperref}
+\usepackage{breakurl}
+
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        {\Large UNIVERSIDAD MAYOR DE SAN SIMÓN}\\
+        \vspace*{0.15cm}
+        {\large FACULTAD DE CIENCIAS Y TECNOLOGÍA}\\
+        \vspace*{0.10cm}
+        DEPARTAMENTO DE ELÉCTRICA-ELECTRÓNICA\\
+        \vspace*{3.0cm}
+        {\Large \textbf{LABORATORIO DE CIRCUITOS ELÉCTRICOS III}}\\
+        \vspace*{0.3cm}
+        {\Large \textbf{INFORME No. 8}}\\
+        \vspace*{3.5cm}
+        {\Large \textbf{CORRECCIÓN DEL FACTOR DE POTENCIA TRIFÁSICO\\
+        EN CARGAS EQUILIBRADAS}}\\
+    \end{center}
+
+    \vspace*{5.3cm}
+    \leftskip=7.95cm
+    \noindent
+    \textbf{Estudiante:}\\
+    Caballero Burgoa, Carlos Eduardo.\\
+    \newline
+    \textbf{Carrera:}\\
+    Ing. Electromecánica.\\
+    \newline
+    \textbf{Docente:}\\
+    Ing. Marco Antonio Vallejo Camacho.\\
+    \newline
+    \textbf{Grupo:} 2F (Martes).\\
+\textbf{Fecha de entrega:} 26 de Noviembre del 2024.\\
+\end{titlepage}
+
+\section{Cálculos teóricos}
+Considerando un circuito trifasico con carga en estrella equilibrado, se hallan
+los factores de potencia, las corrientes de linea y las potencias activa,
+reactiva y aparente.
+
+\subsection{Carga $RL$}
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=1]{figura1.eps}
+\caption{Circuito trifásico equilibrado con carga $RL$.}
+\label{circuito1}
+\end{figure}
+
+Considerando un circuito trifásico con carga $RL$ estrella equilibrado
+(\textbf{Figura~\ref{circuito1}}).
+
+Se calcula la frecuencia angular ($\omega$):
+\begin{equation*}
+    \begin{split}
+        \omega&=2\pi f\\
+              &=2\pi(50)\\
+              &=100\pi\,[\text{rad}/\text{s}]\\
+    \end{split}
+\end{equation*}
+
+Se halla la impedancia en el dominio de frecuencia:
+\begin{equation*}
+    \begin{split}
+        Z &= R+j\omega L\\
+          &= 500+j\,(100\pi)\,(0.5)\\
+          &= 500+j50\pi\,[\Omega]\\
+    \end{split}
+\end{equation*}
+
+Y su representación fasorial:
+\begin{equation*}
+    \begin{split}
+        |Z| &= \sqrt{500^2+(50\pi)^2}\\
+            &= 524.09\\
+        \theta &= \arctan\left(\frac{50\pi}{500}\right)\\
+               &= 17.44^{\circ}\\
+        Z &= 524.09\phase{17.44^{\circ}}\,[\Omega]\\
+    \end{split}
+\end{equation*}
+
+Por tanto, el factor de potencia es:
+\begin{equation*}
+    \begin{split}
+        \text{fp} &= \cos(17.44^{\circ})\\
+                  &= 0.9540\,\text{(atrasado)}\\
+    \end{split}
+\end{equation*}
+
+A partir del voltaje de linea, se calcula el voltaje de fase:
+\begin{equation*}
+    \begin{split}
+        U_F &= \frac{U_L}{\sqrt{3}}\\
+            &= \frac{380}{\sqrt{3}}\\
+            &= 219.39[\text{V}]\\
+    \end{split}
+\end{equation*}
+
+Y a partir del voltaje de fase, se halla la corriente de linea:
+\begin{equation*}
+    \begin{split}
+        I_L &= \frac{U_F}{|Z|}\\
+            &= \frac{219.39}{\sqrt{(500)^2+(50\pi)^2}}\\
+            &= 0.4186[\text{A}]\\
+    \end{split}
+\end{equation*}
+
+Por tanto, las potencias activa, reactiva y aparente son:
+\begin{equation*}
+    \begin{split}
+        P_T &= \sqrt{3}\,U_L\,I_L\,\cos(\phi)\\
+            &= \sqrt{3}\,(380)\,(0.4186)\,\cos(17.44^{\circ})\\
+            &= 262.86[\text{W}]\\
+        Q_T &= \sqrt{3}\,U_L\,I_L\,\sen(\phi)\\
+            &= \sqrt{3}\,(380)\,(0.4186)\,\sen(17.44^{\circ})\\
+            &= 82.579[\text{VAR}]\\
+        S_T &= \sqrt{(262.86)^2+(82.579)^2}\\
+            &= 275.52[\text{VA}]\\
+    \end{split}
+\end{equation*}
+
+\subsection{Carga $RL$ con capacitor en serie}
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=1]{figura2.eps}
+\caption{Circuito trifásico equilibrado con \\carga $RL$ y capacitor en serie.}
+\label{circuito2}
+\end{figure}
+
+Considerando un circuito trifásico con carga $RLC$ estrella equilibrado
+(\textbf{Figura~\ref{circuito2}}).
+
+Se halla la impedancia en el dominio de frecuencia:
+\begin{equation*}
+    \begin{split}
+        Z &= R+j\omega L+\frac{1}{j\omega C}\\
+          &= 500+j\,(100\pi)\,(0.5)+\frac{1}{j\,(100\pi)\,(\num{20e-6})}\\
+          &= 500-j2.0753\,[\Omega]\\
+    \end{split}
+\end{equation*}
+
+Y su representación fasorial:
+\begin{equation*}
+    \begin{split}
+        |Z| &= \sqrt{500^2+(-2.0753)^2}\\
+            &= 500.00\\
+        \theta &= \arctan\left(\frac{-2.0753}{500}\right)\\
+               &= -0.24^{\circ}\\
+        Z &= 500.00\phase{-0.24^{\circ}}\,[\Omega]\\
+    \end{split}
+\end{equation*}
+
+Por tanto, el factor de potencia es:
+\begin{equation*}
+    \begin{split}
+        \text{fp} &= \cos(-0.24^{\circ})\\
+                  &= 1.0000\,\text{(adelantado)}\\
+    \end{split}
+\end{equation*}
+
+A partir del voltaje de linea, se calcula el voltaje de fase:
+\begin{equation*}
+    \begin{split}
+        U_F &= \frac{U_L}{\sqrt{3}}\\
+            &= \frac{380}{\sqrt{3}}\\
+            &= 219.39[\text{V}]\\
+    \end{split}
+\end{equation*}
+
+Y a partir del voltaje de fase, se halla la corriente de linea:
+\begin{equation*}
+    \begin{split}
+        I_L &= \frac{U_F}{|Z|}\\
+            &= \frac{219.39}{\sqrt{(500)^2+(-2.0753)^2}}\\
+            &= 0.4388[\text{A}]\\
+    \end{split}
+\end{equation*}
+
+Por tanto, las potencias activa, reactiva y aparente son:
+\begin{equation*}
+    \begin{split}
+        P_T &= \sqrt{3}\,U_L\,I_L\,\cos(\phi)\\
+            &= \sqrt{3}\,(380)\,(0.4388)\,\cos(-0.24^{\circ})\\
+            &= 288.80[\text{W}]\\
+        Q_T &= \sqrt{3}\,U_L\,I_L\,\sen(\phi)\\
+            &= \sqrt{3}\,(380)\,(0.4388)\,\sen(-0.24^{\circ})\\
+            &= -1.1987[\text{VAR}]\\
+        S_T &= \sqrt{(288.80)^2+(-1.1987)^2}\\
+            &= 288.80[\text{VA}]\\
+    \end{split}
+\end{equation*}
+
+\subsection{Carga $RL$ con capacitor en paralelo}
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=1]{figura3.eps}
+\caption{Circuito trifásico equilibrado con \\carga $RL$ y capacitor en paralelo.}
+\label{circuito3}
+\end{figure}
+
+Considerando un circuito trifásico con carga $RLC$ estrella equilibrado
+(\textbf{Figura~\ref{circuito3}}).
+
+Se halla la impedancia en el dominio de frecuencia:
+\begin{equation*}
+    \begin{split}
+        Z &= (R+j\omega L)||(\frac{1}{j\omega C})\\
+          &= \frac{(500+j50\pi)(-j\frac{500}{\pi})}{(500+j50\pi)+(-j\frac{500}{\pi})}\\
+          &= 50.660-j158.945\,[\Omega]\\
+    \end{split}
+\end{equation*}
+
+Y su representación fasorial:
+\begin{equation*}
+    \begin{split}
+        |Z| &= \sqrt{(50.660)^2+(-158.945)^2}\\
+            &= 166.82\\
+        \theta &= \arctan\left(\frac{-158.945}{50.660}\right)\\
+               &= -72.32^{\circ}\\
+        Z &= 166.82\phase{-72.32^{\circ}}\,[\Omega]\\
+    \end{split}
+\end{equation*}
+
+Por tanto, el factor de potencia es:
+\begin{equation*}
+    \begin{split}
+        \text{fp} &= \cos(-72.32^{\circ})\\
+                  &= 0.3037\,\text{(adelantado)}\\
+    \end{split}
+\end{equation*}
+
+A partir del voltaje de linea, se calcula el voltaje de fase:
+\begin{equation*}
+    \begin{split}
+        U_F &= \frac{U_L}{\sqrt{3}}\\
+            &= \frac{380}{\sqrt{3}}\\
+            &= 219.39[\text{V}]\\
+    \end{split}
+\end{equation*}
+
+Y a partir del voltaje de fase, se halla la corriente de linea:
+\begin{equation*}
+    \begin{split}
+        I_L &= \frac{U_F}{|Z|}\\
+            &= \frac{219.39}{\sqrt{(50.660)^2+(-158.945)^2}}\\
+            &= 1.3151[\text{A}]\\
+    \end{split}
+\end{equation*}
+
+Por tanto, las potencias activa, reactiva y aparente son:
+\begin{equation*}
+    \begin{split}
+        P_T &= \sqrt{3}\,U_L\,I_L\,\cos(\phi)\\
+            &= \sqrt{3}\,(380)\,(1.3151)\,\cos(-72.32^{\circ})\\
+            &= 262.86[\text{W}]\\
+        Q_T &= \sqrt{3}\,U_L\,I_L\,\sen(\phi)\\
+            &= \sqrt{3}\,(380)\,(1.3151)\,\sen(-72.32^{\circ})\\
+            &= -824.71[\text{VAR}]\\
+        S_T &= \sqrt{(262.86)^2+(-824.71)^2}\\
+            &= 865.59[\text{VA}]\\
+    \end{split}
+\end{equation*}
+
+\subsection{Resumen de resultados}
+En la siguiente tabla se resumen los valores obtenidos teóricamente:
+
+\begin{center}
+    \begin{tabular}{|c||c|c|c|c|c|}
+    \hline
+    & $I_F[\text{A}]$ &
+    $P_T[\text{W}]$ &
+    $Q_T[\text{VAR}]$ &
+    $S_T[\text{VA}]$ &
+    \text{fp}
+    \tabularnewline \hline \hline
+    $RL$ &
+    $0.4186$ &
+    $262.86$ &
+    $82.579$ &
+    $275.52$ &
+    $0.9540\,\text{(atrasado)}$
+    \tabularnewline \hline
+    $RL$ + C en serie &
+    $0.4388$ &
+    $288.80$ &
+    $-1.1987$ &
+    $288.80$ &
+    $1.0000\,\text{(adelantado)}$
+    \tabularnewline \hline
+    $RL$ + C en paralelo &
+    $1.3151$ &
+    $262.86$ &
+    $-824.71$ &
+    $865.59$ &
+    $0.3037\,\text{(adelantado)}$
+    \tabularnewline \hline
+    \end{tabular}
+\end{center}
+
+\section{Simulación}
+Se utilizó el software \emph{Electronic Workbench v5.12.} para simular
+los circuitos, la carga $RL$ puede verse en la
+\textbf{Figura~\ref{simulacion1}}, la carga $RL$ con capacitor en serie puede
+verse en la \textbf{Figura~\ref{simulacion2}} y la carga $RL$ con capacitor en
+paralelo puede verse en la \textbf{Figura~\ref{simulacion3}}.
+
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=1.06]{simulacion/practica8.1.eps}
+%\caption{Simulación de la carga $RL$.}
+%\label{simulacion1}
+%\end{figure}
+
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=1.06]{simulacion/practica8.2.eps}
+%\caption{Simulación de la carga $RL$ con capacitor en serie.}
+%\label{simulacion2}
+%\end{figure}
+
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=1.06]{simulacion/practica8.3.eps}
+%\caption{Simulación de la carga $RL$ con capacitor en paralelo.}
+%\label{simulacion2}
+%\end{figure}
+
+\subsection{Resumen de resultados}
+En la siguiente tabla se resumen los valores obtenidos de la simulación: 
+
+\begin{center}
+    \begin{tabular}{|c||c|c|c|c|c|}
+    \hline
+    & $I_F[\text{A}]$ &
+    $P_T[\text{W}]$ &
+    $Q_T[\text{VAR}]$ &
+    $S_T[\text{VA}]$ &
+    \text{fp}
+    \tabularnewline \hline \hline
+    $RL$ &
+    $0.4186$ &
+    $262.86$ &
+    $82.579$ &
+    $275.52$ &
+    $0.9540\,\text{(atrasado)}$
+    \tabularnewline \hline
+    $RL$ + C en serie &
+    $0.4388$ &
+    $288.80$ &
+    $-1.1987$ &
+    $288.80$ &
+    $1.0000\,\text{(adelantado)}$
+    \tabularnewline \hline
+    $RL$ + C en paralelo &
+    $1.3151$ &
+    $262.86$ &
+    $-824.71$ &
+    $865.59$ &
+    $0.3037\,\text{(adelantado)}$
+    \tabularnewline \hline
+    \end{tabular}
+\end{center}
+
+\section{Tablas y mediciones}
+Se presentan los resultados obtenidos en laboratorio por medio del metodo de los
+dos vatimetros, el calculo de la potencia activa, reactiva, aparente y el factor
+de potencia.
+
+La potencia aparente se calcula con la siguiente formula:
+\begin{equation*}
+    S_T = \sqrt{P_T^2 + Q_T^2}
+\end{equation*}
+
+El factor de potencia se calcula con la siguiente formula:
+\begin{equation*}
+    \text{fp} = \frac{P_T}{S_T}
+\end{equation*}
+
+\begin{center}
+    \begin{tabular}{|c||c|c|c|c|c|}
+    \hline
+    & $I_F[\text{A}]$ &
+    $W_1 + W_2 = P_T[\text{W}]$ &
+    $Q_1 + Q_2 = Q_T[\text{VAR}]$ &
+    $S_T[\text{VA}]$ &
+    \text{fp}
+    \tabularnewline \hline \hline
+    $RL$ &
+    $0.40$ &
+    $110 + 153 = 263$ &
+    $112 - 31 = 81$ &
+    $275.19$ &
+    $0.9557$
+    \tabularnewline \hline
+    $RL$ + C en serie &
+    $0.42$ &
+    $143 + 143 = 286$ &
+    $-79 + 78 = -1$ &
+    $286$ &
+    $1.00$
+    \tabularnewline \hline
+    $RL$ + C en paralelo &
+    $1.40$ &
+    $390 - 126 = 264$ &
+    $-393 - 528 = -921$ &
+    $958.09$ &
+    $0.2755$
+    \tabularnewline \hline
+    \end{tabular}
+\end{center}
+
+\section{Cuestionario}
+
+\begin{enumerate}
+
+\item \textbf{¿Qué efectos produce en el circuito un mayor factor de potencia?
+Justifique su respuesta con los datos obtenidos.}
+
+\item \textbf{¿Qué efectos produce en el circuito un menor factor de potencia?
+Justifique su respuesta con los datos obtenidos.}
+
+\item \textbf{¿Por qué razon es conveniente conectar capacitancias en paralelo
+en vez de conectar en serie cuando se corrige el factor de potencia? Justifique
+su respuesta}
+
+\item \textbf{Calcular cual deberia ser el valor de la capacitancia en paralelo
+a conectarse por fase para obtener un factor de potencia igual a 1.}
+
+\end{enumerate}
+
+\section{Conclusiones y Recomendaciones}
+
+\end{document}
+
