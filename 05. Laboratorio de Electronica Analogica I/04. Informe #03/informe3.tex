@@ -1,0 +1,151 @@
+\documentclass[letter,twoside,11pt]{report}
+
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage{framed}
+\usepackage[svgnames]{xcolor}
+\colorlet{shadecolor}{Gainsboro!50}
+
+\usepackage[labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{pstricks}
+
+\usepackage{anysize}
+\marginsize{3cm}{2cm}{2cm}{3cm}
+
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{csquotes}
+\usepackage{amsfonts}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Laboratorio de Electrónica Analógica I}
+\fancyfoot[CO,CE]{\thepage\ de \pageref{LastPage}}
+\setlength{\headheight}{13.59999pt}
+
+\special{papersize=215.9mm,279.4mm}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\usepackage[
+    pdfauthor={Carlos Eduardo Caballero Burgoa},%
+    pdftitle={Laboratorio de Electrónica Analógica I},%
+    pdfsubject={Amplificación de señal con transistores},%
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black,
+    breaklinks]{hyperref}
+\usepackage{breakurl}
+
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\thesection}{\arabic{section}}
+
+\DeclareUnicodeCharacter{03A9}{~}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        {\Large UNIVERSIDAD MAYOR DE SAN SIMÓN}\\
+        \vspace*{0.15cm}
+        {\large FACULTAD DE CIENCIAS Y TECNOLOGÍA}\\
+        \vspace*{0.10cm}
+        DEPARTAMENTO DE ELÉCTRICA-ELECTRÓNICA\\
+        \vspace*{3.0cm}
+        {\Large \textbf{LABORATORIO DE ELECTRÓNICA ANALÓGICA I}}\\
+        \vspace*{0.3cm}
+        {\Large \textbf{INFORME No. 3}}\\
+        \vspace*{3.5cm}
+        {\Large \textbf{AMPLIFICACIÓN DE SEÑAL\\
+        CON TRANSISTORES BJT Y FET}}\\
+    \end{center}
+
+    \vspace*{5.8cm}
+    \leftskip=7.95cm
+    \noindent
+    \textbf{Estudiante:}\\
+    Caballero Burgoa, Carlos Eduardo.\\
+    \newline
+    \textbf{Carrera:}\\
+    Ing. Electromecánica.\\
+    \newline
+    \textbf{Docente:}\\
+    Ing. Alberto Arispe Santander.\\
+    \newline
+    \textbf{Grupo:} 1B.\\
+    \textbf{Fecha de entrega:} 3 de Diciembre del 2024.\\
+\end{titlepage}
+\addtocounter{page}{-1}
+
+\blankpage
+\addtocounter{page}{-1}
+
+\tableofcontents
+\newpage
+
+%\input{01.introduccion}
+%\input{02.objetivos}
+%\input{03.operacion1}
+%\input{03.operacion2}
+%\input{04.polarizacion1}
+%\input{04.polarizacion2}
+%\input{05.ca1}
+%\input{05.ca2}
+\input{06.frecuencia1}
+%\input{06.frecuencia2}
+
+\begin{thebibliography}{99}
+
+\bibitem{Boylestad}
+Robert L. Boylestad, Louis Nashelsky (2009).\\
+\textbf{Electrónica: Teoría de circuitos y dispositivos electrónicos. 10ma edición.}\\
+Pearson Educación
+
+\bibitem{Floyd}
+Thomas L. Floyd (2008).\\
+\textbf{Dispositivos electrónicos. 8va edición.}\\
+Pearson Education\\
+
+\bibitem{Savant}
+C.J. Savant Jr, Martin S. Roden, Gordon Carpenter. (1992).\\
+\textbf{Diseño electrónico. Circuitos y sistemas. 2da edición.}\\
+Addison-Wesley
+
+\bibitem{2N2222A}
+\textbf{2N2222A Small Signal Switching Transistor.}\\
+Extraído el 3 de Noviembre del 2024, de: \\
+\url{https://web.mit.edu/6.101/www/reference/2N2222A.pdf}
+
+\bibitem{2N3819}
+\textbf{2N3819 N-Channel RF Amplifier.}\\
+Extraído el 11 de Noviembre del 2024, de: \\
+\url{https://www.alldatasheet.com/datasheet-pdf/view/171937/FAIRCHILD/2N3819.html}
+
+\bibitem{measuring}
+\textbf{Measuring JFET Idss and Vgs(off).}\\
+Extraído el 28 de Noviembre del 2024, de: \\
+\url{https://therepaircafe.wordpress.com/2020/04/10/measuring-jfet-idss-and-vgsoff/}
+
+\end{thebibliography}
+
+\end{document}
+
