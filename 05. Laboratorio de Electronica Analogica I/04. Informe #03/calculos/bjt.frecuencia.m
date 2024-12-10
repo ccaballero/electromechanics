@@ -1,5 +1,4 @@
-% polarizacion por divisor de voltaje
-% 2N2222A NPN
+% calculo de las frecuencias de corte (2N2222A NPN)
 
 B = 302;                    % hfe
 

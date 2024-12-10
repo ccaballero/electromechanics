@@ -1,5 +1,4 @@
-% polarizacion por divisor de voltaje
-% 2N2222A NPN
+% analisis en ca (2N2222A NPN)
 
 B = 302;                    % hfe
 
